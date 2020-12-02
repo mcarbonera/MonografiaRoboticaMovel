@@ -1,0 +1,700 @@
+\chapter{Referencial Teórico}
+\vspace{-2.5 cm}
+
+Este Capítulo busca explanar os principais conceitos relacionados ao tema. 
+
+\section{Arquitetura baseada em comportamento}
+
+Um dos desafios que surgem em arquiteturas comportamentais é justamente a
+seleção de ações tendo como base um conjunto de comportamentos
+\cite{Livro_Mataric}. Duas maneiras tradicionais de fazer isso são: arbitragem e
+fusão. Na arbitragem, seleciona-se apenas um dos comportamentos por vez,
+enquanto que na fusão, os comportamentos operam em paralelo e suas saídas são
+combinadas. Um esquema dos dois modelos pode ser visto na Figura \ref{fig:arbfus}. 
+
+\input{Figuras/acoes}
+
+\subsection{Comportamentos como campos potenciais}
+
+Uma forma de definir comportamentos é por meio de campos potenciais, onde o
+vetor gradiente determina uma direção de referência para o sistema de controle
+\cite{book:arkin, art:wallfollowing}. Como exemplo, uma possível escolha para um
+comportamento de ``Ir Para Objetivo'' é dado na Equação \ref{eq:vetGTG},
+retratada na Figura \ref{fig:campovet}.a (R = 1). Já o comportamento ``Evitar
+Obstáculo'' (pontual) pode ser descrito pela Equação \ref{eq:vetAO}, retratada
+na Figura \ref{fig:campovet}.b (R = 0 e S = 1). Nas equações, S é uma esfera de
+influência, R é uma distância crítica, $\mathbf{\hat{u}}_{ipo}$ e
+$\mathbf{\hat{u}}_{eo}$ são vetores unitários que apontam, respectivamente,
+para o objetivo e na direção oposta ao obstáculo.
+\begin{equation}
+	\label{eq:vetGTG}
+	V(x,y) = \left \{ \begin{matrix} \mathbf{\hat{u}}_{ipo} &, \ para\ d \geq R \\
+	\ \frac{d}{R}\ \mathbf{\hat{u}}_{ipo} &,\ para\ d < R \end{matrix} \right.
+\end{equation}
+\begin{equation}
+	\label{eq:vetAO}
+	V(x,y) = \left \{ \begin{matrix} [0\quad0]^{T} &, \ para\ d > S \\
+	\ \frac{S-d}{S-R}\ \mathbf{\hat{u}}_{eo} &\quad \ \ \ ,\ para\ R < d \leq S \\
+	\mathbf{\hat{u}}_{eo} &,\ para\ d \leq R \end{matrix} \right.
+\end{equation} 
+
+\input{Figuras/CampoVet}
+
+Em um robô real, cada sensor é associado a uma distância até um obstáculo
+(mesmo que infinitamente distante) e, consequentemente, a um vetor definido pelo
+comportamento ``Evitar Obstáculo''. Uma combinação linear entre estes vetores
+cria um obstáculo virtual pontual a partir de obstáculos não pontuais
+\cite{art:wallfollowing}. 
+
+Vetores associados a comportamentos distintos podem ser combinados (linearmente)
+a fim de obter uma ação intermediária (Fusão, retratada na Figura
+\ref{fig:arbfus}.b), ou suas magnitudes são comparadas de modo que o
+``vencedor'' assume controle pleno (Arbitragem, retratada na Figura
+\ref{fig:arbfus}.a). 
+
+A estratégia de utilizar campos potenciais tem suas particularidades, já que
+podem existir mínimos locais, o que leva o robô a parar antes de chegar ao
+objetivo. Para resolver este problema, deve-se, ou estabelecer um campo
+potencial sem mínimos locais, ou desenvolver métodos para escapar deles
+\cite{art:wallfollowing}. \citeonline{art:wallfollowing} apresentam uma solução
+do segundo tipo, ao definir um comportamento ``Seguidor de Parede''.
+
+%\input{Figuras/MinimoLocal}
+
+\section{Modelagem}
+
+Nesta seção serão levantados os modelos cinemáticos para o robô móvel de
+acionamento diferencial e uniciclo. A seguir, será feita uma relação entre os
+dois, que permitirá realizar o controle do robô diferencial a partir do
+uniciclo, tornando mais simples o projeto. Os esquemas dos dois modelos pode ser
+visto na Figura \ref{fig:modelo}.
+
+\input{Figuras/Modelos}
+
+	\subsection{Modelo cinemático do uniciclo}
+
+O modelo uniciclo representa uma única roda que se movimenta em uma
+superfície sem deslizamento. Considera-se que existe acesso direto às
+velocidades linear e angular. 
+
+O modelo cinemático pode ser visto na Equação
+\ref{eq:uniciclo} \cite{lavalle2006planning}. A Equação \ref{eq:unimat}
+representa o uniciclo na forma matricial \cite{Livro_Siegwart}.
+\begin{equation}
+	\label{eq:uniciclo}
+	\left \{ \begin{matrix} \dot{x} &= v\cos{\phi} \\ \dot{y} &= v\sin{\phi} \\
+	\dot{\phi} &= \omega \end{matrix} \right.
+\end{equation}
+\begin{equation}
+	\label{eq:unimat}
+	\mleft[ 
+	\begin{array}{c c}
+	\dot{x} \\ \dot{y} \\ \dot{\phi}
+	\end{array}
+	\mright] = \mleft[
+	\begin{matrix}
+		  \cos{\phi} & 0 \\
+		  \sin{\phi} & 0 \\
+		  0 & 1 \\
+	\end{matrix}
+	\mright] \mleft[ 
+	\begin{array}{c c}
+	v \\ \omega
+	\end{array}
+	\mright]
+\end{equation}
+
+	\subsection{Modelo cinemático do robô móvel de acionamento diferencial}	
+
+Neste modelo (Equação \ref{eq:diff}), são consideradas como entradas as
+velocidades angulares das rodas esquerda e direita \cite{lavalle2006planning}. 
+\begin{equation}
+	\label{eq:diff}
+	\left \{ \begin{matrix} \dot{x} = \frac{R}{2}(\omega_l +
+	\omega_r)\cos{\phi}
+	\\
+	\dot{y} = \frac{R}{2}(\omega_l +
+	\omega_r)\sin{\phi}
+	\\
+	\dot{\phi} = \frac{R}{L}(\omega_r -
+	\omega_l) \end{matrix} \right.
+\end{equation}
+
+O robô móvel de acionamento diferencial, arquitetura usada neste trabalho, é
+cinematicamente equivalente ao uniciclo \cite{tese:franca}. Isso pode ser
+mostrado igualando $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ das Equações
+\ref{eq:uniciclo} e \ref{eq:diff}. Resolvendo para $\omega_l$ e $\omega_r$,
+tem-se a igualdade da Equação \ref{eq:vw_to_diff}.
+\begin{equation}
+	\label{eq:vw_to_diff}
+	\begin{matrix}
+	\omega_l = \frac{2v - L\omega}{2R} 
+	\\
+	\omega_r = \frac{2v + L\omega}{2R}
+	\end{matrix}
+\end{equation}
+
+Essa equivalência entre modelos é possível pois eles não consideram a dinâmica
+do sistema \cite{lavalle2006planning}.
+
+	%\subsection{Linearização do modelo}
+	%\subsection{Odometria}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				Controle				%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Considerações para o controle de robôs móveis}
+
+O sistema uniciclo tem duas restrições ditas não holonômicas, o que significa
+que não podem ser integradas para obter uma restrição geométrica
+\cite{Oriolo2013}.
+Na Equação \ref{eq:restricoes}, a primeira se refere à ausência de deslizamento
+lateral, enquanto a segunda é relativa à condição de rotação pura (ausência de
+deslizamento no sentido do vetor velocidade) \cite[pg.
+955]{book:AdvancedDynamics}.
+\begin{equation}
+	\label{eq:restricoes}
+	\begin{matrix}
+	\dot{x}\sin{\phi} - \dot{y}\cos{\phi} = 0 
+	\\
+	\dot{x}\cos{\phi} + \dot{y}\sin{\phi} = v
+	\end{matrix}
+\end{equation}
+
+Dois tipos de problemas em controle de robôs móveis podem ser explicitados:
+estabilização em um determinado estado (configuração) e seguir trajetória
+(\textit{tracking}). Pela própria natureza do sistema não holonômico, o primeiro
+problema é considerado mais difícil \cite{tese:franca}.
+
+No caso da estabilização, o teorema de Brockett afirma que, para sistemas
+subatuados, com menos entradas que variáveis de estado, o sistema não pode ser
+estabilizado assintoticamente (exponencialmente) usando leis de controle por
+realimentação de estado contínuas e invariantes no tempo
+\cite{artigo:ASTOLFI1995661, inbook:Ravi_Mumbai}.
+Para solucionar esse problema, técnicas de controle não linear têm sido
+exploradas, envolvendo controladores descontínuos e/ou variantes no tempo
+\cite{tese:franca}.  
+
+O fato do robô movel ser de estado completamente controlável
+apesar de subatuado é devido à presença de restrições não holonômicas
+\cite{Oriolo2013}.
+
+Para o problema de seguir trajetória (\textit{tracking}), o objetivo é seguir
+uma curva parametrizada em função do tempo \cite{art:Manuel}. 
+
+Em \citeonline{art:Magnus_PMPC}, uma técnica é explorada a fim de tratar o
+modelo diferencial pelo modelo de integrador-único (ponto controlado por
+velocidade, ou, $\mathbf{\dot{x}} = \mathbf{u}$). Os autores utilizam como
+referência um ponto deslocado em relação ao ponto no centro entre as duas rodas.
+A Figura \ref{fig:modelo}.b indica a posição deste ponto ($P_r$) e a Equação
+\ref{eq:Pr} mostra os valores de x e y para a nova referência. Derivando e
+substituindo $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ da Equação \ref{eq:uniciclo},
+obtem-se a Equação \ref{eq:PrDeriv}.
+\begin{equation}
+	\label{eq:Pr}
+	\left \{ \begin{matrix} x' = x_o + l\cos{\phi}
+	\\
+	y' = y_o + l\sin{\phi}
+	\end{matrix} \right.
+\end{equation}
+\begin{equation}
+	\label{eq:PrDeriv}
+	\left \{ \begin{matrix} \dot{x'} = \dot{x_o} - \dot{\phi}l\sin{\phi} =
+	v\cos{\phi} - l\omega\sin{\phi}
+	\\
+	\dot{y'} = \dot{y_o} + \dot{\phi}l\cos{\phi} = v\sin{\phi} + l\omega\cos{\phi}
+	\end{matrix} \right.
+\end{equation}
+
+A Equação \ref{eq:single_integrator} é idêntica à \ref{eq:PrDeriv}, porém, na
+forma matricial. Sua inversa estabelece um mapeamento direto entre as entradas
+$[\dot{x}\ \dot{y}]^T$ do modelo de integrador-único para as entradas do modelo
+uniciclo (Equação \ref{eq:si_inv_uni}), ou modelo diferencial (Equação
+\ref{eq:si_inv_diff}).
+\begin{equation}
+	\label{eq:single_integrator}
+	\mleft[ 
+	\begin{array}{c c}
+	\dot{x'} \\ \dot{y'}
+	\end{array}
+	\mright] = \mleft[
+	\begin{matrix}
+		  \cos{\phi} & -\sin{\phi} \\
+		  \sin{\phi} & \cos{\phi} \\
+	\end{matrix}
+	\mright] \mleft[
+	\begin{matrix}
+		  1 & 0 \\
+		  0 & l \\
+	\end{matrix}
+	\mright] \mleft[ 
+	\begin{array}{c c}
+	v \\ \omega
+	\end{array}
+	\mright]
+\end{equation}
+\begin{equation}
+	\label{eq:si_inv_uni}
+	\mleft[ 
+	\begin{array}{c c}
+	v \\ \omega
+	\end{array}
+	\mright] = \mleft[
+	\begin{matrix}
+		  1 & 0 \\
+		  0 & \frac{1}{l} \\
+	\end{matrix}
+	\mright] \mleft[
+	\begin{matrix}
+		  \cos{\phi} & \sin{\phi} \\
+		  -\sin{\phi} & \cos{\phi} \\
+	\end{matrix}
+	\mright] \mleft[ 
+	\begin{array}{c c}
+	\dot{x'} \\ \dot{y'}
+	\end{array}
+	\mright]
+\end{equation}
+\begin{equation}
+	\label{eq:si_inv_diff}
+	\mleft[ 
+	\begin{array}{c c}
+	\omega_l \\ \omega_r
+	\end{array}
+	\mright] = \mleft[
+	\begin{matrix}
+		  \frac{1}{R} & \frac{-L}{2R} \\
+		  \frac{1}{R} & \frac{L}{2R} \\
+	\end{matrix}
+	\mright] \mleft[
+	\begin{matrix}
+		  1 & 0 \\
+		  0 & \frac{1}{l} \\
+	\end{matrix}
+	\mright] \mleft[
+	\begin{matrix}
+		  \cos{\phi} & \sin{\phi} \\
+		  -\sin{\phi} & \cos{\phi} \\
+	\end{matrix}
+	\mright] \mleft[ 
+	\begin{array}{c c}
+	\dot{x'} \\ \dot{y'}
+	\end{array}
+	\mright]
+\end{equation}
+
+Pelo que pode ser verificado em \citeonline{art:Magnus_PMPC}, os modelos
+uniciclo e de integrador-único não são equivalentes, já que $l$ não pode tender
+a zero. Um controle de modelo preditivo é estabelecido para ajustar $l$ a fim de
+obter uma resposta que sacrifique o mínimo possível em precisão e
+manobrabilidade, comparando com uma escolha estática de parâmetro ($l =
+\sqrt{\frac{1-\alpha}{\alpha}\frac{Lv_{max}}{R}}$, com $\alpha = 0,99$). 
+
+Esta técnica, também chamada ``\textit{look-ahead}'', é utilizada, com
+modificações, em alguns trabalhos como passo intermediário antes de realizar uma
+linearização por realimentação \cite{art:feedlin_lookahead, art:novel}. Em
+\citeonline{art:feedlin_lookahead} é mostrado que o modelo dinâmico não pode ser
+linearizado por realimentação entrada-estado. A linearização por realimentação
+entrada-saída estática só é possível adotando esta nova referência.
+
+Apesar de em \citeonline{art:feedlin_lookahead} a dinâmica do sistema ser
+considerada, em \citeonline{art:novel} é dito que um modelo cinemático pode ser
+usado. Ao considerar a dinâmica (primeiro trabalho) uma realimentação é
+definida de forma a compensar não linearidades do sistema, a fim de tratá-lo
+como um modelo de duplo integrador ($\mathbf{\ddot{x}} = \mathbf{u}$). A partir
+disso, o sistema pode ser controlado por técnicas de controle linear. 
+
+Para o modelo cinemático deste trabalho, a definição de um campo potêncial não é
+tão conveniente, já que o negativo do gradiente associado especifica
+força, de modo que a aceleração é obtida considerando massa
+\cite{art:wallfollowing, book:HallidayDaMassa}. Em \citeonline{art:vectorfield},
+o campo vetorial definido indica velocidades. Os vetores velocidade calculados
+podem ser usados como entrada do modelo de integrador único.
+
+Apesar do modelo não ser controlável por técnicas lineares, é possível utilizar 
+controle PID para seguir ângulo, com a limitação de não ter controle sobre 
+velocidades linear ou angular. Para aplicações onde a convergência não tem
+restrições temporais significativas, controle angular é suficiente e será 
+utilizado no caso deste trabalho.
+
+% Campo potencial X Campo vetorial de velocidades.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				DES						%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\section{Sistemas a eventos discretos}
+
+Um Sistema a Eventos Discretos (SED) pode ser caracterizado como um sistema
+dinâmico, cujos estados são discretos, sendo que transições entre estes estados ocorrem
+a partir da detecção de eventos assíncronos \cite{book:SED}. Um evento pode ser
+definido como um estímulo que provoca transições instantâneas de estado. Na
+ausência de eventos, o sistema permanece no mesmo estado \cite{man:Cury}.
+
+Um SED pode ser modelado usando o formalismo presente em teoria de computação:
+linguagens regulares e autômatos finitos. O autômato finito determinístico é uma
+tupla $M=(Q,\Sigma,\delta,q,F)$ formada por um conjunto de estados ($Q$), um conjunto
+de símbolos ($\Sigma$), uma função de transição ($\delta$), um estado inicial
+($q$), e um conjunto de estados finais ($F$, que é subconjunto de $Q$). \cite{book:SED,
+book:TeoriaComp}.
+
+O conjunto de eventos admissíveis em um SED é o alfabeto de uma linguagem e um
+conjunto de eventos sucessivos seriam palavras desta linguagem. O autômato
+representa uma linguagem formal. Uma forma de representar o autômato é por meio
+de um diagrama de transição de estado. Um exemplo pode ser visto na Figura
+\ref{fig:diagrama}.
+
+\input{Figuras/DiagramaTransicao}
+
+O SED possui um comportamento, ou dinâmica, que pretende-se controlar, já que
+algumas cadeias de eventos aceitas pela linguagem podem não ser desejadas. A
+estrutura ou agente responsável pelo controle é chamado supervisor, que interage
+com a planta capturando eventos ocorridos (apenas aqueles que são
+observáveis) e atuando de forma a permitir ou suprimir eventos passíveis de
+ocorrência \cite{book:SED}. Um esquema desta interação pode ser visto na Figura
+\ref{fig:supmalhafechada}.
+
+\input{Figuras/SupMalhaFechada}
+
+\subsection{Autômatos temporizados com guardas}
+
+Uma representação mais completa é o autômato temporizado com guardas, que possui
+um conjunto de variáveis contínuas e em função do tempo denominadas
+\textit{clocks}, cuja dinâmica é linear. O temporizador pode ser usado para
+estabelecer condições que provocam transições. Durante essas transições, a
+variável temporizada pode sofrer \textit{reset} (onde o valor 0 é atribuido)
+\cite{book:SED}.
+
+Transições temporizadas são tuplas da forma (guardas; eventos;
+\textit{reset}), onde ``guardas'' é um conjunto de condições em variáveis
+do tipo \textit{clock} que devem ser atendidas para ocorrência de transição,
+os eventos são componentes já definidos e \textit{reset} especifica um conjunto
+de variáveis do tipo \textit{clock} às quais deve ser atribuído valor 0.
+Quando o conjunto ``guardas'' é vazio $\emptyset$, considera-se valor
+lógico verdadeiro e quando o conjunto \textit{reset} é vazio, nenhuma variável
+\textit{clock} sofre atribuição de valor 0 \cite{book:SED}. Dois exemplo de
+diagramas de transição são mostrados na Figura \ref{fig:ATG}. 
+
+\input{Figuras/AutTempGuarda}
+
+Em casos nos quais a condição de guarda deixa de ser válida, como, por exemplo,
+quando no estado 2 da Figura \ref{fig:ATG}.a, $c_1$ se torna maior ou igual a 1, ocorre
+\textit{deadlock} por tempo (\textit{timelock}). Quando é necessário forçar a
+ocorrência de um evento para evitar \textit{timelock}, modela-se como na Figura
+\ref{fig:ATG}.b. A condição associada a um estado é chamada Invariante
+\cite{book:SED}.
+
+%Dois exemplo de diagramas de transição são mostrados na Figura
+%\ref{fig:ATG}. \textit{Deadlocks} por tempo podem acontecer em casos onde a
+%condição de guarda deixa de ser válida, como por exemplo quando, no estado 2 da
+%Figura \ref{fig:ATG}.a, $c_1$ se torna maior ou igual a 1. Quando é necessário
+%forçar a ocorrência de um evento para evitar \textit{deadlock}, modela-se como
+%na Figura \ref{fig:ATG}.b \cite{book:SED}.
+
+Por fim, o autômato pode ser representado como uma tupla (Q, E, C, Tra, Inv,
+$q_0$), onde Q é um conjunto de estados, E é um conjunto de eventos, C é um
+conjunto de temporizadores (variáveis contínuas), ``Tra'' é um conjunto de
+transições temporizadas, ``Inv'' é um conjunto de invariantes e $q_0$ é o
+estado inicial \cite{book:SED}.
+
+\section{Sistemas híbridos}
+
+Sistemas híbridos são formados quando Sistemas Dinâmicos de Variável
+Contínua (SDVC) e Sistemas a Eventos Discretos (SED) funcionam de maneira
+conjunta. Neste caso, controladores de variável contínua são abstraídos
+por um SED. Transições de estado provocam transições ou ``chaveamento'' entre
+controladores \cite{book:SED}. A Figura \ref{fig:supervisorio} mostra o esquema
+da arquitetura de controle de um sistema híbrido.
+
+\input{Figuras/Supervisorio} 
+
+Neste sentido, é necessário introduzir o conceito de autômatos híbridos. Ao
+invés de estados discretos, os estados do sistema são dados por
+$(q,\mathbf{x})$, com $q \in Q$, onde $Q$ é um conjunto de estados discretos e
+$\mathbf{x} \in X$, onde $X$ é um conjunto de estados contínuos. O estado $q$
+determina o modo de operação do sistema. O autômato híbrido é, portanto, uma extensão do
+autômato temporizado com guardas, já que as funções dos temporizadores
+(lineares) podem ser substituídas por funções arbitrárias \cite{book:SED}.
+
+Esse novo autômato pode ser representado pela tupla $G_h = (Q, X,
+E, U, f, \phi, Inv, guard, \rho, q_0, \mathbf{x_0})$, onde Q é um conjunto de
+estados discretos, X é um conjunto de variáveis contínuas (o espaço de estados
+X $\subseteq \mathbb{R}^n$), E é um conjunto de eventos, U é um conjunto de
+entradas controláveis (U $\subseteq \mathbb{R}^m$), $f$ é um campo vetorial
+($f: Q \times X \times U \rightarrow X$), $\phi$ é uma função de transição de
+estados discretos ($\phi: Q \times X \times E \rightarrow Q$), ``Inv'' é um
+conjunto de invariantes, ou domínio ($Inv \subseteq Q \times X$), ``guard'' é um
+conjunto de condições de guarda ($guard \subseteq Q \times Q \times X$), $\rho$
+é uma função \textit{reset} ($\rho: Q \times Q \times X \times E \rightarrow
+X$) cujo objetivo é alterar \textbf{x} quando ocorre mudança de modo (q), $q_0$
+é o estado discreto inicial (modo de operação) e $\mathbf{x_0}$ é o estado
+contínuo inicial \cite[pg. 316]{book:SED}.
+
+Em robótica móvel, autômatos fornecem um meio de implementar a arbitragem
+requisitada pela arquitetura baseada em comportamentos, onde cada modo de
+operação corresponde a um comportamento. Porém, o uso de autômatos híbridos
+traz uma particularidade potencialmente problemática: o comportamento de
+Zenão, no qual, teoricamente, transições infinitas de modo ocorrem em tempo finito, o que
+bloqueia a passagem de tempo \cite{art:Magnus_Behavior}.
+
+Isso ocorre quando o campo vetorial descontínuo subjacente a um sistema híbrido
+converge para uma superfície de separação entre modos, o que é chamado de
+deslize. Essa limitação do autômato, no ambiente real, provoca oscilações, já
+que mudanças de controladores ocorrem em curto espaço de tempo. Uma possível
+solução é por meio do processo de regularização, que na prática adiciona um
+estado de forma a implementar uma ``dinâmica de deslize'' sobre a fronteira que
+separa comportamentos \cite{art:Magnus_Behavior}. Este conceito está ilustrado
+na Figura \ref{fig:Sliding}.
+
+\input{Figuras/Sliding}
+
+O termo ``comportamento de Zenão'' faz alusão ao filósofo grego Zenão de
+Eleia, conhecido pelos seus famosos paradoxos \cite{art:Magnus_Behavior}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			Lógica Fuzzy				%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Lógica \textit{Fuzzy} em Controle}
+
+Em certas circunstâncias, a lógica Booleana pode não ser suficiente
+para descrever conhecimentos qualitativos com precisão. Como exemplo, ao
+determinar como ``alto'' todo indivíduo com altura maior que 1,70 metros,
+pessoas com 1,71 ou 2,00 metros seriam consideradas igualmente altas.
+A lógica \textit{Fuzzy} acrescenta a informação de ``pertinência'', que atribui um
+``grau de certeza" de um valor (neste exemplo, altura) em relação à classe
+avaliada (categoria ``alto'') \cite{fuzzylilly}.
+
+Sistemas \textit{Fuzzy} tem por objetivo mesclar aspectos exatos com
+conhecimentos imprecisos que caracterizam o pensamento humano. Deste modo,
+aspectos qualitativos de um problema, ou conhecimento especializado, são
+mapeados e utilizados em um sistema \textit{Fuzzy} \cite{fuzzylilly}. Um
+diagrama de blocos de um controlador \textit{Fuzzy} e seus componentes atuando
+em um sistema pode ser visto na Figura \ref{fig:ContFuzzy}.
+
+\input{Figuras/ControladorFuzzy}
+
+Os sistemas \textit{Fuzzy}, de acordo com \citeonline{fuzzy_ross}, são
+úteis em contextos onde é necessário lidar com sistemas muito complexos,
+compreendidos parcialmente, além de casos nos quais soluções rápidas
+são desejadas, mesmo que aproximadas. 
+
+Já \citeonline{fuzzylilly} afirma que problemas não lineares, de difícil
+solução por controle clássico, são exemplos de situações nas quais sistemas
+\textit{Fuzzy} podem ser utilizados. Entretando, o autor alerta que, por conta
+do alto custo computacional desta solução, ela não é indicada para casos
+envolvendo problemas lineares e invariantes no tempo, nos quais soluções
+mais diretas estão disponíveis, por exemplo, controle PID e técnica de alocação
+de pólos. 
+
+\subsection{Conjuntos Fuzzy}
+
+No exemplo dado anteriormente, uma proposição da lógica booleana foi usada para
+definir um conjunto dos indivíduos ``altos''. Este conjunto (convencional) é
+chamado ``crisp''. Em conjuntos \textit{Fuzzy}, associa-se a cada membro de
+um conjunto um valor real entre 0 e 1 chamado ``grau de pertinência'', onde 0
+representa exclusão absoluta, 1 representa pertinência total e qualquer valor
+intermediário representa pertinência parcial \cite{fuzzylilly}. 
+
+Os valores numéricos possíveis para altura são chamados ``universo de
+discurso'', o valor ``alto'' é dito ser um ``valor linguístico'' associado a
+``comprimento'', que é a variável linguística no exemplo dado. Para ilustrar o
+conceito, funções de pertinência associadas à variável linguística ``altura''
+podem ser vistas na Figura \ref{fig:conjfuzzy}, onde $\mu$ é o grau de
+pertinência. Assim, valores de altura podem pertencer a mais de uma classe,
+porém com diferentes graus de pertinência \cite{fuzzylilly}.
+
+\input{Figuras/ConjuntosFuzzy}
+
+As definições conceituais em teoria de conjuntos são diferentes para conjuntos
+\textit{Fuzzy}. As mais importantes, explicitadas em \citeonline{fuzzylilly},
+estão reunidas a seguir, onde $\mu_1(x)$ e $\mu_2(x)$ são graus de pertinência
+relacionados aos conjuntos \textit{Fuzzy} $M_1$ e $M_2$, respectivamente,
+definidas para uma mesma variável $x$ no universo de discurso $\chi$.
+
+\begin{itemize}
+  \item Subconjunto: $M_1$ é subconjunto \textit{Fuzzy} de $M_2$ ($M_1
+  \subseteq M_2$) se $\mu_1 \leq \mu_2$, $\forall x \in \chi$.
+  
+  \item Complemento: o complemento \textit{Fuzzy} de M ($\overline{M}$) é dado
+  por $\mu_{\overline{M}}(x) = 1 - \mu_M (x)$.
+  
+  \item Intersecção (AND): 
+  
+  Pode ser usada qualquer função que cumpra os requisitos:  
+  \begin{enumerate}
+    \item Um elemento do universo não pode pertencer a dois conjuntos
+    \textit{Fuzzy} com maior grau de pertinência que a cada conjunto
+    individualmente.
+    \item Se um elemento não pertence a um dos conjuntos, não pode pertencer à
+    intersecção. 
+    \item Se um elemento pertence aos dois conjuntos \textit{Fuzzy} com
+    pertinência total, então pertence à intersecção com pertinência total. 
+  \end{enumerate}
+
+Duas funções que cumprem os requisitos são: $\mu_{M_1 \bigcap M_2}(x) =
+min\{\mu_1(x),\mu_2(x): x \in \chi\}$ (função mínimo) e $\mu_{M_1 \bigcap
+M_2}(x) = \{\mu_1(x)\mu_2(x): x \in \chi\}$ (produto algébrico).  
+  
+  \item União (OR):
+  
+  Pode ser usada qualquer função que cumpra os requisitos:
+  \begin{enumerate}
+    \item Um elemento do universo não pode pertencer à união de dois conjunto
+    \textit{Fuzzy} com menor grau de pertinência que a cada conjunto
+    individualmente.
+    \item Se um elemento pertence a um dos conjuntos, então deve pertencer à
+    união. 
+    \item Se um elemento não pertence a nenhum dos dois conjuntos
+    \textit{Fuzzy}, então não pertence à união.
+  \end{enumerate}
+  
+Duas funções que cumprem o requisito são: $\mu_{M_1 \bigcup M_2}(x) =
+max\{\mu_1(x),\mu_2(x): x \in \chi\}$ (função máximo) e $\mu_{M_1 \bigcup
+M_2}(x) = \{\mu_1(x) + \mu_2(x) - \mu_1(x)\mu_2(x): x \in \chi\}$ (soma
+algébrica).
+\end{itemize}
+
+Um exemplo das operações união e intersecção pode ser visto na figura
+\ref{fig:ANDOR}.
+
+\input{Figuras/ANDOR}
+% Produto Cartesiano
+% Conjuntos Fuzzy Singleton
+
+\subsection{Componentes de um Sistema \textit{Fuzzy}}
+
+Conhecimento qualitativo é utilizado para gerar regras do tipo ``Se P
+então Q", que relacionam valores linguísticos de entrada com valores
+linguísticos de saída. O conjunto de regras forma a ``Base de Regras'', que
+pode ser vista como uma tabela de consulta, com número de dimensões igual
+ao número de variáveis \cite{fuzzy_passino}.
+
+	\subsubsection{Fuzzificação}
+	
+	O processo de associar variáveis numéricas a conjuntos fuzzy, a fim de obter
+	valores linguísticos com seus respectivos valores de pertinência, é denominado
+	Fuzzificação. A saída deste processo é o conjunto de graus de pertinência
+	vinculados aos valores linguísticos definidos \cite{fuzzy_passino}.
+	
+	%Fuzzificação singleton
+	\subsubsection{Mecanismo de Inferência}
+	
+	Ao final do processo de fuzzificação, a Base de Regras deve ser utilizada para
+	encontrar saídas definidas por variáveis linguísticas. Contudo, apenas entradas
+	associadas a graus de pertinência maiores que zero devem ser levados em
+	consideração, a fim de obter um subconjunto de regras (ativas) a serem
+	avaliadas \cite{fuzzy_passino}.
+	
+	Um conjunto de regras ativas e os respectivos graus de pertinência de suas
+	premissas são utilizados para calcular funções de pertinência para cada regra.
+	Como exemplo, dadas as regras $A \rightarrow C$ e $B \rightarrow D$, onde as
+	premissas A e B possuem pertinências $\mu_A = 0,75$ e $\mu_B = 0,25$, e os
+	consequentes C e D possuem funções de pertinência mostradas na Figura
+	\ref{fig:FuzzyInferencia}.a. As Figuras \ref{fig:FuzzyInferencia}.b e
+	\ref{fig:FuzzyInferencia}.c mostram funções de pertinência obtidas para as
+	regras. As saídas destas regras são vistas como	recomendações que, apesar de
+	conflitantes, podem ser combinadas de acordo com sua importância (pertinência)
+	\cite{fuzzy_passino}.
+	
+	\input{Figuras/FuzzyInferencia}
+	
+	%1) Matching 
+	%1.1) Combinar entradas com regras
+	%1.2) Determinar regras ativas
+	%2) Inferencia 
+	\subsubsection{Defuzzificação}
+	
+	O processo de associar recomendações distintas dadas pelo conjunto de regras
+	ativas a variáveis numéricas de saída é denominado Defuzzificação. Existem
+	vários meios de cumprir tal objetivo, sendo que um método bastante utilizado é
+	o cálculo do ``centro de gravidade'' (COG) das funções de pertinência das
+	regras. A Equação \ref{eq:COG} mostra este cálculo, no qual $b_i$ é o centro da
+	função de pertinência \cite{fuzzy_passino}.
+\begin{equation}
+	\label{eq:COG}
+	u_{crisp} = \frac{\sum_i b_i \int \mu_i}{\sum_i \int \mu_i}
+\end{equation}
+
+	O valor $\int \mu_i$ pode ser obtido analiticamente para uma função de
+	pertinência triangular. Dada uma base ``b'' e altura de corte ``h'',
+	pode-se mostrar que a área se iguala a $b(h-\frac{h^2}{2})$
+	\cite{fuzzy_passino}. Para o exemplo anterior, o processo de defuzzificação foi
+	ilustrado na Figura \ref{fig:Defuzzificacao}.
+	
+	\input{Figuras/FuzzyDefuzzificacao}
+	
+\section{Odometria}
+
+Odometria em robótica móvel é o processo de cálculo da posição do robô
+utilizando sensores. No caso específico de um robô móvel de acionamento
+diferencial, deseja-se calcular a coordenada em um plano (x e y) e a 
+orientação ($\phi$) do robô a partir de sensores de efeito hall acoplados
+aos mostores. \cite{art:odometria1}
+
+Cada motor possui dois sensores, de modo a produzir sinais em canais 
+A e B, que se comportam conforme a Figura \ref{fig:ImagemOdometria}. Para medir velocidade, 
+deve-se  calcular a quantidade de pulsos gerados em um período de tempo,
+utilizando a especificação de pulsos por revolução (PPR), bem como a
+medida de circunferência do pneu \cite{odometria2}. A Equação 
+\ref{eq:odometria1} mostra o cálculo de velocidade, onde $N_{ticks}$
+é o período de amostragem, $N_{PPR}$ é o número de partes por revolução,
+$R$ é o raio do pneu e $T$ é o período de amostragem.
+
+\input{Figuras/motorOdometria}
+
+\begin{equation}
+	\label{eq:odometria1}
+	V_{pneu} = \frac{N_{ticks}}{N_{PPR}} \frac{2\pi R}{T}
+\end{equation}
+
+A utilização de uma caixa de redução entre o motor e o pneu adiciona
+uma particularidade interessante, pois apesar de reduzir a velocidade
+máxima, aumenta a precisão dos sensores pela razão do sistema de 
+engrenagens. 
+	
+Para descobrir a direção de rotação, é necessário analisar a diferença 
+de fase entre os sinais. Ao detectar borda de subida e descida em 
+um dos canais e a seguir verificar se os dois possuem sinais lógicos 
+iguais ou diferentes, um contador é incrementado ou decrementado. 
+
+Decidir se o contador será incrementado ou decrementado na presença de
+sinais iguais é um processo empírico, pois o sentido de movimento 
+depende da fixação dos motores no chassi do robô. Como há diferença 
+de 180 graus na fixação, um sentido horário de rotação pode ser ''para 
+frente'' ou ''para trás'' dependendo de qual motor for analisado.
+
+Pode-se utilizar apenas borda de subida para esse cálculo, porém, 
+ao levar em consideração as duas bordas do sinal, duplica-se
+a contagem de pulsos por revolução.
+
+O cálculo do estado atual a partir de estados anteriores e medições
+dos encoders pode ser obtido a partir da Equação \ref{eq:odometria2},
+onde $[x,y,\phi]^T$ é o estado anterior, $[x' y' \phi']^T$ é o estado
+a ser calculado, $L$ é a distância entre os pneus e $d_{esq}$ e 
+$d_{dir}$ são as distâncias percorridas pelos pneus esquerdo e direito, 
+respectivamente. \cite{art:odometria1}.
+
+\begin{equation}
+	\label{eq:odometria2}
+	\left \{ \begin{matrix} x' = x + \frac{d_{esq} + d_{dir}}{2} \cos{\phi}
+	\\
+	y' = y + \frac{d_{esq} + d_{dir}}{2} \sin{\phi}
+	\\
+	\phi' = \phi + \frac{d_{dir} - d_{esq}}{L} \end{matrix} \right.
+\end{equation}
+
+
+%\cite{fuzzylilly}
+%\cite{fuzzy_ross}
+%\cite{fuzzy_passino}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				Controle				%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%\section{Controle baseado em comportamentos}
+%\section{Definição de comportamentos usando campos vetoriais}
+%	\subsection{Comportamentos básicos em navegação}
+%	\subsection{Limitações}
+%	\subsection{Comportamento seguir parede}
+	
+	%\subsection{Comportamentos definidos por controlador PID}
+	%\subsection{Comportamentos definidos por regra \textit{Fuzzy}}

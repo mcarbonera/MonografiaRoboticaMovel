@@ -1,0 +1,75 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: document.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'name_of_file' (item size: 1) to 39 items.
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: abnt-alf.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: abnt-options.bib
+Database file #2: ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "mest_marchi" isn't style-file defined
+--line 149 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "mest_neto" isn't style-file defined
+--line 161 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--I didn't find a database entry for "abnt-etal-list=99"
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
++---------------------------------------------------------+
+| Estilo bibliografico abnt-alf.bst versao 1.52           |
+| Implementa a NBR6023, NBR10520 e NBR10523               |
+| Em caso de duvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 43 entries,
+            6523 wiz_defined-function locations,
+            1440 strings with 15991 characters,
+and the built_in function-call counts, 30014 in all, are:
+= -- 2426
+> -- 905
+< -- 25
++ -- 372
+- -- 282
+* -- 2031
+:= -- 4102
+add.period$ -- 189
+call.type$ -- 45
+change.case$ -- 347
+chr.to.int$ -- 73
+cite$ -- 40
+duplicate$ -- 1462
+empty$ -- 2597
+format.name$ -- 1340
+if$ -- 7318
+int.to.chr$ -- 2
+int.to.str$ -- 2
+missing$ -- 735
+newline$ -- 221
+num.names$ -- 192
+pop$ -- 851
+preamble$ -- 1
+purify$ -- 150
+quote$ -- 0
+skip$ -- 1741
+stack$ -- 1
+substring$ -- 931
+swap$ -- 691
+text.length$ -- 15
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 0
+while$ -- 246
+width$ -- 0
+write$ -- 653
+(There were 3 warnings)

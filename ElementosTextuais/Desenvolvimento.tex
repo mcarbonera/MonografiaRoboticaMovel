@@ -1,0 +1,322 @@
+\chapter{Desenvolvimento}
+\vspace{-2.5 cm}
+
+% Este Capítulo apresenta o que foi desenvolvido até o momento.
+Este Capítulo apresenta o que foi desenvolvido como resultado deste trabalho,
+visando alcançar os objetivos propostos.
+
+\section{O simulador Simiam e alterações necessárias}
+
+O Simulador Simiam foi implementado pela Universidade Georgia Tech, 
+inicialmente oferecendo apenas suporte ao robô Khepera 3. Posteriormente, 
+para atender necessidades do curso \textit{Control of Mobile Robots}, hospedado 
+na plataforma ``Coursera.org'', o robô de baixo custo QuickBot foi adicionado. 
+Os robôs Khepera e QuickBot reais podem ser vistos na Figura \ref{fig:RobosK3QB}. 
+Suas contrapartes simuladas estão retratadas na Figura \ref{fig:RobosEmSimulador}.
+
+O curso mencionado foi removido da plataforma no dia 17 de Agosto de 2020 e apenas
+os alunos concluíntes possuem acesso. De qualquer forma, o simulador ainda pode ser
+obtido gratuitamente.
+
+\input{Figuras/FigRobos}
+
+\input{Figuras/FigRobosEmSim}
+
+O Simiam é implementado como um aplicativo Matlab. Possui uma interface
+gráfica intuitiva e uma arquitetura interna simples, facilmente customizável. As
+subseções a seguir apresentam os pacotes mais importantes, bem como as
+principais classes que os compõem e chama atenção para as alterações necessárias
+a fim de tornar a simulação coerente com o presente trabalho.
+
+	\subsection{Pacote ``ui''}
+	
+	O pacote ``ui'' é responsável pela interface gráfica do simulador. A classe
+	``AppWindow'' possui um método construtor que inicializa atributos e o
+	método ``load\_ui'' que invoca o método ``create\_layout", responsável por
+	criar o leiaute da interface.
+	
+	O botão start, criado pelo método anterior é tratado por ``ui\_button\_start".
+	Esta é a função principal reponsável por criar o ambiente de simulação
+	(definido no arquivo ``settings.xml''), inserir um ou mais robôs e iniciar a
+	simulação.
+	
+	Alterações mínimas foram efetuadas nesta etapa. Foram adicionados comandos para
+	maximizar a janela do simulador e para ajustar o ``zoom'' de modo a permitir uma
+	visão panorâmica de todo o ambiente de simulação. O arquivo de configuração
+	``settings.xml'' foi alterado a fim de ajustar o ``tamanho do mundo'' ao
+	tamanho da	tela.
+	
+	\subsection{Pacote ``simulator''}
+	
+	O pacote ``simulator'' realiza de fato a simulação. A classe ``World'' é
+	responsável por extrair informações do arquivo ``.xml'', como quantidade e
+	localização inicial de robôs e obstáculos, armazenado em estruturas de dados.
+	A classe ``Simulator'' atualiza a simulação na janela, enquanto a
+	classe ``Physics'' é responsável por detectar colisões de robôs com obstáculos
+	e entre si. 
+	
+	As alterações neste pacote foram todas na classe ``Simulator'', no intuito
+	de possibilitar a captura da simulação em video ``.mp4" ou ``.gif". Apesar de
+	não ser uma alteração fundamental para a etapa de execução do trabalho, é
+	necessária para a apresentação. Não foi criado um botão na interface para
+	especificar ao simulador a captura em video. Assim, é necessário, no
+	construtor da classe Simulator, atribuir valor verdadeiro aos atributos
+	``gravarvideo'' e/ou ``gravargif". 
+	
+	\subsection{Pacote ``robot''}
+	
+	O pacote ``robot'' define um ou mais robôs passíveis de serem instanciados. A
+	classe ``QuickBot'' estabelece parâmetros físicos, tais como informações
+	geométricas, posicionamento dos sensores no corpo do robô e estabelece
+	limitações, como velocidades de saturação e zona morta dos motores. Além de
+	instanciar objetos das classes ``DifferentialDrive'', ``ProximitySensor'' e
+	``WheelEncoder'', ``QuickBot'' extende a classe ``Robot''. 
+	
+	A classe ``DifferentialDrive" implementa a ``dinâmica'' dos modelos de
+	acionamento diferencial e uniciclo. Com os métodos ``uni\_to\_diff'' e ``diff\_to\_uni'', a
+	equivalência entre modelo apresentada na Equação \ref{eq:vw_to_diff} é
+	estabelecida no espaço de simulação. 
+
+	A classe ``ProximitySensor'' estabelece características do sensor infravermelho
+	usado no QuickBot, tais como distâncias mínimas e máximas, espalhamento, localização e
+	direção em relação ao corpo do robô e adiciona um ruído gaussiano.
+	``WheelEncoder'', similarmente, estabelece características do \textit{encoder}.
+	
+	As alterações nesta etapa foram no intuito de incluir o robô deste trabalho
+	no Simiam. O arquivo ``settings.xml'' deve determinar que um objeto (robô) da
+	nova classe criada seja instanciado, ao invés do objeto da classe QuickBot.
+	
+	\subsection{Pacote ``controller''}
+	
+	O pacote ``controller'' é responsável pela implementação de todos os
+	controladores e supervisores dos robôs implementados. A classe ``Supervisor'' é
+	extendida para obter o controlador supervisório de cada robô a ser simulado.
+	Para o QuickBot e Khepera 3, os respectivos supervisores são definidos pelas
+	classes ``QBSupervisor'' e ``K3Supervisor''. Essas classes definem máquinas de
+	estado, onde cada estado é associado a um controlador de variável contínua.
+	Esses controladores, por sua vez, extendem a classe ``Controller'' e
+	implementam os ``comportamentos'', ou modos, dos robôs.
+	% Calculo de odometria está em QBSupervisor.
+	
+	As alterações neste pacote foram responsáveis pela inclusão de suporte a
+	controladores \textit{Fuzzy}, além de adicionar o supervisório específico para
+	o robô desenvolvido.
+	 
+\section{Montagem física do robô}
+
+Os componentes físicos do robô podem ser vistos na Figura \ref{fig:RoboReal}.a e
+o resultado após montagem está retratado na Figura \ref{fig:RoboReal}.b.
+
+\input{Figuras/RoboJubileu}
+
+\subsection{Especificações}
+
+As variáveis L e R na Equação \ref{eq:diff}, para o robô deste trabalho, valem
+respectivamente 18 cm e 3,4 cm.
+
+O sensor infravermelho GP2Y0A21YK0F utilizado neste trabalho possui a curva de
+tensão por distância representada na Figura \ref{fig:SensorIR}. A faixa de
+distância está entre 10 e 80 cm. No QuickBot, é utilizado o sensor GP2Y0A41SK0F,
+com distância de medição entre 4 e 30 cm.
+
+\input{Figuras/FigRespostaIR}
+
+Para a região da curva onde $d > 5,5 cm$, o polinômio que a aproxima, associando
+o inverso da distância pela tensão ($d(v) = \frac{1}{d'(v)}$), obtido utilizando
+a função polyfit do Matlab pode ser visto na Equação \ref{eq:PolinomioVx}.
+\begin{equation}
+	\label{eq:PolinomioVx}
+	d'(v) = 21.49298 v^5 + 21.86894 v^4 + 22.25754 v^3 + 22.65912 v^2 + 23.07406 v
+	+ 23.50272
+\end{equation}
+
+%Odometria
+
+\section{Desenvolvimento dos controladores}
+
+	Nesta seção pretende-se investigar a arquitetura comportamental em robótica 
+	móvel para as duas estratégias clássicas de implementação: arbitragem e fusão de 
+	comportamentos. Para isso, controladores híbrido e fuzzy serão criados, o primeiro
+	para arbitrágem e o segundo para fusão.
+
+	\subsection{Por Controlador Híbrido}
+	
+	Nesta subseção, pretende-se demonstrar um controlador simples capaz de 
+	solucionar o problema de navegação, usando autômato híbrido. Para cada estado
+	no autômato, um controlador é selecionado e uma recomendação de saída é 
+	calculada. 
+	
+		\subsubsection{Comportamento ''Ir Para Objetivo''}
+		
+		\input{Figuras/CompIPO}
+		
+		\subsubsection{Comportamento ''Evitar Obstáculo''}
+		
+		\input{Figuras/CompEO}
+		
+		\subsubsection{Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}
+		
+		\subsubsection{Mínimos locais}
+		
+		\input{Figuras/minimosLocais}
+		
+		\subsubsection{Comportamento ''Seguir parede''}
+		
+		\input{Figuras/CompSP}
+		
+		\input{Figuras/CompSPVetor}
+		
+		\begin{equation}
+			\label{eq:vetorPerpendicularSP1}
+			\mathbf{u_a} \cdot \mathbf{u_t} = \mid \mathbf{u_a} \mid \cdot \mid \mathbf{u_t} \mid \cos(\theta)
+		\end{equation}
+		
+		\begin{equation}
+			\label{eq:vetorPerpendicularSP2}
+			\mathbf{u_a} \cdot \mathbf{u_t} = \mid \mathbf{u_a} \mid \cos(\theta) = d
+		\end{equation}
+		
+		\begin{equation}
+			\label{eq:vetorPerpendicularSP3}
+			\mathbf{u_p} = \mathbf{u_a} - d \cdot \mathbf{u_t}
+		\end{equation}
+		
+		\subsubsection{O autômato para arbitragem de comportamentos}
+	
+		\input{Figuras/automatoHibrido}
+	
+		\input{Tabelas/AutomatoEstados}
+		
+		\input{Tabelas/AutomatoTransicoes}
+	
+	\subsection{Por Controlador \textit{Fuzzy}}
+	
+	Nesta seção, pretende-se demonstrar um controlador simples capaz de solucionar 
+	o problema de navegação, usando sistema \textit{fuzzy}.
+	
+	\subsubsection{Comportamento ''Gerar Recomendação''}
+	
+	a
+	
+	\subsubsection{Comportamento ''Seguir parede''}
+	
+	\subsubsection{Comportamento ''Seguir Recomendação''}
+	
+	\subsubsection{A estratégia para fusão de comportamentos}
+	
+\section{Simulação}
+
+	\subsection{Utilizando controlador Híbrido}
+	
+	a
+	
+	\subsection{Utilizando controlador \textit{Fuzzy}}
+	
+	a
+	
+\section{Montagem Física}
+
+	\subsection{Processo de montagem}
+
+	\subsection{Curvas dos motores}
+
+a
+	
+\section{Implementação do sistema embarcado}
+
+	\subsection{Considerações práticas, limitações do modelo e da simulação}
+
+	\subsection{Esquema lógico do sistema embarcado}
+
+	\subsection{Projeto da placa}
+	
+	a
+	
+	\subsection{Implementação da abordagem Híbrida}
+
+	\subsection{Implementação da solução \textit{Fuzzy}}
+	
+\section{Resultado e Discussão}
+
+	\subsection{Resultado para contrador híbrido}
+
+	a
+	
+	\subsection{Resultado para contrador \textit{fuzzy}}
+
+\chapter{Considerações Finais}
+\vspace{-2.5 cm}
+
+Para concluir esta etapa do trabalho, algumas deliberações precisam ser feitas.
+Por enquanto, uma parte do trabalho foi completamente desconsiderada: estimativa
+do estado do sistema. Para simulação, muitos trabalhos acadêmicos consideram o
+estado atual do robô como um valor conhecido. Para um robô real, autônomo, este
+estado pode ser estimado usando técnicas como observadores, filtro de Kalman,
+odometria, entre outras.
+
+É importante salientar que há um conflito entre os objetivos deste trabalho,
+já que um robô ao mesmo tempo autônomo e sem armazenamento de mapa deve possuir
+a capacidade de estimar com perfeição seu estado atual. Na prática, a estimativa
+de estado carrega erros que são somados no decorrer do tempo de execução. Para
+corrigir tais erros, ou o robô deve armazenar mapa (representação interna do
+mundo à sua volta) e reconhecer locais já visitados, ou o robô precisa de um
+sistema externo (computador com câmera, sistema GPS) que envie correções
+(isso reduz autonomia). 
+
+A segunda solução pode ser adotada neste trabalho, a fim de torná-lo mais focado
+no aspecto de controle e navegação, o que possibilitará explorar as diferentes
+abordagens estipuladas (controle híbrido e \textit{fuzzy}) com maior
+aproveitamento. 
+
+Desta forma, uma comparação qualitativa será efetuada. Esta análise
+deve ser qualitativa pois não existe um padrão de teste (\textit{benchmark})
+amplamente adotado em robótica móvel. Logo, qualquer análise comparativa só pode
+ser qualitativa.
+
+
+
+
+
+
+
+
+% \section{Comandos latex (desconsiderar)}
+% \begin{equation}
+% 	^{A}P = _{B}^{A}R ^{B}P + ^{A}Q_{B_{origem}}
+% 	\label{eq:trans} 
+% \end{equation}
+% 
+% \begin{equation}
+% 	^{A}P = _{B}^{A}T ^{B}P = \mleft[
+% 	\begin{array}{c|c}
+% 		  _{B}^{A}R & ^{A}Q_{B_{Origem}} \\
+% 			  \hline
+% 		  0 \quad 0 \quad 0 & 1
+% 	\end{array}
+% 	\mright] \mleft[ 
+% 	\begin{array}{c c}
+% 	^{B}P_{x} \\ ^{B}P_{y} \\ ^{B}P_{z} \\ 1
+% 	\end{array}
+% 	\mright] = \mleft[
+% 	\begin{matrix}
+% 		  _{B}^{A}R_{11} & _{B}^{A}R_{12} & _{B}^{A}R_{13} & Q_{x} \\
+% 		  _{B}^{A}R_{21} & _{B}^{A}R_{22} & _{B}^{A}R_{23} & Q_{y} \\
+% 		  _{B}^{A}R_{31} & _{B}^{A}R_{32} & _{B}^{A}R_{33} & Q_{z} \\
+% 		  0 & 0 & 0 & 1
+% 	\end{matrix}
+% 	\mright] \mleft[ 
+% 	\begin{array}{c c}
+% 	^{B}P_{x} \\ ^{B}P_{y} \\ ^{B}P_{z} \\ 1
+% 	\end{array}
+% 	\mright]
+% \end{equation} 
+% 
+% \begin{equation}
+% 	_{B}^{A}T^{-1} = _{A}^{B}T = \mleft[
+% 	\begin{array}{c|c}
+% 		  _{B}^{A}R^{T} & -_{B}^{A}R^{T} \: ^{A}Q_{B_{Origem}} \\
+% 		  \hline
+% 		  0 \quad 0 \quad 0 & 1
+% 	\end{array}
+% 	\mright]
+% \end{equation}

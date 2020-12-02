@@ -1,0 +1,45 @@
+\chapter{Materiais e Método}
+\vspace{-2.5 cm}
+
+Este Capítulo descreve os requisitos materiais para o desenvolvimento do
+trabalho e os métodos que serão adotados para atingir os objetivos. 
+
+\section{Materiais}
+
+Os materiais a serem utilizados dividem-se em componentes eletrônicos e
+componentes físicos. Os componentes eletrônicos podem ser vistos na tabela \ref{tab:custo}.
+
+\input{Tabelas/TabelaCustos.tex}
+
+Materiais para o corpo do robô, como chapa de MDF para o chassi, parafusos
+de rosca, abraçadeiras não tiveram seus custos contabilizados.
+
+Entre as ferramentas, será utilizado \textit{software} Matlab, com o
+simulador Simiam \cite{Simiam}, que é implementado como um aplicativo Matlab.
+
+\section{Metodologia}
+
+Neste trabalho o protótipo será desenvolvido tendo como base o robô móvel de
+acionamento diferencial Quickbot \cite{QuickBot}. Porém, esse robô se encontra
+com alguns componentes de hardware obsoletos. Componentes mais atuais serão
+utilizados.
+
+O simulador Simiam será estudado de modo a permitir a inserção de novas
+funcionalidades, como o módulo \textit{fuzzy}, pois este simulador foi
+implementado visando a utilização de uma arquitetura de controle híbrida.  
+
+Em seguida, deve-se projetar os comportamentos do robô que solucionem o problema
+proposto de duas maneiras separadas: utilizando o sistema híbrido e por meio de
+regras \textit{fuzzy}.
+
+Utilizar o simulador Simiam, desenvolvido pela Universidade Georgia
+Tech, para validar o algoritmo de controle.
+
+Num próximo passo, a montagem física deve tomar espaço no cronograma,
+concomitante à implementação do sistema embarcado.
+
+Os testes serão realizados em ambiente pré-definido. Contudo, os obstáculos
+serão colocados em posições distintas para verificar a robustez do algoritmo. 
+
+Para finalizar, o robô móvel e os algoritmos implementados no sistema embarcado
+serão submetidos a testes em protótipo.

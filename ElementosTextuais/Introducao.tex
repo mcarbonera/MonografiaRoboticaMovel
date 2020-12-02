@@ -1,0 +1,137 @@
+\chapter{Introdução}
+\vspace{-2.5 cm}
+% Introdução
+	% Considerações iniciais
+	% Objetivos
+		% Objetivo Geral
+		% Objetivos Específicos
+	% Motivação e justificativa
+	% Estrutura
+
+Este Capítulo apresenta o que se pretende realizar com o desenvolvimento do
+presente trabalho.
+
+\section{Considerações Iniciais} 
+
+A robótica móvel mescla aspectos das engenharias mecânica, elétrica e
+eletrônica, além das ciências cognitiva, social e de computação. Os objetivos da
+robótica móvel são voltados para aplicações diversas, como sensoriamento remoto,
+exploração ou operação em ambientes inóspitos, carros autônomos, além de
+relacionamento com humanos, em tarefas assistivas \cite{Livro_Siegwart}.
+
+Na UTFPR câmpus Pato Branco, entre os trabalhos que tratam de robôs móveis,
+destacam-se: 
+
+a) \citeonline{Tcc_Biesek}, que desenvolveu um robô para estacionamento
+automático.
+
+b) \citeonline{Tcc_Petry}, que desenvolveu um robô seguidor de linha,
+comparando uma arquitetura de controle híbrida (sistema dinâmico combinado a um
+sistema a eventos discretos) com o controle por lógica \textit{Fuzzy}.
+
+c) \citeonline{Tcc_Lopes}, que desenvolveu um robô seguidor de linha, também de
+arquitetura híbrida.
+
+d) \citeonline{Tcc_Marinho}, cujo trabalho aprimorou um robô de
+sumô (robô de competição) previamente disponível. 
+
+A execução de tarefas em robôs autônomos envolve raciocínio automatizado,
+percepção e controle, que incluem problemas como o de planejamento de
+trajetórias. De uma forma geral, esse problema consiste em encontrar um
+trajeto que transporte o robô de uma configuração (posição e direção)
+inicial até uma configuração final. A navegação é, portanto, uma importante área
+de estudo em robôs autônomos \cite{mest_marchi, mest_neto, Tcc_Ottoni}.
+
+No intuito de aumentar robustez na tarefa de navegação, pode-se usar
+\textit{lógica fuzzy}, que permite lidar com incertezas do mundo real
+\cite{inbook:FuzzyNavigationIntech}, já que ruídos podem provocar comportamentos
+erráticos.
+
+A lógica \textit{fuzzy} é um mapeamento não linear de dados de entrada em saídas
+escalares que permite traduzir conhecimento qualitativo (linguístico) em uma
+solução numérica, de modo relativamente direto \cite{Art_Mendel}. 
+
+\subsection{Aspectos qualitativos em robótica móvel}
+
+Conforme \citeonline{Livro_Mataric}, controle de robôs móveis pode ser
+dividido em controle deliberativo, reativo, híbrido (no sentido de
+combinar os aspectos deliberativo e reativo) e baseado em comportamento.
+
+No controle deliberativo, deve-se planejar antes de executar qualquer
+ação. Essa abordagem remonta aos primeiros estudos voltados à aplicação de
+conceitos da Inteligência Artificial (IA) clássica ao campo da robótica. O foco
+desta abordagem é atender metas de longo prazo. Porém o alto custo computacional (manter representação
+interna do ambiente e operar buscas no modelo) traz dificuldades em alcançar
+requisitos de curto prazo (possibilidade iminente de colisão).
+
+O controle reativo, por sua vez, tem como foco uma curta escala de tempo, que
+pode ser obtida pelo estabelecimento de um mapeamento direto entre entradas e
+saídas, sem representação interna do ambiente. Pode ser visto como reflexo ou
+instinto. 
+
+Na arquitetura híbrida, no sentido encontrado no livro de
+\citeonline{Livro_Mataric}, o controle deliberativo (``inteligente, porém
+lento'') e reativo (``rápido, porém inflexível'') são combinados de modo a
+extrair os pontos fortes de cada abordagem. Há a necessidade de implementar uma
+camada intermediária entre os dois tipos, a fim de balancear objetivos
+conflitantes (como escala de tempo). No restante deste texto, o termo
+``arquitetura híbrida'' será usado apenas para designar sistemas que mesclam
+aspectos de controle contínuo e a eventos discretos.  
+
+Por fim, o modo baseado em comportamento surgiu do controle reativo, diferindo
+deste pelo nível de abstração. Enquanto comportamentos descrevem funções como
+``seguir objeto'', ``encontrar objeto'', ``seguir parede'', reações são simples
+ações como ``andar reto'' ou ``virar''. Há também uma distinção na escala de
+tempo das ações, já que comportamentos não são instantâneos e operam ao longo do
+tempo. Tendo em vista que esta arquitetura será utilizada neste trabalho,
+maiores considerações serão tecidas no Capítulo 2.
+
+\section{Objetivos}
+
+O presente trabalho tem por objetivo assimilar aspectos relativos ao campo da
+robótica móvel. Nessa seção, pretende-se delimitar quais objetivos devem ser
+atendidos.
+
+	\subsection{Objetivo Geral}
+	
+	Construir um robô móvel de acionamento diferencial autônomo, sem
+	armazenamento de mapa, capaz de se locomover entre duas referências, desviando
+	de obstáculos, se necessário.
+	
+	Pretende-se comparar qualitativamente soluções por controlador híbrido
+	(sistema a eventos discretos combinado a controladores contínuos) e controlador
+	\textit{fuzzy}, de modo a identificar aspectos positivos e negativos de cada
+	abordagem.
+ 	
+	\subsection{Objetivos Específicos}
+ 
+	\begin{itemize}
+	  \item Levantar o modelo matemático para o robô móvel de acionamento
+	  diferencial.
+	  \item Definir uma arquitetura de controle (utilizando controle híbrido e
+	  lógica \textit{fuzzy}).
+	  \item Construir o robô. 
+	  \item Construir o sistema embarcado com a lógica de controle.
+	  \item Definir um ambiente de teste e validação para o robô. 
+	\end{itemize}
+	
+\section{Motivação e justificativa}
+
+Com os objetivos estipulados, pretende-se explorar o campo da robótica móvel em
+seus aspectos cruciais: navegação e inteligência.
+
+A utilização de lógica fuzzy tem por intuito simplificar o processo de
+projeto, já que a introdução de variáveis linguísticas permite
+resolver o problema em questão utilizando predominantemente conhecimentos
+qualitativos. Deseja-se investigar tal abordagem de forma crítica, verificando
+qualidades e deficiências frente à contraparte híbrida, que utiliza controle
+baseado em comportamento associado a sistemas a eventos discretos.
+
+\section{Estrutura}
+
+Este trabalho está organizado em cinco capítulos: Introdução,
+Referencial Teórico, Materiais e Método e Desenvolvimento. 
+
+As etapas do trabalho referentes a teoria de controle e lógica \textit{fuzzy}
+serão discutidas no Capítulo 2 e desenvolvidas para o robô móvel no Capítulo
+4.

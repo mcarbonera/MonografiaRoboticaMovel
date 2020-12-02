@@ -1,0 +1,8 @@
+graph G {
+mindist = 0.5;
+node [shape="circle"];
+edge [lblstyle="mystyle"];
+a -- b [label="ab"];
+b -- c [label="bc"];
+c -- a [label="ca"];
+}

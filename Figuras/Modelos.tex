@@ -1,0 +1,190 @@
+%\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
+% The axes
+
+\newcommand{\coordsystwo}[1]{
+	\draw[->] (xyz cs:x=0) -- (xyz cs:x=1.5) node[right] {$\hat{X}_{#1}$};
+	\draw[->] (xyz cs:y=0) -- (xyz cs:y=1.5) node[above] {$\hat{Y}_{#1}$};
+	% The thin ticks
+	%\foreach \coo in {-13,-12,...,13}
+	%{
+	%  \draw (\coo,-1.5pt) -- (\coo,1.5pt);
+	%  \draw (-1.5pt,\coo) -- (1.5pt,\coo);
+	%  \draw (xyz cs:y=-0.15pt,z=\coo) -- (xyz cs:y=0.15pt,z=\coo);
+	%}
+	
+	% The thick ticks
+	%\foreach \coo in {-10,-5,5,10}
+	%{
+	%\draw[thick] (\coo,-3pt) -- (\coo,3pt) node[below=6pt] {\coo};
+	%\draw[thick] (-3pt,\coo) -- (3pt,\coo) node[left=6pt] {\coo};
+	%\draw[thick] (xyz cs:y=-0.3pt,z=\coo) -- (xyz cs:y=0.3pt,z=\coo)
+	% node[below=8pt] {\coo}; }
+	
+	% Dashed lines for the points P, Q
+	%\draw[dashed] 
+	%\draw[dashed] (u) -- (v);
+	%\draw[dashed] (-5,7) -- (-5,0) -- (w);
+	%\draw[dashed] (3,0) |- (0,5);
+	
+	% Dots and labels for P, Q
+	%\node[fill,circle,inner sep=1.5pt,label={left:$Q(-5,-5,7)$}] at (0,0) {};
+	%\node[fill,circle,inner sep=1.5pt,label={above:$P(3,0,5)$}] at (3,5) {};
+	% The origin
+
+	% Ponto na origem do sistema de coordenadas
+	\node[fill,circle,inner sep=1pt] at (0,0) {};
+	
+	% Seta para indicar Sistema de coordenadas {X}
+	%\node[align=center] at (2,-2) (ori) {\{#1\}};
+	%\draw[->,help lines,shorten >=3pt] (ori) .. controls (0.6,-1.3) and (1,-1) ..
+	%(0,0,0);
+}
+
+\newcommand{\robodiff}{
+	% Linhas de baixo, lat esq e dir
+	\draw[-, inner sep = 0] (-0.65,-0.75) -- (0.65,-0.75);
+	\draw[-, inner sep = 0] (-0.75,-0.65) -- (-0.75,0.5);
+	\draw[-, inner sep = 0] (0.75,-0.65) -- (0.75,0.5);
+	
+	% bordas de baixo
+	\draw[-, inner sep = 0] (-0.65,-0.75) -- (-0.75,-0.65);
+	\draw[-, inner sep = 0] (0.65,-0.75) -- (0.75,-0.65);
+	
+	% Retas de cima
+	\def\UserL{\fpeval{1.3/(2*cosd(45)+1)}}
+	\draw[-, inner sep = 0] (-0.75,0.5) -- (\fpeval{-0.75+\UserL*cosd(45)},
+	\fpeval{0.5+\UserL*sind(45)});
+	
+	\draw[-, inner sep = 0] (0.75,0.5) -- (\fpeval{0.75-\UserL*cosd(45)},
+	\fpeval{0.5+\UserL*sind(45)});
+	
+	\draw[-, inner sep = 0]
+	(\fpeval{-0.75+\UserL*cosd(45)},\fpeval{0.5+\UserL*sind(45)}) -- (\fpeval{0.75-\UserL*cosd(45)},
+	\fpeval{0.5+\UserL*sind(45)});
+	
+	% Bola de rolamento
+	\filldraw (0,0.65) circle (1.5pt);
+	\draw (0,0.65) circle (3pt);
+	
+	% Desenhar rodas
+	\begin{scope}[shift={(-0.75,-0.65)},rotate = 90]
+		\draw[rounded corners=2pt] (0,0) rectangle ++(0.8,0.2);
+	\end{scope}
+	\begin{scope}[shift={(0.75,-0.65)},rotate = 90]
+		\draw[rounded corners=2pt] (0,0) rectangle ++(0.8,-0.2);
+	\end{scope}
+	
+	%\draw[dashed, -, inner sep = 0] (-0.75,-0.25) -- (0.75,-0.25);
+	
+	% Medida R
+	\draw[-, inner sep = 0] (+1.2,-0.3) -- ++(0,0.5) node[right] at (+1.4,-0.15)
+	{R};
+	\draw[-, inner sep = 0] (+1.25,-0.25) -- ++(-0.1,0);
+	\draw[-, inner sep = 0] (+1.25,0.15) -- ++(-0.1,0);
+	% Medida L
+	\draw[-, inner sep = 0] (-0.8,-1) -- (0.8,-1) node[below] at (-0.1,-1.2){L};
+	\draw[-, inner sep = 0] (-0.75,-1.05) -- ++(0,0.1);
+	\draw[-, inner sep = 0] (0.75,-1.05) -- ++(0,0.1);	
+}
+
+\newcommand{\robodiffinercial}{
+	\begin{tikzpicture}[scale = 1.5]
+		\coordsystwo{I}
+		%\draw[-{latex}, shorten >=1.5pt] (0,0) -- (2,2) node[above] at
+		%(2.1,0.6){$^{A}Q_{B_{origem}}$};
+		% Translação
+		\begin{scope}[shift={(2, 2)}]
+			%\coordsys{A'}
+			% Rotação
+			\draw[->] (0.3,0) arc (0:60:0.3);
+			\draw[-] (0,0) -- (0.4,0);
+			\node at (0.5,0.3) {$\phi$};
+			
+			% Po 
+			\node[color = gray] at (0.1,-0.25) {$P_o$};
+			
+			\begin{scope}[rotate=60]
+				% Ponto Pr
+				\node[fill,circle,inner sep=1pt] at (0.6,0) {};
+			 	\node[color = gray] at (0.65,0.25) {$P_r$};
+			 	\node[color = gray] at (0.3,0.15) {$l$};
+			
+				\coordsystwo{R}
+				\begin{scope}[shift={(0.25,0)},rotate = -90]
+					\robodiff
+				\end{scope}
+				% Flecha até P
+				%\draw[-{latex}, shorten >=1.5pt] (0,0) -- (1,2.4) node[right] {$^{B}P$};
+				% Ponto em P
+				%\node[fill,circle,inner sep=1pt] at (1,2.4) {}; 
+				% Definir ponto para desenhar reta
+				%\node[align=center,inner sep=0pt] at (1,2.4) (Ponto) {};
+			\end{scope}	
+		\end{scope}
+	% Ponto de {A} para {B}
+	%\draw[dashed, -{latex}, shorten >=1pt] (0,0) -- (Ponto) node[above] at (1.5,
+	%1.8) {$^{A}P$};
+	\end{tikzpicture}
+}
+
+\newcommand{\robouniciclo}{
+	\begin{scope}[rotate = 90]
+	\begin{scope}[shift={(-0.6, -0.15)}]
+		\draw[rounded corners=2pt] (0,0) rectangle ++(1.2,0.3);
+	\end{scope}
+	\end{scope}
+}
+
+\newcommand{\robounicicloinercial}{
+	\begin{tikzpicture}[scale = 1.5]
+		\coordsystwo{I}
+		%\draw[-{latex}, shorten >=1.5pt] (0,0) -- (2,2) node[above] at
+		%(2.1,0.6){$^{A}Q_{B_{origem}}$};
+		% Translação
+		\begin{scope}[shift={(2, 2)}]
+			%\coordsys{A'}
+			% Rotação
+			\draw[->] (0.3,0) arc (0:60:0.3);
+			\draw[-] (0,0) -- (0.4,0);
+			\node at (0.6,0.3) {$\phi$};
+			
+			\begin{scope}[rotate=60]
+				\coordsystwo{R}
+				\begin{scope}[rotate = -90]
+					\robouniciclo
+				\end{scope}
+				% Flecha até P
+				%\draw[-{latex}, shorten >=1.5pt] (0,0) -- (1,2.4) node[right] {$^{B}P$};
+				% Ponto em P
+				%\node[fill,circle,inner sep=1pt] at (1,2.4) {}; 
+				% Definir ponto para desenhar reta
+				%\node[align=center,inner sep=0pt] at (1,2.4) (Ponto) {};
+			\end{scope}	
+		\end{scope}
+	% Ponto de {A} para {B}
+	%\draw[dashed, -{latex}, shorten >=1pt] (0,0) -- (Ponto) node[above] at (1.5,
+	%1.8) {$^{A}P$};
+	\end{tikzpicture}
+}
+
+\begin{figure}[h]
+\centering
+\caption{Modelos uniciclo e diferencial} \label{fig:modelo}
+	\begin{subfigure}[t]{0.5\textwidth}%
+		\centering
+		\robounicicloinercial
+		\label{fig:uniciclo}%
+		\caption{Uniciclo}%
+		\end{subfigure}%
+    	~
+    	\begin{subfigure}[t]{0.5\textwidth}%
+		\centering
+		\robodiffinercial
+		\label{fig:diff}%
+		\caption{Diferencial}%
+		\end{subfigure}%
+		
+		\textbf{Fonte: baseado em \citeonline{Livro_Siegwart}, p. 49 e 54.}
+\end{figure}
+
+%\begin{tikzpicture}[x=0.5cm,y=0.5cm,z=0.3cm,>=stealth]
