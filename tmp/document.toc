@@ -44,13 +44,13 @@
 \contentsline {subsubsection}{\numberline {4.3.1.5}Comportamento ''Seguir parede''}{32}{}%
 \contentsline {subsubsection}{\numberline {4.3.1.6}O autômato para arbitragem de comportamentos}{33}{}%
 \contentsline {subsection}{\numberline {4.3.2}Por Controlador \textit {Fuzzy}}{33}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Comportamento ''Gerar Recomendação''}{34}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Comportamento ''Evitar Obstáculo''}{34}{}%
 \contentsline {subsubsection}{\numberline {4.3.2.2}Comportamento ''Seguir parede''}{34}{}%
 \contentsline {subsubsection}{\numberline {4.3.2.3}Comportamento ''Seguir Recomendação''}{34}{}%
 \contentsline {subsubsection}{\numberline {4.3.2.4}A estratégia para fusão de comportamentos}{34}{}%
 \contentsline {section}{\numberline {4.4}\MakeUppercase {Simulação}}{34}{}%
 \contentsline {subsection}{\numberline {4.4.1}Utilizando controlador Híbrido}{34}{}%
-\contentsline {subsection}{\numberline {4.4.2}Utilizando controlador \textit {Fuzzy}}{35}{}%
+\contentsline {subsection}{\numberline {4.4.2}Utilizando controlador \textit {Fuzzy}}{34}{}%
 \contentsline {section}{\numberline {4.5}\MakeUppercase {Montagem Física}}{35}{}%
 \contentsline {subsection}{\numberline {4.5.1}Processo de montagem}{35}{}%
 \contentsline {subsection}{\numberline {4.5.2}Curvas dos motores}{35}{}%
@@ -63,5 +63,5 @@
 \contentsline {section}{\numberline {4.7}\MakeUppercase {Resultado e Discussão}}{36}{}%
 \contentsline {subsection}{\numberline {4.7.1}Resultado para contrador híbrido}{36}{}%
 \contentsline {subsection}{\numberline {4.7.2}Resultado para contrador \textit {fuzzy}}{36}{}%
-\contentsline {chapter}{\numberline {5}\MakeUppercase {Considerações Finais}}{38}{}%
-\contentsline {chapter}{REFER\^ENCIAS}{39}{}%
+\contentsline {chapter}{\numberline {5}\MakeUppercase {Considerações Finais}}{43}{}%
+\contentsline {chapter}{REFER\^ENCIAS}{44}{}%
