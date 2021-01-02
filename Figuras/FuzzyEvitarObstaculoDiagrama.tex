@@ -8,7 +8,7 @@
     pinstyle/.style = {scale = 1.2, pin edge={to-,thin,black}}
 }
 
-\begin{figure}[h]%
+\begin{figure}[ht]%
     \caption{Diagrama do sistema \textit{Fuzzy} ``Evitar Obstáculo''}%
     \centering
     
@@ -23,13 +23,13 @@
 	\node[block, right = 6cm of SDE] (EO) {Evitar Obstáculo};
 	
 	\node[block, right = 6cm of EO, yshift = 0.7cm] (RecYSDE) {RecYSDE};
-	\node[block, above = 1.4cm of RecYSDE, xshift=-0.2cm] (RecXSDE) {RecXSDE};
-	\node[block, above = 1.4cm of RecXSDE, xshift=-0.2cm] (RecYSD) {RecYSD};
-	\node[block, above = 1.4cm of RecYSD, xshift=-0.2cm] (RecYSE) {RecYSE};
-	\node[block, below = 1.4cm of RecYSDE] (RecXSDD) {RecXSDD};
-	\node[block, below = 1.4cm of RecXSDD, xshift=-0.2cm] (RecYSDD) {RecYSDD};
-	\node[block, below = 1.4cm of RecYSDD, xshift=-0.2cm] (RecXSF) {RecXSF};
-	\node[block, below = 1.4cm of RecXSF, xshift=-0.2cm] (RecV) {RecV};
+	%\node[block, above = 1.4cm of RecYSDE, xshift=-0.2cm] (RecXSDE) {RecXSDE};
+	\node[block, above = 1.4cm of RecYSDE] (RecYSD) {RecYSD};
+	\node[block, above = 1.4cm of RecYSD] (RecYSE) {RecYSE};
+	%\node[block, below = 1.4cm of RecYSDE] (RecXSDD) {RecXSDD};
+	\node[block, below = 1.4cm of RecYSDE] (RecYSDD) {RecYSDD};
+	\node[block, below = 1.4cm of RecYSDD] (RecXSF) {RecXSF};
+	\node[block, below = 1.4cm of RecXSF] (RecV) {RecV};
 
 	\draw [->] (SE) -- (EO);
 	\draw [->] (SD) -- (EO);
@@ -39,9 +39,9 @@
 
 	\draw [->] (EO) -- (RecYSE);
 	\draw [->] (EO) -- (RecYSD);
-	\draw [->] (EO) -- (RecXSDE);
+	%\draw [->] (EO) -- (RecXSDE);
 	\draw [->] (EO) -- (RecYSDE);
-	\draw [->] (EO) -- (RecXSDD);
+	%\draw [->] (EO) -- (RecXSDD);
 	\draw [->] (EO) -- (RecYSDD);
 	\draw [->] (EO) -- (RecXSF);
 	\draw [->] (EO) -- (RecV);

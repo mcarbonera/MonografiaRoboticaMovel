@@ -450,6 +450,54 @@ na Figura \ref{fig:Sliding}.
 O termo ``comportamento de Zenão'' faz alusão ao filósofo grego Zenão de
 Eleia, conhecido pelos seus famosos paradoxos \cite{art:Magnus_Behavior}. 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%				 PID				 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Controlador PID}
+
+O controlador PID é um tipo de controle por realimentação no qual a ação de 
+controle é constituída por três termos: proporcional (P), integral (I) e 
+derivativo (D) \cite{LivroControlePID}.
+
+A Equação \ref{eq:pid_continuo} mostra o cálculo da ação de controle, onde $k_p$, $k_i$ e $k_d$
+são constantes dos termos proporcional, integral e derivativo, respectivamente. O termo $e(t)$
+é o erro da variável a ser controlada \cite{LivroControlePID}.   
+
+\begin{equation}
+	\label{eq:pid_continuo}	
+	u(t) = k_p e(t) + k_i \int_0^t e(\tau) d\tau + k_d \frac{de(t)}{dt}
+\end{equation}
+
+A Figura \ref{fig:pidGrafico} mostra uma representação gráfica da ação do controlador. O termo
+proporcional considera o erro atual e, portanto, leva em conta o presente. O termo integral 
+considera a soma dos erros e por isso leva em conta o passado. O termo derivativo projeta a tendência
+do sinal de controle e, consequentemente, leva em conta uma espécie de previsão do futuro. As 
+constantes retratam o grau de importância do termo para a composição do sinal de 
+controle \cite{LivroControlePID}.
+
+\input{Figuras/PIDPassadoPresenteFuturo}
+
+A Equação \ref{eq:pid_continuo} representa a ação de controle em tempo contínuo. A equação em
+tempo discreto é necessária para implementação computacional. O termo integral é calculado por
+integração numérica e o termo derivativo por equação de diferenças. A Equação \ref{eq:pid_discreto} 
+representa a discretização do controlador PID, onde $T_d$ é o período da 
+discretização \cite{LivroControlePID}.
+
+\begin{equation}
+	\label{eq:pid_discreto}	
+	u(k) = k_p e(k) + k_i T_d \sum_0^k e(k) + k_d \frac{e(k) - e(k-1)}{T_d}
+\end{equation}
+
+Duas considerações práticas são muito importantes em robôs móveis. O \textit{Windup} é uma 
+não-linearidade que ocorre quando a saída do controlador é maior que a capacidade dos atuadores,
+o que leva à saturação e, consequentemente, degradação de performance. A zona morta é outra 
+não-linearidade que ocorre quando a saída do controlador é muito pequena e o atuador, por conta 
+de forças de atrito, é incapaz de responder ao sinal de controle \cite{LivroControlePID}.
+
+No caso do \textit{Windup}, o robô perde capacidade de cumprir requisitos de velocidade angular. É 
+importante, após o cálculo da atuação, verificar a ocorrência de saturação e, se necessário, 
+sacrificar o requisito de velocidade linear a fim de cumprir o requisito de velocidade angular.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			Lógica Fuzzy				%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -621,6 +669,35 @@ ao número de variáveis \cite{fuzzy_passino}.
 	ilustrado na Figura \ref{fig:Defuzzificacao}.
 	
 	\input{Figuras/FuzzyDefuzzificacao}
+
+	As duas curvas da Figura \ref{fig:Defuzzificacao} possuem áreas sobrepostas que estão
+	sendo somadas duas vezes no cálculo de defuzzificação. Algumas bibliografias (por exemplo, 
+	\citeonline{fuzzy_passino}) citam a existência de um cálculo global, que utiliza todas 
+	as funções para calcular a chamada ``função de agregação'' e o centro de massa é calculado
+	sobre ela. 
+	
+	Nem todas as bibliografias mostram exemplos utilizando este método, por conta do custo 
+	computacional. Porém, ao longo do desenvolvimento, observou-se que o simulador (Matlab) 
+	estava computando a função de agregação por integração numérica, o que gerava diferenças 
+	de resultado no cálculo do microcontrolador. A função de agregação em simulação está sendo 
+	calculada aplicando a função $max()$ sobre todas as funções parciais (verificado 
+	empiricamente). A Equação \ref{eq:COG_Global}, encontrada em \citeonline{fuzzy_ross} 
+	mostra a saída \textit{fuzzy} sobre a função de agregação, pelo método do centroide.
+	\begin{equation}
+		\label{eq:COG_Global}
+		u_{crisp} = \frac{\int \mu^* (x) x dx}{\int \mu^* (x) dx}
+	\end{equation}
+	
+	Para manter o resultado da implementação fiel à simulação, mas ao mesmo tempo evitar ter 
+	de realizar um método de integração numérica no microcontrolador, foi desenvolvida uma forma
+	de calcular a integral analítica da curva, o que reduz complexidade computacional, ao custo
+	de aumentar complexidade de espaço para o armazenamento de uma estrutura de dados. 
+	
+	Foi utilizada uma lista encadeada para armazenar parâmetros das funções de pertinência. 
+	A lista é ordenada pela posição do centro de massa da função de pertinência no eixo X. Como 
+	essas funções são todas triangulares, a função de agregação é descontínua, porém formada por 
+	retas. O algoritmo para cálculo do centro de massa, ao percorrer a lista, calcula e soma 
+	as integrais definidas parciais. 
 	
 \section{Odometria}
 

@@ -17,51 +17,52 @@
 \contentsline {section}{\numberline {2.4}\MakeUppercase {Sistemas a eventos discretos}}{15}{}%
 \contentsline {subsection}{\numberline {2.4.1}Autômatos temporizados com guardas}{16}{}%
 \contentsline {section}{\numberline {2.5}\MakeUppercase {Sistemas híbridos}}{17}{}%
-\contentsline {section}{\numberline {2.6}\MakeUppercase {Lógica \textit {Fuzzy} em Controle}}{19}{}%
-\contentsline {subsection}{\numberline {2.6.1}Conjuntos Fuzzy}{20}{}%
-\contentsline {subsection}{\numberline {2.6.2}Componentes de um Sistema \textit {Fuzzy}}{22}{}%
-\contentsline {subsubsection}{\numberline {2.6.2.1}Fuzzificação}{22}{}%
-\contentsline {subsubsection}{\numberline {2.6.2.2}Mecanismo de Inferência}{23}{}%
-\contentsline {subsubsection}{\numberline {2.6.2.3}Defuzzificação}{23}{}%
-\contentsline {section}{\numberline {2.7}\MakeUppercase {Odometria}}{24}{}%
-\contentsline {chapter}{\numberline {3}\MakeUppercase {Materiais e Método}}{26}{}%
-\contentsline {section}{\numberline {3.1}\MakeUppercase {Materiais}}{26}{}%
-\contentsline {section}{\numberline {3.2}\MakeUppercase {Metodologia}}{26}{}%
-\contentsline {chapter}{\numberline {4}\MakeUppercase {Desenvolvimento}}{28}{}%
-\contentsline {section}{\numberline {4.1}\MakeUppercase {O simulador Simiam e alterações necessárias}}{28}{}%
-\contentsline {subsection}{\numberline {4.1.1}Pacote ``ui''}{29}{}%
-\contentsline {subsection}{\numberline {4.1.2}Pacote ``simulator''}{29}{}%
-\contentsline {subsection}{\numberline {4.1.3}Pacote ``robot''}{30}{}%
-\contentsline {subsection}{\numberline {4.1.4}Pacote ``controller''}{30}{}%
-\contentsline {section}{\numberline {4.2}\MakeUppercase {Montagem física do robô}}{31}{}%
-\contentsline {subsection}{\numberline {4.2.1}Especificações}{31}{}%
-\contentsline {section}{\numberline {4.3}\MakeUppercase {Desenvolvimento dos controladores}}{31}{}%
-\contentsline {subsection}{\numberline {4.3.1}Por Controlador Híbrido}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Comportamento ''Ir Para Objetivo''}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}Comportamento ''Evitar Obstáculo''}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.4}Mínimos locais}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.5}Comportamento ''Seguir parede''}{32}{}%
-\contentsline {subsubsection}{\numberline {4.3.1.6}O autômato para arbitragem de comportamentos}{33}{}%
-\contentsline {subsection}{\numberline {4.3.2}Por Controlador \textit {Fuzzy}}{33}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Comportamento ''Evitar Obstáculo''}{34}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Comportamento ''Seguir parede''}{34}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}Comportamento ''Seguir Recomendação''}{34}{}%
-\contentsline {subsubsection}{\numberline {4.3.2.4}A estratégia para fusão de comportamentos}{34}{}%
-\contentsline {section}{\numberline {4.4}\MakeUppercase {Simulação}}{34}{}%
-\contentsline {subsection}{\numberline {4.4.1}Utilizando controlador Híbrido}{34}{}%
-\contentsline {subsection}{\numberline {4.4.2}Utilizando controlador \textit {Fuzzy}}{34}{}%
-\contentsline {section}{\numberline {4.5}\MakeUppercase {Montagem Física}}{35}{}%
-\contentsline {subsection}{\numberline {4.5.1}Processo de montagem}{35}{}%
-\contentsline {subsection}{\numberline {4.5.2}Curvas dos motores}{35}{}%
-\contentsline {section}{\numberline {4.6}\MakeUppercase {Implementação do sistema embarcado}}{36}{}%
-\contentsline {subsection}{\numberline {4.6.1}Considerações práticas, limitações do modelo e da simulação}{36}{}%
-\contentsline {subsection}{\numberline {4.6.2}Esquema lógico do sistema embarcado}{36}{}%
-\contentsline {subsection}{\numberline {4.6.3}Projeto da placa}{36}{}%
-\contentsline {subsection}{\numberline {4.6.4}Implementação da abordagem Híbrida}{36}{}%
-\contentsline {subsection}{\numberline {4.6.5}Implementação da solução \textit {Fuzzy}}{36}{}%
-\contentsline {section}{\numberline {4.7}\MakeUppercase {Resultado e Discussão}}{36}{}%
-\contentsline {subsection}{\numberline {4.7.1}Resultado para contrador híbrido}{36}{}%
-\contentsline {subsection}{\numberline {4.7.2}Resultado para contrador \textit {fuzzy}}{36}{}%
-\contentsline {chapter}{\numberline {5}\MakeUppercase {Considerações Finais}}{43}{}%
-\contentsline {chapter}{REFER\^ENCIAS}{44}{}%
+\contentsline {section}{\numberline {2.6}\MakeUppercase {Controlador PID}}{19}{}%
+\contentsline {section}{\numberline {2.7}\MakeUppercase {Lógica \textit {Fuzzy} em Controle}}{21}{}%
+\contentsline {subsection}{\numberline {2.7.1}Conjuntos Fuzzy}{22}{}%
+\contentsline {subsection}{\numberline {2.7.2}Componentes de um Sistema \textit {Fuzzy}}{23}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.1}Fuzzificação}{23}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.2}Mecanismo de Inferência}{24}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.3}Defuzzificação}{24}{}%
+\contentsline {section}{\numberline {2.8}\MakeUppercase {Odometria}}{26}{}%
+\contentsline {chapter}{\numberline {3}\MakeUppercase {Materiais e Método}}{28}{}%
+\contentsline {section}{\numberline {3.1}\MakeUppercase {Materiais}}{28}{}%
+\contentsline {section}{\numberline {3.2}\MakeUppercase {Metodologia}}{28}{}%
+\contentsline {chapter}{\numberline {4}\MakeUppercase {Desenvolvimento}}{30}{}%
+\contentsline {section}{\numberline {4.1}\MakeUppercase {O simulador Simiam e alterações necessárias}}{30}{}%
+\contentsline {subsection}{\numberline {4.1.1}Pacote ``ui''}{31}{}%
+\contentsline {subsection}{\numberline {4.1.2}Pacote ``simulator''}{31}{}%
+\contentsline {subsection}{\numberline {4.1.3}Pacote ``robot''}{32}{}%
+\contentsline {subsection}{\numberline {4.1.4}Pacote ``controller''}{32}{}%
+\contentsline {section}{\numberline {4.2}\MakeUppercase {Montagem física do robô}}{33}{}%
+\contentsline {subsection}{\numberline {4.2.1}Especificações}{33}{}%
+\contentsline {section}{\numberline {4.3}\MakeUppercase {Desenvolvimento dos controladores}}{33}{}%
+\contentsline {subsection}{\numberline {4.3.1}Por Controlador Híbrido}{34}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Comportamento ''Ir Para Objetivo''}{35}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Comportamento ''Evitar Obstáculo''}{35}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}{37}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.4}Mínimos locais}{37}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.5}Comportamento ''Seguir parede''}{37}{}%
+\contentsline {subsubsection}{\numberline {4.3.1.6}O autômato para arbitragem de comportamentos}{38}{}%
+\contentsline {subsection}{\numberline {4.3.2}Por Controlador \textit {Fuzzy}}{38}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Comportamento ''Evitar Obstáculo''}{39}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Comportamento ''Seguir parede''}{39}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Comportamento ''Seguir Recomendação''}{39}{}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}A estratégia para fusão de comportamentos}{39}{}%
+\contentsline {section}{\numberline {4.4}\MakeUppercase {Simulação}}{39}{}%
+\contentsline {subsection}{\numberline {4.4.1}Utilizando controlador Híbrido}{39}{}%
+\contentsline {subsection}{\numberline {4.4.2}Utilizando controlador \textit {Fuzzy}}{39}{}%
+\contentsline {section}{\numberline {4.5}\MakeUppercase {Montagem Física}}{40}{}%
+\contentsline {subsection}{\numberline {4.5.1}Processo de montagem}{40}{}%
+\contentsline {subsection}{\numberline {4.5.2}Curvas dos motores}{40}{}%
+\contentsline {section}{\numberline {4.6}\MakeUppercase {Implementação do sistema embarcado}}{40}{}%
+\contentsline {subsection}{\numberline {4.6.1}Considerações práticas, limitações do modelo e da simulação}{40}{}%
+\contentsline {subsection}{\numberline {4.6.2}Esquema lógico do sistema embarcado}{40}{}%
+\contentsline {subsection}{\numberline {4.6.3}Projeto da placa}{40}{}%
+\contentsline {subsection}{\numberline {4.6.4}Implementação da abordagem Híbrida}{41}{}%
+\contentsline {subsection}{\numberline {4.6.5}Implementação da solução \textit {Fuzzy}}{41}{}%
+\contentsline {section}{\numberline {4.7}\MakeUppercase {Resultado e Discussão}}{41}{}%
+\contentsline {subsection}{\numberline {4.7.1}Resultado para contrador híbrido}{41}{}%
+\contentsline {subsection}{\numberline {4.7.2}Resultado para contrador \textit {fuzzy}}{41}{}%
+\contentsline {chapter}{\numberline {5}\MakeUppercase {Considerações Finais}}{49}{}%
+\contentsline {chapter}{REFER\^ENCIAS}{50}{}%

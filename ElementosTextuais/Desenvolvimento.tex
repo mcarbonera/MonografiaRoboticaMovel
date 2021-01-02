@@ -146,15 +146,128 @@ a função polyfit do Matlab pode ser visto na Equação \ref{eq:PolinomioVx}.
 	no autômato, um controlador é selecionado e uma recomendação de saída é 
 	calculada. 
 	
+	A recomendação para todos os comportamentos é dada por um vetor. Seu ângulo é calculado 
+	para  o sistema de coordenadas global e, subtraindo o ângulo do robô, o erro é calculado. 
+	A partir do erro, um controlador PID calcula a velocidade angular. 
+		
+	A velocidade linear é definida inicialmente como fixa, sendo que cada comportamento pode 
+	definir sua velocidade máxima. Após o cálculo de velocidade angular pelo controlador, a 
+	Equação \ref{eq:vw_to_diff} é utilizada para calcular velocidades angulares dos motores
+	que atendam aos requisitos de velocidade linear e angular do modelo uniciclo. Contudo, 
+	$w_l$ e $w_r$ podem estar saturadas ou em região de zona morta. 
+	
+	Em condição de saturação, a velocidade linear é sacrificada para atender o requisito 
+	de velocidade angular. A diferença entre a velocidade sugerida e a velocidade máxima 
+	permitida pelos motores é subtraída de $w_l$ e $w_r$. 
+	
+	Para evitar zona morta, a diferença entre velocidade mínima permitida e velocidade 
+	sugerida é adicionada a $w_l$ e $w_r$ para evitar travamento das rodas devido ao atrito.
+	
 		\subsubsection{Comportamento ''Ir Para Objetivo''}
+		
+		O comportamento ``Ir Para Objetivo'', exemplificado na Figura \ref{fig:CompIPO}, calcula 
+		um vetor normalizado que aponta para o objetivo a partir do centro de massa do robô. O 
+		vetor é calculado operando $P_o - P_r$, onde $P_o$ e $P_r$ são pontos que podem ser 
+		vistos na Figura. A recomendação para velocidade linear é a máxima, já que o robô 
+		está livre de obstáculos.
 		
 		\input{Figuras/CompIPO}
 		
+		O controlador PID para comportamento ``Ir Para Objetivo'' possui parâmetros $k_p = 4$ e 
+		$k_i = k_d = 0,01$. O erro no ângulo, entrada do controlador, é calculado pela Equação
+		\ref{eq:vetor_ipo}, onde $\phi$ é o ângulo do robô e a função $atan2()$ é o arco 
+		tangente com dois parâmetros, presente em muitas linguagens de programação, 
+		tendo a vantagem de calcular o ângulo sem dúvidas quanto ao quadrante.
+		\begin{equation}
+			\label{eq:vetor_ipo}
+			e_\theta = atan2(v_y, v_x) - \phi
+		\end{equation}
+		
 		\subsubsection{Comportamento ''Evitar Obstáculo''}
+		
+		O comportamento ``Evitar Obstáculo'' calcula um vetor cujo objetivo é afastar o robô de 
+		barreiras encontradas. A Figura \ref{fig:CompEO}.a mostra a disposição dos 
+		sensores enquanto a Figura \ref{fig:CompEO}.b mostra vetores com origem nas coordenadas dos 
+		sensores e cujos módulos são iguais às distâncias medidas. 
 		
 		\input{Figuras/CompEO}
 		
+		É interessante definir sistemas de coordenadas para cada sensor de modo que a coordenada
+		do obstáculo possa ser representada como um vetor da forma $[d_i\ 0]^T$, onde $d_i$ é a 
+		distância detectada pelo i-ésimo sensor. Assim, a representação é extremamente simples
+		e, com matrizes de rotação, pode-se encontrar suas posições no sistemas de coordenadas
+		do robô. 
+		
+		A representação dos obstáculos no sistema de coordenadas do robô está retratada na 
+		Equação \ref{eq:ao_robot_frame}, onde $\theta_i$ é o ângulo do i-ésimo sensor, $d_i$ é a 
+		distância ao obstáculo (pode estar saturada) e $[o_x\ o_y]_i^T$ é um vetor na coordenada
+		do robô que define um \textit{offset}, apontando para a origem do sistema de coordenadas
+		do sensor.
+		
+		\begin{equation}
+			\label{eq:ao_robot_frame}
+			\mleft[ 
+			\begin{array}{c c}
+				x \\ y
+			\end{array}
+			\mright]_i^R = \mleft[
+			\begin{matrix}
+		  		\cos{\theta_i} & -\sin{\theta_i} \\
+		  		\sin{\theta_i} & \cos{\theta_i} \\
+			\end{matrix}
+			\mright] \mleft[ 
+			\begin{array}{c c}
+				d_i \\ 0
+			\end{array}
+			\mright] + \mleft[ 
+			\begin{array}{c c}
+				o_x \\ o_y
+			\end{array}
+			\mright]_i^R
+		\end{equation}
+
+		Os cinco sensores foram posicionados de modo a formar ângulos de $-\pi/2$, $-\pi/4$,
+		$0$, $\pi/4$ e $\pi/2$, respectivamente. Os cinco vetores no sistema de coordenadas do 
+		robô são combinados linearmente para formar uma única recomendação. A recomendação é 
+		dada pela Equação \ref{eq:eo_comb_linear}.
+		
+		\begin{equation}
+			\label{eq:eo_comb_linear}
+			\mathbf{u_{eo}} = k_1 \mathbf{v_1} + k_2 \mathbf{v_2} + k_3 \mathbf{v_3} + 
+			k_4 \mathbf{v_4} + k_5 \mathbf{v_5} + \mathbf{v_{eq}}
+		\end{equation}
+		
+		As constantes $k_1$ a $k_5$ valem respectivamente, 0.7, 2, 1.2, 2 e 0.7. Elas
+		foram definidas a partir de simulação. A razão de considerar peso maior para os sensores
+		diagonais ($-\pi/4$ e $\pi/4$) é causar uma deflexão ao encontrar obstáculos frontais. 
+		O peso pequeno nos sensores laterais ($-\pi/2$ e $\pi/2$) é devido ao baixo risco de 
+		colisão, já que o sentido de movimento do robô é perpendicular a estes obstáculos.
+		
+		Em condição de ausência de obstáculos, os módulos dos vetores $v_1$ a $v_5$ estarão 
+		saturados em 80 (calculo dos sensores em centímetros). Neste caso, a soma dos cinco 
+		primeiros termos tem como resultante um vetor ao longo do eixo X no sistema de 
+		coordenadas do robô. Ao encontrar uma parede posicionada na perpendicular em relação 
+		ao sentido de movimento, a resultante continuaria no eixo X, provocando colisão. 
+		O vetor $\mathbf{v_{eq}}$ tem por objetivo reduzir a magnitude da resultante. Seu
+		módulo poderia ser definido de modo que a resultante se torne zero a uma distância 
+		segura do obstáculo. 
+		
+		A condição de equilíbrio é indesejável, pois o robô não atinge o objetivo, mas 
+		este caso é um excelente ponto de partida para compreender o comportamento
+		de evitar obstáculo. A partir do equilibrio, se for adicionado um obstáculo em qualquer 
+		sensor (ou aproximado um obstáculo já existente), a magnitude do vetor correspondente 
+		diminui, e a resultante será no sentido contrário.
+		
+		O valor de $\mathbf{v_{eq}}$ foi definido como $[-240 \ 0]^T$, de modo que o robô não
+		para até se chocar com o obstáculo. Portanto, o efeito deste vetor é apenas reduzir a
+		aparente ``inercia'' e aumentar o efeito de deflexão ao encontrar obstáculos em ângulos
+		oblíquos. Para aproximações com angulos retos, é necessário um cálculo diferente.
+		
+		
+		
 		\subsubsection{Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}
+		
+		deflexão!
 		
 		\subsubsection{Mínimos locais}
 		
@@ -204,6 +317,8 @@ a função polyfit do Matlab pode ser visto na Equação \ref{eq:PolinomioVx}.
 	
 	\input{Figuras/FuzzyEvitarObstaculoOutputV}
 	
+	\input{Tabelas/FuzzyEvitarObstaculoTabelaRegras}
+	
 	\subsubsection{Comportamento ''Seguir parede''}
 
 	\input{Figuras/FuzzySeguirParedeDiagrama}
@@ -211,6 +326,8 @@ a função polyfit do Matlab pode ser visto na Equação \ref{eq:PolinomioVx}.
 	\input{Figuras/FuzzySeguirParedeCurvaAtivacao}
 
 	\input{Figuras/FuzzySeguirParedeSaidas}
+	
+	\input{Tabelas/FuzzySeguirParedeTabelaRegras}
 	
 	\subsubsection{Comportamento ''Seguir Recomendação''}
 	
@@ -222,6 +339,8 @@ a função polyfit do Matlab pode ser visto na Equação \ref{eq:PolinomioVx}.
 	
 	\input{Figuras/FuzzySeguirVetorSaidasW}
 	
+	\input{Tabelas/FuzzySeguirVetorVelocidades}
+		
 	\subsubsection{A estratégia para fusão de comportamentos}
 	
 \section{Simulação}
