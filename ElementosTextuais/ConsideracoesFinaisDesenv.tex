@@ -1,0 +1,28 @@
+\chapter{Considerações Finais}
+\vspace{-2.5 cm}
+
+Para concluir esta etapa do trabalho, algumas deliberações precisam ser feitas.
+Por enquanto, uma parte do trabalho foi completamente desconsiderada: estimativa
+do estado do sistema. Para simulação, muitos trabalhos acadêmicos consideram o
+estado atual do robô como um valor conhecido. Para um robô real, autônomo, este
+estado pode ser estimado usando técnicas como observadores, filtro de Kalman,
+odometria, entre outras.
+
+É importante salientar que há um conflito entre os objetivos deste trabalho,
+já que um robô ao mesmo tempo autônomo e sem armazenamento de mapa deve possuir
+a capacidade de estimar com perfeição seu estado atual. Na prática, a estimativa
+de estado carrega erros que são somados no decorrer do tempo de execução. Para
+corrigir tais erros, ou o robô deve armazenar mapa (representação interna do
+mundo à sua volta) e reconhecer locais já visitados, ou o robô precisa de um
+sistema externo (computador com câmera, sistema GPS) que envie correções
+(isso reduz autonomia). 
+
+A segunda solução pode ser adotada neste trabalho, a fim de torná-lo mais focado
+no aspecto de controle e navegação, o que possibilitará explorar as diferentes
+abordagens estipuladas (controle híbrido e \textit{fuzzy}) com maior
+aproveitamento. 
+
+Desta forma, uma comparação qualitativa será efetuada. Esta análise
+deve ser qualitativa pois não existe um padrão de teste (\textit{benchmark})
+amplamente adotado em robótica móvel. Logo, qualquer análise comparativa só pode
+ser qualitativa.

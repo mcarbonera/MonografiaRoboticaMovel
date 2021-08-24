@@ -1,4 +1,4 @@
-\chapter{Referencial Teórico}
+\chapter{Referencial Teórico \label{CAP:TEORIA}}
 \vspace{-2.5 cm}
 
 Este Capítulo busca explanar os principais conceitos relacionados ao tema. 
@@ -79,7 +79,11 @@ velocidades linear e angular.
 
 O modelo cinemático pode ser visto na Equação
 \ref{eq:uniciclo} \cite{lavalle2006planning}. A Equação \ref{eq:unimat}
-representa o uniciclo na forma matricial \cite{Livro_Siegwart}.
+representa o uniciclo na forma matricial \cite{Livro_Siegwart}. Nestas equações,
+as variáveis $\dot{x}$ e $\dot{y}$ representam as taxas de variação 
+para as coordenadas do robô, $\dot{\phi}$ é a taxa de variação para o ângulo do robô
+em relação ao eixo $\textit{x}$ e as variáveis $v$ e $\omega$ representam as velocidades
+linear e angular do robô, respectivamente.
 \begin{equation}
 	\label{eq:uniciclo}
 	\left \{ \begin{matrix} \dot{x} &= v\cos{\phi} \\ \dot{y} &= v\sin{\phi} \\
@@ -108,6 +112,10 @@ representa o uniciclo na forma matricial \cite{Livro_Siegwart}.
 
 Neste modelo (Equação \ref{eq:diff}), são consideradas como entradas as
 velocidades angulares das rodas esquerda e direita \cite{lavalle2006planning}. 
+As variáveis $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ são as mesmas já descritas no
+modelo uniciclo. Já $\omega_l$ e $\omega_r$ são as velocidades angulares para os
+motores esquerdo e direito, respectivamente. A constante R é o raio dos pneus e a
+constante L é a distância entre pneus.
 \begin{equation}
 	\label{eq:diff}
 	\left \{ \begin{matrix} \dot{x} = \frac{R}{2}(\omega_l +
@@ -124,13 +132,23 @@ O robô móvel de acionamento diferencial, arquitetura usada neste trabalho, é
 cinematicamente equivalente ao uniciclo \cite{tese:franca}. Isso pode ser
 mostrado igualando $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ das Equações
 \ref{eq:uniciclo} e \ref{eq:diff}. Resolvendo para $\omega_l$ e $\omega_r$,
-tem-se a igualdade da Equação \ref{eq:vw_to_diff}.
+tem-se a igualdade da Equação \ref{eq:vw_to_diff}. Resolvendo para $v$ e $\omega$,
+tem-se o a igualdade da Equação \ref{eq:diff_to_vw}. Tem-se, portanto, as duas expressões
+necessárias para conversão entre modelos.
 \begin{equation}
 	\label{eq:vw_to_diff}
 	\begin{matrix}
 	\omega_l = \frac{2v - L\omega}{2R} 
 	\\
 	\omega_r = \frac{2v + L\omega}{2R}
+	\end{matrix}
+\end{equation}
+\begin{equation}
+	\label{eq:diff_to_vw}
+	\begin{matrix}
+	v = \frac{R}{2} (\omega_l + \omega_r) 
+	\\
+	\omega = \frac{R}{L} (\omega_r - \omega_l)
 	\end{matrix}
 \end{equation}
 
@@ -186,10 +204,11 @@ Em \citeonline{art:Magnus_PMPC}, uma técnica é explorada a fim de tratar o
 modelo diferencial pelo modelo de integrador-único (ponto controlado por
 velocidade, ou, $\mathbf{\dot{x}} = \mathbf{u}$). Os autores utilizam como
 referência um ponto deslocado em relação ao ponto no centro entre as duas rodas.
-A Figura \ref{fig:modelo}.b indica a posição deste ponto ($P_r$) e a Equação
-\ref{eq:Pr} mostra os valores de x e y para a nova referência. Derivando e
+A Figura \ref{fig:modelo}.b indica a posição deste ponto ($P_r$). O valor $l$ também
+pode ser visto na Figura e é justamente a distância entre a origem e $P_r$. A Equação 
+\ref{eq:Pr} mostra os valores de $x$ e $y$ para a nova referência. Derivando e
 substituindo $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ da Equação \ref{eq:uniciclo},
-obtem-se a Equação \ref{eq:PrDeriv}.
+obtem-se a Equação \ref{eq:PrDeriv}. 
 \begin{equation}
 	\label{eq:Pr}
 	\left \{ \begin{matrix} x' = x_o + l\cos{\phi}
@@ -311,11 +330,10 @@ força, de modo que a aceleração é obtida considerando massa
 o campo vetorial definido indica velocidades. Os vetores velocidade calculados
 podem ser usados como entrada do modelo de integrador único.
 
-Apesar do modelo não ser controlável por técnicas lineares, é possível utilizar 
-controle PID para seguir ângulo, com a limitação de não ter controle sobre 
-velocidades linear ou angular. Para aplicações onde a convergência não tem
-restrições temporais significativas, controle angular é suficiente e será 
-utilizado no caso deste trabalho.
+Apesar do modelo não ser controlável por técnicas lineares, é possível utilizar controle PID 
+para seguir ângulo, com a limitação de não ter controle sobre velocidade linear. Para 
+aplicações onde a convergência não tem restrições temporais significativas, controlar o ângulo
+é suficiente e será utilizado no caso deste trabalho.
 
 % Campo potencial X Campo vetorial de velocidades.
 
@@ -359,8 +377,8 @@ ocorrência \cite{book:SED}. Um esquema desta interação pode ser visto na Figu
 
 Uma representação mais completa é o autômato temporizado com guardas, que possui
 um conjunto de variáveis contínuas e em função do tempo denominadas
-\textit{clocks}, cuja dinâmica é linear. O temporizador pode ser usado para
-estabelecer condições que provocam transições. Durante essas transições, a
+\textit{clocks}, cuja dinâmica é linear. O \textit{clock} é um temporizador que pode 
+ser usado para estabelecer condições para efetuar transições. Durante essas transições, a
 variável temporizada pode sofrer \textit{reset} (onde o valor 0 é atribuido)
 \cite{book:SED}.
 
@@ -376,11 +394,18 @@ diagramas de transição são mostrados na Figura \ref{fig:ATG}.
 
 \input{Figuras/AutTempGuarda}
 
-Em casos nos quais a condição de guarda deixa de ser válida, como, por exemplo,
-quando no estado 2 da Figura \ref{fig:ATG}.a, $c_1$ se torna maior ou igual a 1, ocorre
-\textit{deadlock} por tempo (\textit{timelock}). Quando é necessário forçar a
-ocorrência de um evento para evitar \textit{timelock}, modela-se como na Figura
-\ref{fig:ATG}.b. A condição associada a um estado é chamada Invariante
+Para exemplificar, na Figura \ref{fig:ATG}.a a transição do estado 1 para o estado 2
+só ocorre se o evento '$a$' acontecer enquanto o contador $c_1$ possuir valor maior do que 
+zero e menor do que 1. Se a condição de guarda deixar de ser válida, o evento '$a$' não
+provoca transição para o estado 2, mas sim, ocorre a transição reflexiva 
+``$(c_1 \geq 1; a; c_1)$'', o valor do \textit{reset} ($c_1$) indica que este clock será 
+zerado e a transição para o estado 2 volta a ser possível.
+
+Em casos nos quais a condição de guarda deixa de ser válida e nenhuma outra transição 
+puder acontecer, como, por exemplo, o estado 2 da Figura \ref{fig:ATG}.a, $c_1$ se torna 
+maior ou igual a 1, ocorre \textit{deadlock} por tempo (\textit{timelock}). Quando é 
+necessário forçar a ocorrência de um evento para evitar \textit{timelock}, modela-se como 
+na Figura \ref{fig:ATG}.b. A condição associada a um estado é chamada Invariante
 \cite{book:SED}.
 
 %Dois exemplo de diagramas de transição são mostrados na Figura
@@ -396,14 +421,21 @@ conjunto de temporizadores (variáveis contínuas), ``Tra'' é um conjunto de
 transições temporizadas, ``Inv'' é um conjunto de invariantes e $q_0$ é o
 estado inicial \cite{book:SED}.
 
-\section{Sistemas híbridos}
+\section{Sistemas híbridos \label{SEC:SISTEMASHIBRIDOS}}
 
 Sistemas híbridos são formados quando Sistemas Dinâmicos de Variável
 Contínua (SDVC) e Sistemas a Eventos Discretos (SED) funcionam de maneira
 conjunta. Neste caso, controladores de variável contínua são abstraídos
 por um SED. Transições de estado provocam transições ou ``chaveamento'' entre
 controladores \cite{book:SED}. A Figura \ref{fig:supervisorio} mostra o esquema
-da arquitetura de controle de um sistema híbrido.
+da arquitetura de controle de um sistema híbrido, onde o bloco ``Sistema'' representa
+a planta a ser controlada, o bloco ``Controlador de Variável Contínua'' é o controlador
+de um sistema de controle clássico. Os dois blocos inferiores são abstraídos como um
+Sistema a Eventos Discretos. O bloco ``Interface'' é essa abstração, que recebe
+dos blocos inferiores informações de variações nas variáveis contínuas, transformando-as
+em eventos que informam o ``Controlador Supervisório''. Este, por sua vez, devolve comandos,
+também em forma de eventos que são traduzidos pela interface em entradas para os controladores
+de variável contínua.  
 
 \input{Figuras/Supervisorio} 
 
@@ -448,7 +480,18 @@ na Figura \ref{fig:Sliding}.
 \input{Figuras/Sliding}
 
 O termo ``comportamento de Zenão'' faz alusão ao filósofo grego Zenão de
-Eleia, conhecido pelos seus famosos paradoxos \cite{art:Magnus_Behavior}. 
+Eleia, conhecido pelos seus famosos paradoxos \cite{art:Magnus_Behavior}.
+
+Para exemplificar o processo de regularização em robótica móvel, a Figura 
+\ref{fig:ExemploSliding}.a mostra um obstáculo circular e uma fronteira de 
+deslize entre comportamentos ``Ir para Objetivo'' e ``Evitar Obstáculo''. 
+Cada comportamento corresponde a uma dinâmica (sistema de variável contínua). 
+As transições entre estados é papel do controlador supervisório. Na Figura 
+\ref{fig:ExemploSliding}.b, o comportamento ``Seguir Parede'' surge como resultado
+da regularização. As Figuras \ref{fig:ExemploSliding}.a e \ref{fig:ExemploSliding}.b 
+representam os diagramas de transição da Figura \ref{fig:Sliding}.b.
+
+\input{Figuras/ExemploSliding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %				 PID				 %
@@ -699,13 +742,13 @@ ao número de variáveis \cite{fuzzy_passino}.
 	retas. O algoritmo para cálculo do centro de massa, ao percorrer a lista, calcula e soma 
 	as integrais definidas parciais. 
 	
-\section{Odometria}
+\section{Odometria \label{SEC:ODOMETRIA}}
 
 Odometria em robótica móvel é o processo de cálculo da posição do robô
 utilizando sensores. No caso específico de um robô móvel de acionamento
 diferencial, deseja-se calcular a coordenada em um plano (x e y) e a 
 orientação ($\phi$) do robô a partir de sensores de efeito hall acoplados
-aos mostores. \cite{art:odometria1}
+aos motores. \cite{art:odometria1}
 
 Cada motor possui dois sensores, de modo a produzir sinais em canais 
 A e B, que se comportam conforme a Figura \ref{fig:ImagemOdometria}. Para medir velocidade, 
@@ -724,7 +767,7 @@ $R$ é o raio do pneu e $T$ é o período de amostragem.
 \end{equation}
 
 A utilização de uma caixa de redução entre o motor e o pneu adiciona
-uma particularidade interessante, pois apesar de reduzir a velocidade
+uma particularidade interessante, pois ao reduzir a velocidade
 máxima, aumenta a precisão dos sensores pela razão do sistema de 
 engrenagens. 
 	

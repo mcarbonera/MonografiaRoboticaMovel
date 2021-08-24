@@ -7,13 +7,13 @@
     pinstyle/.style = {pin edge={to-,thin,black}}
 }
 
-\begin{figure}[ht]%
+\begin{figure}[!ht]%
     \caption{Conjuntos \textit{Fuzzy} para a entrada de velocidade}%
     \label{fig:fuzzySVInputV}%
     \centering
     
 \begin{tikzpicture}[scale = 1, auto, node distance=2cm, on grid, >=latex']%
-	\begin{axis}[xmin=0, xmax=1,ymax=1.1, samples=50, xlabel={Velocidade},
+	\begin{axis}[xmin=0, xmax=1,ymax=1.1, samples=50, xlabel={Velocidade (normalizada)},
 	ylabel={$\mu$}, width=\textwidth, height=\axisdefaultheight, xtick distance={0.1}]
 	
 		\addplot [thick, color=black] table {

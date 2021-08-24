@@ -1,0 +1,91 @@
+\chapter{Conclusões e Trabalhos Futuros}
+\vspace{-2.5 cm}
+
+Este trabalho teve por intuito defender que a definição de uma boa arquitetura para solução de um problema é
+mais importante que a tecnologia empregada. Com a definição de uma arquitetura robusta, o funcionamento do sistema 
+independe de tecnologia. Neste trabalho, por exemplo, utilizou-se controladores PID e controladores \textit{Fuzzy}
+para implementar as estratégias de arbitragem e fusão, mas elas poderiam ter sido utilizadas em conjunto sob uma mesma
+estratégia. Se um novo comportamento precisar ser implementado, qualquer tecnologia poderia ser usada para 
+implementá-lo (desde soluções reativas simples até algoritmos de aprendizado de máquina), o que torna a solução
+deste trabalho escalável.
+
+Nesse sentido, é necessário comparar arquiteturas de arbitragem e fusão de comportamento. A primeira é mais escalável
+que a segunda, já que cada comportamento pode ser testado de modo isolado. Na fusão de comportamentos, cada novo
+comportamento adicionado se relaciona com todos os outros e a complexidade tende a aumentar de maneira exponencial.
+O grande problema detectado na arquitetura de arbitragem é a situação de presença de ruído, que foi discutida na seção
+dos resultados. Este trabalho adotou uma solução que provavelmente não é a melhor. Filtrar o ruído atrasa a 
+``velocidade de percepção'', já que demora mais tempo para que o robô perceba que houve uma mudança no ambiente. 
+
+Talvez exista alguma forma de detectar que o ruído ocorreu e desfazer transições indevidas. É interessante 
+investigar em trabalhos futuros uma forma de tornar um autômato mais robusto na presença de ruídos. 
+
+A arquitetura de fusão de comportamentos tem a tendência de provocar muitas oscilações, pois ao integrar 
+um novo comportamento, este deve interagir com todos os outros. Em certas circunstâncias ele pode ser suprimido, em
+outras, deve ``cancelar'' os outros a fim de se sobressair. As oscilações ocorrem por conta da interação entre 
+comportamentos, quando está ora suprimido, ora se sobressaindo em relação aos demais.
+
+A questão do custo computacional é outro ponto onde a arbitragem de comportamentos se sobressai,
+pois apenas um comportamento é executado por vez. Desde que cada comportamento execute dentro
+do tempo disponível, o custo computacional não compromete o funcionamento. Na fusão de 
+comportamentos, por outro lado, todos os custos individuais se somam. 
+
+Outro aspecto importante neste trabalho é a conversão de modelos de acionamento diferencial para uniciclo. Pode 
+parecer completamente desnecessário em uma primeira leitura, porém, se houver a necessidade de controlar algum outro 
+robô, com outro modelo matemático, em um mesmo ambiente, percebe-se que, desde que seja possível converter seu modelo 
+para o uniciclo, o mesmo controlador deste trabalho poderá ser usado para controlá-lo.  
+ 
+Considerando que outros robôs podem se beneficiar do mesmo algoritmo de controle deste trabalho, desde que 
+seu modelo possa ser convertido para o uniciclo, seria interessante explorar essa integração em trabalhos futuros.
+o robô tipo ``Segway'' seria um bom ponto de partida, já que é necessário apenas um controlador a mais para controlar
+o ângulo vertical (controle de um pêndulo invertido), bem como uma forma de associar a inclinação do ``pêndulo'' com 
+a velocidade linear do uniciclo.
+
+O presente trabalho teve objetivos muito extensos e, portanto, deixou muitos pontos que são passíveis de melhoria.
+Para trabalhos futuros, é interessante investigar melhorias no simulador. Acredito que seria interessante reescrevê-lo
+em um ``ambiente'' de código aberto. O ``Gazebo'' do \textit{Robot Operating System} (ROS) pode ser uma boa 
+alternativa. Ou talvez, escrever uma espécie de extensão para o Blender, já que o aspecto de renderização já está
+implementado e seria possível obter animações muito bonitas ao concluir uma simulação.  
+
+Acredito que melhorias futuras devem levar em conta a importância de definir uma espécie de 
+``infraestrutura'' ou ``ecossistema'' para robótica, que seriam ferramentas e sistemas cujas
+funcionalidades facilitem o desenvolvimento e testes de robôs. A chave para isso acredito que 
+está em desenvolver um simulador mais robusto, capaz de se conectar aos robôs, usar seus
+sensores como entrada para o algoritmo a ser testado e devolver o resultado a eles, para que
+realizem a atuação recomendada (a Universidade Georgia Tech possui algo nesse sentido para 
+os seus robôs Khepera). 
+
+Com essa infraestrutura, é possível testar muito rapidamente quaisquer alterações no algoritmo.
+Com a utilização de câmeras, a coordenada do robô real pode ser estimada, de modo a
+calcular com maior precisão os erros de odometria, além de facilitar a extração de figuras e
+videos para análise posterior. A partir desse ``ecossistema'', um tema mais moderno em robótica 
+móvel pode ser explorado: navegação em grupos. 
+
+%Para finalizar, gostaria de salientar que os trabalhos atuais em robótica móvel tratam de 
+%temas como navegação em grupo. 
+
+%Essa infraestrutura requer a convergência entre as áreas de Engenharia de 
+%Software, Processamento de Imagens e Desenvolvimento Web.
+ 
+%Para finalizar, gostaria de salientar que os trabalhos atuais em robótica móvel tratam de temas como navegação em 
+%grupo. Dito isso, para o meu descontentamento, o presente trabalho apenas faz algo que já se fazia na década de 90. 
+%As universidades que fazem o que há de mais avançado possuem uma cultura de dar continuidade a trabalhos 
+%anteriores. 
+
+%Para isso ser possível na UTFPR, é necessário desenvolver uma espécie de ``infraestrutura'' para robótica. Desenvolver
+%ao longo de multiplos trabalhos acadêmicos um conjunto de ferramentas cujas funcionalidades permitiriam integrar 
+%simuladores aos robôs reais. Como exemplo, posso imaginar simuladores que permitem exportar código direto para os 
+%robôs . Nesse ``ecossistema'' de 
+%robótica, sistemas com câmeras poderiam ajudar a desenhar o trajeto do robô e facilitar o processo de depuração.
+
+%Para iniciar a implementação desse grande projeto, é necessário compreender o que são arquiteturas escaláveis para 
+%sistemas IOT (internet das coisas). É cada vez mais comum no mundo do software falar de arquitetura 
+%de microserviços, mas não está muito claro para o estudante de engenharia de computação como seria a integração das 
+%tecnologias de software com dispositivos IOT. É necessário compreender a diferença entre os servidores de 
+%mensageria (\textit{brokers}) que são implementados para comunicação entre microserviços e para comunicação entre 
+%dispositivos IOT. Eles não são intercambiáveis (pelo menos hoje em dia).  
+
+%É importante falar disso, pois desenvolver um ``ecossistema'' escalável para robótica traria diversas vantagens, já
+%que seria mais fácil efetuar testes em robõs e facilitaria a integração de um número maior de robôs operando em um 
+%mesmo ambiente. O conhecimento em nível de arquitetura contribui para formar profissionais melhores, tendo em vista 
+%que o objetivo do curso de Engenharia de Computação é justamente formar profissionais capazes de integrar 
+%\textit{hardware} e \textit{software}.

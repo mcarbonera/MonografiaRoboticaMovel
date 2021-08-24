@@ -35,7 +35,7 @@ arquitetura híbrida.
 d) \citeonline{Tcc_Marinho}, cujo trabalho aprimorou um robô de
 sumô (robô de competição) previamente disponível. 
 
-A execução de tarefas em robôs autônomos envolve raciocínio automatizado,
+A execução de tarefas por robôs autônomos envolve raciocínio automatizado,
 percepção e controle, que incluem problemas como o de planejamento de
 trajetórias. De uma forma geral, esse problema consiste em encontrar um
 trajeto que transporte o robô de uma configuração (posição e direção)
@@ -51,20 +51,23 @@ A lógica \textit{fuzzy} é um mapeamento não linear de dados de entrada em sa�
 escalares que permite traduzir conhecimento qualitativo (linguístico) em uma
 solução numérica, de modo relativamente direto \cite{Art_Mendel}. 
 
-\subsection{Aspectos qualitativos em robótica móvel}
+\subsection{Aspectos qualitativos em robótica móvel \label{SEC:SUBSUNCAO}}
 
 Conforme \citeonline{Livro_Mataric}, controle de robôs móveis pode ser
 dividido em controle deliberativo, reativo, híbrido (no sentido de
 combinar os aspectos deliberativo e reativo) e baseado em comportamento.
 
-No controle deliberativo, deve-se planejar antes de executar qualquer
+Na arquitetura deliberativa, deve-se planejar antes de executar qualquer
 ação. Essa abordagem remonta aos primeiros estudos voltados à aplicação de
 conceitos da Inteligência Artificial (IA) clássica ao campo da robótica. O foco
-desta abordagem é atender metas de longo prazo. Porém o alto custo computacional (manter representação
-interna do ambiente e operar buscas no modelo) traz dificuldades em alcançar
-requisitos de curto prazo (possibilidade iminente de colisão).
+desta abordagem é atender metas de longo prazo. Porém existe um alto custo 
+computacional, já que é necessário manter uma representação interna do ambiente 
+e operar buscas neste mapa, o que traz dificuldades em alcançar requisitos de curto 
+prazo, dada a possibilidade iminente (imediata) de colisão. O armazenamento de mapa
+é uma representação do mundo, uma forma de armazenar informações do passado. Podem ser
+utilizadas matrizes, grafos. Quanto mais detalhe se armazena, maior o custo.
 
-O controle reativo, por sua vez, tem como foco uma curta escala de tempo, que
+A arquitetura reativa, por sua vez, tem como foco uma curta escala de tempo, que
 pode ser obtida pelo estabelecimento de um mapeamento direto entre entradas e
 saídas, sem representação interna do ambiente. Pode ser visto como reflexo ou
 instinto. 
@@ -78,19 +81,25 @@ conflitantes (como escala de tempo). No restante deste texto, o termo
 ``arquitetura híbrida'' será usado apenas para designar sistemas que mesclam
 aspectos de controle contínuo e a eventos discretos.  
 
-Por fim, o modo baseado em comportamento surgiu do controle reativo, diferindo
+Por fim, a arquitetura baseada em comportamento surgiu do controle reativo, diferindo
 deste pelo nível de abstração. Enquanto comportamentos descrevem funções como
 ``seguir objeto'', ``encontrar objeto'', ``seguir parede'', reações são simples
 ações como ``andar reto'' ou ``virar''. Há também uma distinção na escala de
 tempo das ações, já que comportamentos não são instantâneos e operam ao longo do
-tempo. Tendo em vista que esta arquitetura será utilizada neste trabalho,
-maiores considerações serão tecidas no Capítulo 2.
+tempo. 
 
-Sobre as arquiteturas reativas e comportamentais, existe a arquitetura de subsunção, que 
-organiza comportamentos em camadas, de modo a estabelecer uma hierarquia na qual módulos de 
-maior importância podem inibir modulos de baixa importância. Para exemplificar, um 
-comportamento responsável por parar o robô deve inibir modulos responsáveis por seu 
-movimento \cite{Livro_Mataric}.
+O protótipo desenvolvido neste trabalho utiliza a arquitetura comportamental. A 
+utilização de comportamentos pode acontecer por meio de duas estratégias distintas: 
+arbitragem e fusão de comportamentos. Neste trabalho, o protótipo desenvolvido
+explora essa arquitetura por completo, utilizando um controlador híbrido (sistemas 
+contínuos com sistemas a eventos discretos) para a arbitragem de comportamentos e 
+controladores \textit{fuzzy} para implementar fusão de comportamentos.  
+
+Sobre as arquiteturas reativas e comportamentais, é importante citar a arquitetura 
+de subsunção, que organiza comportamentos em camadas, de modo a estabelecer uma 
+hierarquia na qual módulos de maior importância podem inibir modulos de baixa 
+importância. Para exemplificar, um comportamento responsável por parar o robô deve 
+inibir modulos responsáveis por seu movimento \cite{Livro_Mataric}.
 
 \section{Objetivos}
 
@@ -102,23 +111,27 @@ atendidos.
 	
 	Construir um robô móvel de acionamento diferencial autônomo, sem
 	armazenamento de mapa, capaz de se locomover entre duas referências, desviando
-	de obstáculos, se necessário.
+	de obstáculos, se necessário. 
 	
-	Pretende-se comparar qualitativamente soluções por controlador híbrido
-	(sistema a eventos discretos combinado a controladores contínuos) e controlador
-	\textit{fuzzy}, de modo a identificar aspectos positivos e negativos de cada
-	abordagem.
+	Comparar qualitativamente as abordagens de arbitragem e fusão de comportamentos. A 
+	comparação, portanto, não será em nível de tecnologia (controlador híbrido e controlador
+	\textit{fuzzy}), mas em nível de arquitetura, o que faz mais sentido, já que o intuito deste
+	trabalho é explorar o campo da robótica baseada em comportamentos.
  	
 	\subsection{Objetivos Específicos}
  
 	\begin{itemize}
 	  \item Levantar o modelo matemático para o robô móvel de acionamento
 	  diferencial.
-	  \item Definir uma arquitetura de controle (utilizando controle híbrido e
-	  lógica \textit{fuzzy}).
+	  \item Desenvolver o projeto de controle por arbitragem de comportamentos usando
+	  controlador híbrido, que se trata da junção entre Sistemas Dinâmicos de Variável 
+	  Contínua (SDVC) e Sistemas a Eventos Discretos (SED).
+	  \item Desenvolver o projeto de controle por fusão de comportamentos usando Lógica 
+	  \textit{Fuzzy}.
 	  \item Construir o robô. 
-	  \item Construir o sistema embarcado com a lógica de controle.
-	  \item Definir um ambiente de teste e validação para o robô. 
+	  \item Implementar os controles no sistema embarcado. 
+	  \item Realizar testes de desempenho.
+	  \item Comparar as estratégias de arbitragem e fusão de comportamentos. 
 	\end{itemize}
 	
 \section{Motivação e justificativa}
@@ -139,5 +152,5 @@ Este trabalho está organizado em cinco capítulos: Introdução,
 Referencial Teórico, Materiais e Método e Desenvolvimento. 
 
 As etapas do trabalho referentes a teoria de controle e lógica \textit{fuzzy}
-serão discutidas no Capítulo 2 e desenvolvidas para o robô móvel no Capítulo
-4.
+serão discutidas no Capítulo \ref{CAP:TEORIA} e desenvolvidas para o robô móvel 
+no Capítulo \ref{CAP:DESENVOLVIMENTO}.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  1 JAN 2021 23:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  24 AUG 2021 15:11
 entering extended mode
 **./document.tex
 (document.tex
@@ -928,7 +928,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-2021111380'>"document.w18")...disabled (restricted
+runsystem(echo 'write18-test-2021824911'>"document.w18")...disabled (restricted
 ).
 
 
@@ -977,10 +977,72 @@ Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@dima=\skip65
 \bigstrutjot=\dimen298
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-17.
+("C:\Program Files\MiKTeX\tex/latex/slashbox\slashbox.sty"
+slashbox style by K.Yasuoka, May 1993.
+\@slashboxa=\box130
+\@slashboxb=\box131
+\@slashboxc=\box132
+\@slashboxwd=\count325
+\@slashboxht=\count326
+\@slashsepl=\dimen299
+\@slashsepr=\dimen300
+) ("C:\Program Files\MiKTeX\tex/latex/textcase\textcase.sty"
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+("C:\Program Files\MiKTeX\tex/latex/mathtools\mathtools.sty"
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
 
-("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd"
+("C:\Program Files\MiKTeX\tex/latex/mathtools\mhsetup.sty"
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count327
+\l_MT_multwidth_dim=\dimen301
+\origjot=\skip66
+\l_MT_shortvdotswithinadjustabove_dim=\dimen302
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen303
+\l_MT_above_intertext_sep=\dimen304
+\l_MT_below_intertext_sep=\dimen305
+\l_MT_above_shortintertext_sep=\dimen306
+\l_MT_below_shortintertext_sep=\dimen307
+\xmathstrut@box=\box133
+\xmathstrut@dim=\dimen308
+) (algorithm_PT.sty
+
+LaTeX Warning: You have requested package `algorithm_PT',
+               but the package provides `algorithm'.
+
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+("C:\Program Files\MiKTeX\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count328
+\float@exts=\toks46
+\float@box=\box134
+\@float@everytoks=\toks47
+\@floatcapt=\box135
+)
+\@float@every@algorithm=\toks48
+\c@algorithm=\count329
+) (algorithmic_PT.sty
+
+LaTeX Warning: You have requested package `algorithmic_PT',
+               but the package provides `algorithmic'.
+
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count330
+\c@ALC@line=\count331
+\c@ALC@rem=\count332
+\c@ALC@depth=\count333
+\ALC@tlm=\skip67
+\algorithmicindent=\skip68
+)
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
+32.
+ ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (document.aux
 
@@ -994,6 +1056,18 @@ LaTeX Warning: Label `fig:subfig2' multiply defined.
 
 
 LaTeX Warning: Label `fig:subfig2@cref' multiply defined.
+
+
+LaTeX Warning: Label `fig:diagreg' multiply defined.
+
+
+LaTeX Warning: Label `fig:diagreg@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:diagreg' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:diagreg@cref' multiply defined.
 
 
 LaTeX Warning: Label `fig:exemploAnd' multiply defined.
@@ -1028,39 +1102,41 @@ LaTeX Warning: Label `fig:CompSP@cref' multiply defined.
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 117.
+(lastpage)             ! on input line 132.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package newfloat Info: Trying Plan B...
+Package newfloat Info: `float' package detected.
  ("C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count325
-\scratchdimen=\dimen299
-\scratchbox=\box130
-\nofMPsegments=\count326
-\nofMParguments=\count327
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count328
-\MPscratchDim=\dimen300
-\MPnumerator=\count329
-\makeMPintoPDFobject=\count330
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count334
+\scratchdimen=\dimen309
+\scratchbox=\box136
+\nofMPsegments=\count335
+\nofMParguments=\count336
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count337
+\MPscratchDim=\dimen310
+\MPnumerator=\count338
+\makeMPintoPDFobject=\count339
+\everyMPtoPDFconversion=\toks50
 ) ("C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1081,42 +1157,42 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 117.
+ on input line 132.
 
 <Figuras/capa_PB.png, id=4, 597.432pt x 845.0772pt>
 File: Figuras/capa_PB.png Graphic file (type png)
 <use Figuras/capa_PB.png>
-Package pdftex.def Info: Figuras/capa_PB.png  used on input line 122.
+Package pdftex.def Info: Figuras/capa_PB.png  used on input line 137.
 (pdftex.def)             Requested size: 597.55817pt x 845.04933pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 122.
+ 137.
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 122.
+ 137.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 122.
+ 137.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 122.
+ 137.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 122.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
  [1
 
 
@@ -1124,45 +1200,60 @@ Non-PDF special ignored!
 <special> papersize=210mm,297mm
 {C:/Users/Luiz/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Figuras/capa_P
 B.png (PNG copy)>]
-Overfull \hbox (2.28001pt too wide) in paragraph at lines 123--123
+Overfull \hbox (2.28001pt too wide) in paragraph at lines 138--138
   $[]$ 
  []
 
-[1] (ElementosPreTextuais/Epigrafe.tex [1
+[1] (ElementosPreTextuais/Dedicatoria.tex [1
 
 
-]) (document.lof)
+])
+(ElementosPreTextuais/Agradecimentos.tex [2
+
+
+])
+(ElementosPreTextuais/Epigrafe.tex [3
+
+
+]) (ElementosPreTextuais/Resumo.tex
+[4
+
+
+]) (ElementosPreTextuais/Abstract.tex [5
+
+
+]) (document.lof [6
+
+])
 \tf@lof=\write5
 \openout5 = `document.lof'.
 
- [2
-
-] (document.lot)
+ [7]
+(document.lot)
 \tf@lot=\write6
 \openout6 = `document.lot'.
 
+ [8
 
-[3
-
-] (document.toc [4
+] (document.toc [9
 
 
 ])
 \tf@toc=\write7
 \openout7 = `document.toc'.
 
- [5] (ElementosTextuais/Introducao.tex
+ [10] (ElementosTextuais/Introducao.tex
 Cap\'{\i }tulo 1.
-[6
+[12
 
 
-] [7]
+] [13]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-15.
+24.
  ("C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [8])
-(ElementosTextuais/ReferencialTeorico.tex [9]
+) [14])
+(ElementosTextuais/ReferencialTeorico.tex [15]
 Cap\'{\i }tulo 2.
 (Figuras/acoes.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
@@ -1176,7 +1267,7 @@ Overfull \hbox (4.56006pt too wide) in paragraph at lines 16--95
  [][]  [] 
  []
 
-) [10
+) [16
 
 ] (Figuras/CampoVet.tex
 NOTE: coordinate (2Y2.0e0],2Y2.0e0],0Y0.0e0]) has been dropped because it is un
@@ -4230,23 +4321,28 @@ Overfull \hbox (4.56006pt too wide) in paragraph at lines 6--78
  [][]  [] 
  []
 
-) [11] (Figuras/Modelos.tex
+) [17] (Figuras/Modelos.tex
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 173--186
  [][]  [] 
  []
 
-) [12] [13] [14] (Figuras/DiagramaTransicao.tex) [15]
-(Figuras/SupMalhaFechada.tex) [16] (Figuras/AutTempGuarda.tex
+) [18] [19] [20] [21] (Figuras/DiagramaTransicao.tex)
+(Figuras/SupMalhaFechada.tex) [22] (Figuras/AutTempGuarda.tex
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 60--73
  [][]  [] 
  []
 
-) (Figuras/Supervisorio.tex) [17] [18] (Figuras/Sliding.tex
+) [23] (Figuras/Supervisorio.tex) [24] (Figuras/Sliding.tex
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 77--91
  [][]  [] 
  []
 
-) [19] (Figuras/PIDPassadoPresenteFuturo.tex
+) (Figuras/ExemploSliding.tex
+Overfull \hbox (4.56006pt too wide) in paragraph at lines 6--233
+ [][]  [] 
+ []
+
+) [25] [26] (Figuras/PIDPassadoPresenteFuturo.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4269,32 +4365,32 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 Package pgfplots info on input line 60: fill between: activating layered graphi
 cs
-\pgf@layerbox@axis background=\box131
-\pgf@layerboxsaved@axis background=\box132
-\pgf@layerbox@axis grid=\box133
-\pgf@layerboxsaved@axis grid=\box134
-\pgf@layerbox@axis ticks=\box135
-\pgf@layerboxsaved@axis ticks=\box136
-\pgf@layerbox@axis lines=\box137
-\pgf@layerboxsaved@axis lines=\box138
-\pgf@layerbox@axis tick labels=\box139
-\pgf@layerboxsaved@axis tick labels=\box140
-\pgf@layerbox@pre main=\box141
-\pgf@layerboxsaved@pre main=\box142
-\pgf@layerbox@axis descriptions=\box143
-\pgf@layerboxsaved@axis descriptions=\box144
-\pgf@layerbox@axis foreground=\box145
-\pgf@layerboxsaved@axis foreground=\box146
+\pgf@layerbox@axis background=\box137
+\pgf@layerboxsaved@axis background=\box138
+\pgf@layerbox@axis grid=\box139
+\pgf@layerboxsaved@axis grid=\box140
+\pgf@layerbox@axis ticks=\box141
+\pgf@layerboxsaved@axis ticks=\box142
+\pgf@layerbox@axis lines=\box143
+\pgf@layerboxsaved@axis lines=\box144
+\pgf@layerbox@axis tick labels=\box145
+\pgf@layerboxsaved@axis tick labels=\box146
+\pgf@layerbox@pre main=\box147
+\pgf@layerboxsaved@pre main=\box148
+\pgf@layerbox@axis descriptions=\box149
+\pgf@layerboxsaved@axis descriptions=\box150
+\pgf@layerbox@axis foreground=\box151
+\pgf@layerboxsaved@axis foreground=\box152
 Package pgfplots info on input line 60: Setting layers 'axis background,axis gr
 id,axis ticks,axis lines,axis tick labels,pre main,main,axis descriptions,axis 
 foreground'...
-) [20]
+) [27]
 (Figuras/ControladorFuzzy.tex
 Overfull \hbox (11.53798pt too wide) in paragraph at lines 60--61
  [][] 
  []
 
-) [21] (Figuras/ConjuntosFuzzy.tex
+) [28] (Figuras/ConjuntosFuzzy.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4310,7 +4406,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-) [22] (Figuras/ANDOR.tex
+) [29] (Figuras/ANDOR.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4346,7 +4442,7 @@ Overfull \hbox (4.56006pt too wide) in paragraph at lines 15--86
  [][]  [] 
  []
 
-) [23] (Figuras/FuzzyInferencia.tex
+) [30] (Figuras/FuzzyInferencia.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4382,7 +4478,7 @@ Overfull \hbox (4.57016pt too wide) in paragraph at lines 15--104
  [][]  []  [] 
  []
 
-) [24] (Figuras/FuzzyDefuzzificacao.tex
+) [31] (Figuras/FuzzyDefuzzificacao.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4398,7 +4494,7 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
-) [25] (Figuras/motorOdometria.tex
+) [32] (Figuras/motorOdometria.tex
 Package epstopdf Info: Source file: <Figuras/encoderMotor.eps>
 (epstopdf)                    date: 2020-11-15 22:29:21
 (epstopdf)                    size: 43726 bytes
@@ -4414,90 +4510,140 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/encoderMotor-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/encoderMotor-eps-converted-to.pdf, id=102, 483.8075pt x 123.46124pt>
+<Figuras/encoderMotor-eps-converted-to.pdf, id=121, 483.8075pt x 123.46124pt>
 File: Figuras/encoderMotor-eps-converted-to.pdf Graphic file (type pdf)
 <use Figuras/encoderMotor-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/encoderMotor-eps-converted-to.pdf  used on inp
 ut line 5.
 (pdftex.def)             Requested size: 435.42273pt x 111.11407pt.
-) [26]) (ElementosTextuais/MateriaisMetodo.tex [27 <./Figuras/encoderMotor-eps-
+) [33]) (ElementosTextuais/MateriaisMetodo.tex [34 <./Figuras/encoderMotor-eps-
 converted-to.pdf>]
 Cap\'{\i }tulo 3.
-(Tabelas/TabelaCustos.tex) [28
-
-]) (ElementosTextuais/Desenvolvimento.tex
-[29]
-Cap\'{\i }tulo 4.
-(Figuras/FigRobos.tex
-<Figuras/Khepera_III_robot.jpg, id=124, 1310.496pt x 982.872pt>
+(Tabelas/TabelaCustos.tex) (Figuras/FigRobos.tex
+<Figuras/Khepera_III_robot.jpg, id=136, 1310.496pt x 982.872pt>
 File: Figuras/Khepera_III_robot.jpg Graphic file (type jpg)
 <use Figuras/Khepera_III_robot.jpg>
 Package pdftex.def Info: Figuras/Khepera_III_robot.jpg  used on input line 9.
 (pdftex.def)             Requested size: 151.60132pt x 137.60114pt.
-<Figuras/quickbot-blue.png, id=126, 2055.68pt x 1541.76pt>
+<Figuras/quickbot-blue.png, id=138, 2055.68pt x 1541.76pt>
 File: Figuras/quickbot-blue.png Graphic file (type png)
 <use Figuras/quickbot-blue.png>
 Package pdftex.def Info: Figuras/quickbot-blue.png  used on input line 18.
 (pdftex.def)             Requested size: 161.95747pt x 138.75241pt.
 ) (Figuras/FigRobosEmSim.tex
-<Figuras/simiam-screenshot.png, id=129, 1606.0pt x 903.375pt>
+<Figuras/simiam-screenshot.png, id=141, 1606.0pt x 903.375pt>
 File: Figuras/simiam-screenshot.png Graphic file (type png)
 <use Figuras/simiam-screenshot.png>
 Package pdftex.def Info: Figuras/simiam-screenshot.png  used on input line 8.
 (pdftex.def)             Requested size: 385.44788pt x 216.81442pt.
-) [30
+)
+[35
 
- <./Figuras/Khepera_III_robot.jpg> <./Figuras/quickbot-blue.png>] [31 <./Figura
-s/simiam-screenshot.png>] (Figuras/RoboJubileu.tex
-<Figuras/Robo1.jpg, id=142, 3276.24pt x 2457.18pt>
-File: Figuras/Robo1.jpg Graphic file (type jpg)
-<use Figuras/Robo1.jpg>
-Package pdftex.def Info: Figuras/Robo1.jpg  used on input line 9.
-(pdftex.def)             Requested size: 229.36023pt x 172.02017pt.
-
-Overfull \hbox (6.28812pt too wide) in paragraph at lines 8--10
- [][] 
- []
-
-<Figuras/Robo2.jpg, id=144, 3276.24pt x 2457.18pt>
-File: Figuras/Robo2.jpg Graphic file (type jpg)
-<use Figuras/Robo2.jpg>
-Package pdftex.def Info: Figuras/Robo2.jpg  used on input line 18.
-(pdftex.def)             Requested size: 229.36023pt x 172.02017pt.
-
-Overfull \hbox (6.28812pt too wide) in paragraph at lines 17--19
- [][] 
- []
-
-[32]) (Figuras/FigRespostaIR.tex
+] [36 <./Figuras/Khepera_III_robot.jpg> <./Figuras/quickbot-blue.png>]
+[37 <./Figuras/simiam-screenshot.png>] (Figuras/FigRespostaIR.tex
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/IR_Datasheet_Figure.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/IR_Datasheet_Figure.pdf, id=149, 597.50786pt x 845.04686pt>
+<Figuras/IR_Datasheet_Figure.pdf, id=158, 597.50786pt x 845.04686pt>
 File: Figuras/IR_Datasheet_Figure.pdf Graphic file (type pdf)
 <use Figuras/IR_Datasheet_Figure.pdf>
 Package pdftex.def Info: Figuras/IR_Datasheet_Figure.pdf  used on input line 8.
 
 (pdftex.def)             Requested size: 327.2059pt x 258.91931pt.
-) [33 <./Figuras/Robo1.jpg> <./Figuras/Robo2.jpg>] [34 <./Figuras/IR_Datasheet_
-Figure.pdf>] (Figuras/CompIPO.tex) (Figuras/CompEO.tex
+) [38] (Figuras/RoboJubileu.tex
+<Figuras/RoboMontagem1.jpg, id=163, 4175.6pt x 3131.7pt>
+File: Figuras/RoboMontagem1.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem1.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem1.jpg  used on input line 9.
+(pdftex.def)             Requested size: 229.62685pt x 172.22014pt.
+
+Overfull \hbox (6.55473pt too wide) in paragraph at lines 8--10
+ [][] 
+ []
+
+<Figuras/RoboMontagem2.jpg, id=165, 4175.6pt x 3131.7pt>
+File: Figuras/RoboMontagem2.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem2.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem2.jpg  used on input line 18.
+(pdftex.def)             Requested size: 229.62685pt x 172.22014pt.
+
+Overfull \hbox (6.55473pt too wide) in paragraph at lines 17--19
+ [][] 
+ []
+
+<Figuras/RoboMontagem3.jpg, id=167, 4175.6pt x 3131.7pt>
+File: Figuras/RoboMontagem3.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem3.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem3.jpg  used on input line 27.
+(pdftex.def)             Requested size: 229.62685pt x 172.22014pt.
+
+Overfull \hbox (6.55473pt too wide) in paragraph at lines 26--28
+ [][] 
+ []
+
+<Figuras/RoboMontagem4.jpg, id=169, 3131.7pt x 4175.6pt>
+File: Figuras/RoboMontagem4.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem4.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem4.jpg  used on input line 36.
+(pdftex.def)             Requested size: 172.22014pt x 229.62685pt.
+) (Figuras/RoboJubileuMontado.tex
+<Figuras/RoboMontagem5.jpg, id=171, 3131.7pt x 4175.6pt>
+File: Figuras/RoboMontagem5.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem5.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem5.jpg  used on input line 9.
+(pdftex.def)             Requested size: 172.22014pt x 174.86273pt.
+<Figuras/RoboMontagem6.jpg, id=173, 3131.7pt x 4175.6pt>
+File: Figuras/RoboMontagem6.jpg Graphic file (type jpg)
+<use Figuras/RoboMontagem6.jpg>
+Package pdftex.def Info: Figuras/RoboMontagem6.jpg  used on input line 18.
+(pdftex.def)             Requested size: 172.22014pt x 174.86273pt.
+) [39 <./Figuras/IR_Datasheet_Figure.pdf>]
+(Figuras/AcionamentoMotor1.tex
+<Figuras/Acionamento_Sem_Carga_rps.png, id=183, 1387.584pt x 672.111pt>
+File: Figuras/Acionamento_Sem_Carga_rps.png Graphic file (type png)
+<use Figuras/Acionamento_Sem_Carga_rps.png>
+Package pdftex.def Info: Figuras/Acionamento_Sem_Carga_rps.png  used on input l
+ine 8.
+(pdftex.def)             Requested size: 419.1658pt x 222.96835pt.
+ [40 <./Figuras/RoboMontagem1.jpg> <./Figuras/RoboMontagem2.jpg> <./Figuras/Rob
+oMontagem3.jpg> <./Figuras/RoboMontagem4.jpg>])
+(Figuras/AcionamentoMotor2.tex
+<Figuras/Acionamento_Com_Carga_rps.png, id=192, 1387.584pt x 672.111pt>
+File: Figuras/Acionamento_Com_Carga_rps.png Graphic file (type png)
+<use Figuras/Acionamento_Com_Carga_rps.png>
+Package pdftex.def Info: Figuras/Acionamento_Com_Carga_rps.png  used on input l
+ine 8.
+(pdftex.def)             Requested size: 419.1658pt x 222.96835pt.
+) (Figuras/AcionamentoMotor3.tex
+<Figuras/Curva_Do_Motor_rps.png, id=194, 1387.584pt x 672.111pt>
+File: Figuras/Curva_Do_Motor_rps.png Graphic file (type png)
+<use Figuras/Curva_Do_Motor_rps.png>
+Package pdftex.def Info: Figuras/Curva_Do_Motor_rps.png  used on input line 8.
+(pdftex.def)             Requested size: 419.1658pt x 222.96835pt.
+ [41 <./Figuras/RoboMontagem5.jpg> <./Figuras/RoboMontagem6.jpg> <./Figuras/Aci
+onamento_Sem_Carga_rps.png>]) [42 <./Figuras/Acionamento_Com_Carga_rps.png> <./
+Figuras/Curva_Do_Motor_rps.png>]) (ElementosTextuais/Desenvolvimento.tex [43]
+Cap\'{\i }tulo 4.
+[44
+
+] (Figuras/CompIPO.tex) [45] [46] (Figuras/CompEO.tex
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 96--119
  [][]  [] 
  []
 
-) [35] [36] (Figuras/minimosLocais.tex) (Figuras/CompSP.tex
+) [47] [48] [49] (Figuras/minimosLocais.tex) [50] (Figuras/CompSP.tex
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 111--146
  [][]  [] 
  []
 
-) (Figuras/CompSPVetor.tex
+) [51] (Figuras/CompSPVetor.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
-) (Figuras/automatoHibrido.tex [37])
-(Tabelas/AutomatoEstados.tex) (Tabelas/AutomatoTransicoes.tex)
-(Figuras/FuzzyEvitarObstaculoDiagrama.tex)
+) [52] (Tabelas/AutomatoEstados.tex)
+(Tabelas/AutomatoTransicoes.tex) [53] [54] [55] (Figuras/automatoHibrido.tex)
+[56] [57] (Figuras/FuzzyEvitarObstaculoDiagrama.tex) [58]
 (Figuras/FuzzyEvitarObstaculoInput.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -4601,8 +4747,7 @@ Overfull \hbox (5.31215pt too wide) in paragraph at lines 42--43
  [][] 
  []
 
-) (Tabelas/FuzzyEvitarObstaculoTabelaRegras.tex)
-(Figuras/FuzzySeguirParedeDiagrama.tex)
+) (Tabelas/FuzzyEvitarObstaculoTabelaRegras.tex) [59] [60]
 (Figuras/FuzzySeguirParedeCurvaAtivacao.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -4614,7 +4759,8 @@ Overfull \hbox (8.17259pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-) (Figuras/FuzzySeguirParedeSaidas.tex
+) [61] (Figuras/FuzzySeguirParedeDiagrama.tex) [62] [63] [64]
+(Figuras/FuzzySeguirParedeSaidas.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4640,8 +4786,9 @@ Overfull \hbox (5.31065pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-) (Tabelas/FuzzySeguirParedeTabelaRegras.tex)
-(Figuras/FuzzySeguirVetorDiagrama.tex) (Figuras/FuzzySeguirVetorEntradasXY.tex
+) [65] (Tabelas/FuzzySeguirParedeTabelaRegras.tex)
+(Figuras/FuzzySeguirVetorDiagrama.tex) [66]
+(Figuras/FuzzySeguirVetorEntradasXY.tex
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
@@ -4779,16 +4926,120 @@ Overfull \hbox (5.3107pt too wide) in paragraph at lines 76--77
  [][] 
  []
 
-) (Tabelas/FuzzySeguirVetorVelocidades.tex) [38] [39] [40] [41] [42] [43]
-[44] [45] [46] [47] [48]
+) [67] (Tabelas/FuzzySeguirVetorVelocidades.tex) [68] [69] [70]
+(Figuras/EsquemaCircuito.tex
+Package epstopdf Info: Source file: <Figuras/EsquemaCircuito.eps>
+(epstopdf)                    date: 2021-04-14 06:42:57
+(epstopdf)                    size: 893913 bytes
+(epstopdf)             Output file: <Figuras/EsquemaCircuito-eps-converted-to.p
+df>
+(epstopdf)                    date: 2021-04-14 06:48:03
+(epstopdf)                    size: 352852 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figuras/EsquemaCircuito-eps
+-converted-to.pdf Figuras/EsquemaCircuito.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figuras/EsquemaCircuito-eps-converted-to.p
+df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figuras/EsquemaCircuito-eps-converted-to.pdf, id=300, 557.08125pt x 505.89pt>
+File: Figuras/EsquemaCircuito-eps-converted-to.pdf Graphic file (type pdf)
+<use Figuras/EsquemaCircuito-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/EsquemaCircuito-eps-converted-to.pdf  used on 
+input line 6.
+(pdftex.def)             Requested size: 445.6656pt x 404.71254pt.
+) [71 <./Figuras/EsquemaCircuito-eps-converted-to.pdf>] [72]
+(Figuras/JubileuBoard.tex
+Package epstopdf Info: Source file: <Figuras/JubileuBoard.eps>
+(epstopdf)                    date: 2021-04-07 18:31:36
+(epstopdf)                    size: 54430 bytes
+(epstopdf)             Output file: <Figuras/JubileuBoard-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2021-04-07 18:39:14
+(epstopdf)                    size: 47740 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figuras/JubileuBoard-eps-co
+nverted-to.pdf Figuras/JubileuBoard.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figuras/JubileuBoard-eps-converted-to.pdf)
+: PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figuras/JubileuBoard-eps-converted-to.pdf, id=345, 171.64125pt x 342.27875pt>
+File: Figuras/JubileuBoard-eps-converted-to.pdf Graphic file (type pdf)
+<use Figuras/JubileuBoard-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/JubileuBoard-eps-converted-to.pdf  used on inp
+ut line 5.
+(pdftex.def)             Requested size: 171.64081pt x 342.2779pt.
+) [73] (Tabelas/ComunicacaoComandos.tex) [74 <./Figuras/JubileuBoard-eps-conver
+ted-to.pdf>] (Figuras/SimulacaoHibrido.tex
+<Figuras/simulacao_hibrido.png, id=357, 7704.785pt x 3790.16pt>
+File: Figuras/simulacao_hibrido.png Graphic file (type png)
+<use Figuras/simulacao_hibrido.png>
+Package pdftex.def Info: Figuras/simulacao_hibrido.png  used on input line 8.
+(pdftex.def)             Requested size: 446.86609pt x 219.82365pt.
+) [75] (Figuras/SimulacaoFuzzy.tex
+<Figuras/simulacao_fuzzy.png, id=362, 7704.785pt x 3790.16pt>
+File: Figuras/simulacao_fuzzy.png Graphic file (type png)
+<use Figuras/simulacao_fuzzy.png>
+Package pdftex.def Info: Figuras/simulacao_fuzzy.png  used on input line 8.
+(pdftex.def)             Requested size: 446.86609pt x 219.82365pt.
+)
+[76 <./Figuras/simulacao_hibrido.png (PNG copy)>] (Figuras/ResultadoIPO.tex
+<Figuras/ComportamentoIPO.png, id=368, 7726.8675pt x 4354.2675pt>
+File: Figuras/ComportamentoIPO.png Graphic file (type png)
+<use Figuras/ComportamentoIPO.png>
+Package pdftex.def Info: Figuras/ComportamentoIPO.png  used on input line 8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+)
+(Figuras/ResultadoEO.tex
+<Figuras/ComportamentoEO.png, id=370, 7726.8675pt x 4354.2675pt>
+File: Figuras/ComportamentoEO.png Graphic file (type png)
+<use Figuras/ComportamentoEO.png>
+Package pdftex.def Info: Figuras/ComportamentoEO.png  used on input line 8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+) [77 <./Figuras/simulacao_fuzzy.png (PNG copy)>]
+(Figuras/ResultadoMesclado.tex
+<Figuras/ComportamentoIPO_E_EO.png, id=376, 7726.8675pt x 4354.2675pt>
+File: Figuras/ComportamentoIPO_E_EO.png Graphic file (type png)
+<use Figuras/ComportamentoIPO_E_EO.png>
+Package pdftex.def Info: Figuras/ComportamentoIPO_E_EO.png  used on input line 
+8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+ [78 <./Figuras/ComportamentoIPO.png (PNG copy)> <./Figuras/ComportamentoEO.png
+ (PNG copy)>]) (Figuras/ResultadoSP.tex
+<Figuras/ComportamentoSP.png, id=384, 7726.8675pt x 4354.2675pt>
+File: Figuras/ComportamentoSP.png Graphic file (type png)
+<use Figuras/ComportamentoSP.png>
+Package pdftex.def Info: Figuras/ComportamentoSP.png  used on input line 8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+)
+(Figuras/ResultadoHibrido.tex
+<Figuras/hibrido.png, id=386, 7726.8675pt x 4354.2675pt>
+File: Figuras/hibrido.png Graphic file (type png)
+<use Figuras/hibrido.png>
+Package pdftex.def Info: Figuras/hibrido.png  used on input line 8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+) [79 <./Figuras/ComportamentoIPO_E_EO.png (PNG copy)>] [80 <./Figuras/Comporta
+mentoSP.png (PNG copy)>]
+(Figuras/ResultadoFuzzy.tex
+<Figuras/fuzzy.png, id=396, 7726.8675pt x 4354.2675pt>
+File: Figuras/fuzzy.png Graphic file (type png)
+<use Figuras/fuzzy.png>
+Package pdftex.def Info: Figuras/fuzzy.png  used on input line 8.
+(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+) [81 <./Figuras/hibrido.png (PNG copy)>]
+(ElementosTextuais/ConclusoesTrabalhosFuturos.tex [82 <./Figuras/fuzzy.png (PNG
+ copy)>]
 Cap\'{\i }tulo 5.
-) [49
+[83
 
-] (document.bbl [50
+])) [84] (document.bbl [85
 
 
-] [51]
-Overfull \hbox (42.07814pt too wide) in paragraph at lines 287--293
+] [86] [87]
+Overfull \hbox (42.07814pt too wide) in paragraph at lines 309--315
 \OT1/ptm/m/n/12 Dis-pon[]vel em: $\OML/ztmcm/m/it/12 <$\OT1/ptm/m/n/12 https:/
 /repository.upenn.edu/cgi/viewcontent.cgi?article=1524&context=cis[]reports$\OM
 L/ztmcm/m/it/12 >$\OT1/ptm/m/n/12 .
@@ -4796,7 +5047,7 @@ L/ztmcm/m/it/12 >$\OT1/ptm/m/n/12 .
 
 ) 
 AED: lastpage setting LastPage
-[52]
+[88]
 +-------------------------------------------------------------------+
 | Comentario, sugestao ou critica sobre o abnTeX? Entre em contato: |
 |                  http://abntex.codigolivre.org.br                 |
@@ -4807,26 +5058,27 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 36241 strings out of 480224
- 897992 string characters out of 2889982
- 1849344 words of memory out of 3000000
- 51942 multiletter control sequences out of 15000+200000
- 591227 words of font info for 150 fonts, out of 3000000 for 9000
+ 37404 strings out of 480224
+ 922130 string characters out of 2889982
+ 1758416 words of memory out of 3000000
+ 53001 multiletter control sequences out of 15000+200000
+ 594315 words of font info for 153 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,21n,112p,707b,3078s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 77i,21n,112p,707b,3076s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><
-C:/Program Files/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTe
-X/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/time
-s/utmb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Pro
-gram Files/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/urw/times/utmri8a.pfb>
-Output written on document.pdf (54 pages, 7924059 bytes).
+0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/font
+s/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb
+8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on document.pdf (89 pages, 261913229 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
+ 467 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 95 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

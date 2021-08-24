@@ -37,6 +37,16 @@ Dispon{\'\i}vel em:
 50~f. Monografia (Trabalho de Conclusão de Curso (Graduação)) ---
   Universidade Tecnológica Federal do Paraná, Pato Branco, 2016.}
 
+\bibitem[Carbonera 2021]{repositorioImplementacao}
+\abntrefinfo{Carbonera}{CARBONERA}{2021a}
+{CARBONERA, M.~G. \textbf{JubileuBotFirmware}. [S.l.]: GitHub, 2021.
+Https://github.com/mcarbonera/JubileuBotFirmware.}
+
+\bibitem[Carbonera 2021]{repositorioSimulacaoFork}
+\abntrefinfo{Carbonera}{CARBONERA}{2021b}
+{CARBONERA, M.~G. \textbf{Simiam}. [S.l.]: GitHub, 2021.
+Https://github.com/mcarbonera/simiam.}
+
 \bibitem[Carona et al. 2008]{art:Manuel}
 \abntrefinfo{Carona et al.}{CARONA et al.}{2008}
 {CARONA, R.; AGUIAR, A. P.; GASPAR, J. Control of unicycle type robots
@@ -55,6 +65,11 @@ ISBN 978-0-387-33332-8.}
 {CROIX, J.~P. de~la. \textbf{Quickbot project}. 2013.
 Dispon{\'\i}vel em: $<$http://jpdelacroix.com/software/simiam.html$>$. Acesso
   em: 21 maio 2019.}
+
+\bibitem[Croix 2014]{repositorioSimulacaoOriginal}
+\abntrefinfo{Croix}{CROIX}{2014}
+{CROIX, J.~P. de~la. \textbf{Simiam}. [S.l.]: GitHub, 2014.
+Https://github.com/jdelacroix/simiam.}
 
 \bibitem[Cury 2001]{man:Cury}
 \abntrefinfo{Cury}{CURY}{2001}
@@ -255,6 +270,13 @@ ISBN 9780470748510.}
 {SIEGWART, R.; NOURBAKHSH, I.~R. \textbf{Introduction to Autonomous Mobile
   Robots}. [S.l.]: Bradford Company, 2004.
 ISBN 026219502X.}
+
+\bibitem[Texas Instruments Incorporated 2014]{datasheet:TivaC}
+\abntrefinfo{Texas Instruments Incorporated}{TEXAS INSTRUMENTS
+  INCORPORATED}{2014}
+{TEXAS INSTRUMENTS INCORPORATED. \textbf{Tiva™ TM4C1294NCPDT
+  Microcontroller}.
+[S.l.], Junho de 2014.}
 
 \bibitem[Wang 2008]{im:Khepera}
 \abntrefinfo{Wang}{WANG}{2008}
