@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  24 AUG 2021 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  24 AUG 2021 20:45
 entering extended mode
 **./document.tex
 (document.tex
@@ -928,8 +928,8 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write4
-runsystem(echo 'write18-test-2021824911'>"document.w18")...disabled (restricted
-).
+runsystem(echo 'write18-test-20218241245'>"document.w18")...disabled (restricte
+d).
 
 
 
@@ -1039,10 +1039,17 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count333
 \ALC@tlm=\skip67
 \algorithmicindent=\skip68
-)
+) ("C:\Program Files\MiKTeX\tex/latex/xurl\xurl.sty"
+Package: xurl 2020/12/30 v 0.09a modify URL breaks
+
+("C:\Program Files\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-32.
- ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd"
+40.
+
+("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (document.aux
 
@@ -1102,23 +1109,23 @@ LaTeX Warning: Label `fig:CompSP@cref' multiply defined.
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 132.
+(lastpage)             ! on input line 140.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1157,42 +1164,42 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 132.
+ on input line 140.
 
 <Figuras/capa_PB.png, id=4, 597.432pt x 845.0772pt>
 File: Figuras/capa_PB.png Graphic file (type png)
 <use Figuras/capa_PB.png>
-Package pdftex.def Info: Figuras/capa_PB.png  used on input line 137.
+Package pdftex.def Info: Figuras/capa_PB.png  used on input line 145.
 (pdftex.def)             Requested size: 597.55817pt x 845.04933pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 137.
+ 145.
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 137.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 137.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 137.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
  [1
 
 
@@ -1200,7 +1207,7 @@ Non-PDF special ignored!
 <special> papersize=210mm,297mm
 {C:/Users/Luiz/AppData/Local/MiKTeX/pdftex/config/pdftex.map} <./Figuras/capa_P
 B.png (PNG copy)>]
-Overfull \hbox (2.28001pt too wide) in paragraph at lines 138--138
+Overfull \hbox (2.28001pt too wide) in paragraph at lines 146--146
   $[]$ 
  []
 
@@ -4974,78 +4981,82 @@ ut line 5.
 (pdftex.def)             Requested size: 171.64081pt x 342.2779pt.
 ) [73] (Tabelas/ComunicacaoComandos.tex) [74 <./Figuras/JubileuBoard-eps-conver
 ted-to.pdf>] (Figuras/SimulacaoHibrido.tex
-<Figuras/simulacao_hibrido.png, id=357, 7704.785pt x 3790.16pt>
-File: Figuras/simulacao_hibrido.png Graphic file (type png)
-<use Figuras/simulacao_hibrido.png>
-Package pdftex.def Info: Figuras/simulacao_hibrido.png  used on input line 8.
-(pdftex.def)             Requested size: 446.86609pt x 219.82365pt.
+<Figuras/simulacao_hibridoCompactado.png, id=357, 1540.75626pt x 757.83125pt>
+File: Figuras/simulacao_hibridoCompactado.png Graphic file (type png)
+<use Figuras/simulacao_hibridoCompactado.png>
+Package pdftex.def Info: Figuras/simulacao_hibridoCompactado.png  used on input
+ line 10.
+(pdftex.def)             Requested size: 446.80788pt x 219.76543pt.
 ) [75] (Figuras/SimulacaoFuzzy.tex
-<Figuras/simulacao_fuzzy.png, id=362, 7704.785pt x 3790.16pt>
-File: Figuras/simulacao_fuzzy.png Graphic file (type png)
-<use Figuras/simulacao_fuzzy.png>
-Package pdftex.def Info: Figuras/simulacao_fuzzy.png  used on input line 8.
-(pdftex.def)             Requested size: 446.86609pt x 219.82365pt.
+<Figuras/simulacao_fuzzyCompactado.png, id=362, 1540.75626pt x 757.83125pt>
+File: Figuras/simulacao_fuzzyCompactado.png Graphic file (type png)
+<use Figuras/simulacao_fuzzyCompactado.png>
+Package pdftex.def Info: Figuras/simulacao_fuzzyCompactado.png  used on input l
+ine 10.
+(pdftex.def)             Requested size: 446.80788pt x 219.76543pt.
 )
-[76 <./Figuras/simulacao_hibrido.png (PNG copy)>] (Figuras/ResultadoIPO.tex
-<Figuras/ComportamentoIPO.png, id=368, 7726.8675pt x 4354.2675pt>
-File: Figuras/ComportamentoIPO.png Graphic file (type png)
-<use Figuras/ComportamentoIPO.png>
-Package pdftex.def Info: Figuras/ComportamentoIPO.png  used on input line 8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+[76 <./Figuras/simulacao_hibridoCompactado.png (PNG copy)>]
+(Figuras/ResultadoIPO.tex
+<Figuras/ComportamentoIPOCompactado.png, id=368, 1544.77126pt x 870.25125pt>
+File: Figuras/ComportamentoIPOCompactado.png Graphic file (type png)
+<use Figuras/ComportamentoIPOCompactado.png>
+Package pdftex.def Info: Figuras/ComportamentoIPOCompactado.png  used on input 
+line 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
+) (Figuras/ResultadoEO.tex
+<Figuras/ComportamentoEOCompactado.png, id=370, 1544.77126pt x 870.25125pt>
+File: Figuras/ComportamentoEOCompactado.png Graphic file (type png)
+<use Figuras/ComportamentoEOCompactado.png>
+Package pdftex.def Info: Figuras/ComportamentoEOCompactado.png  used on input l
+ine 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
+) [77 <./Figuras/simulacao_fuzzyCompactado.png (PNG copy)>] (Figuras/ResultadoM
+esclado.tex
+<Figuras/ComportamentoIPO_E_EOCompactado.png, id=376, 1544.77126pt x 870.25125p
+t>
+File: Figuras/ComportamentoIPO_E_EOCompactado.png Graphic file (type png)
+<use Figuras/ComportamentoIPO_E_EOCompactado.png>
+Package pdftex.def Info: Figuras/ComportamentoIPO_E_EOCompactado.png  used on i
+nput line 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
+ [78 <./Figuras/ComportamentoIPOCompactado.png (PNG copy)> <./Figuras/Comportam
+entoEOCompactado.png (PNG copy)>]) (Figuras/ResultadoSP.tex
+<Figuras/ComportamentoSPCompactado.png, id=384, 1544.77126pt x 870.25125pt>
+File: Figuras/ComportamentoSPCompactado.png Graphic file (type png)
+<use Figuras/ComportamentoSPCompactado.png>
+Package pdftex.def Info: Figuras/ComportamentoSPCompactado.png  used on input l
+ine 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
+) (Figuras/ResultadoHibrido.tex
+<Figuras/hibridoCompactado.png, id=386, 1544.77126pt x 870.25125pt>
+File: Figuras/hibridoCompactado.png Graphic file (type png)
+<use Figuras/hibridoCompactado.png>
+Package pdftex.def Info: Figuras/hibridoCompactado.png  used on input line 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
 )
-(Figuras/ResultadoEO.tex
-<Figuras/ComportamentoEO.png, id=370, 7726.8675pt x 4354.2675pt>
-File: Figuras/ComportamentoEO.png Graphic file (type png)
-<use Figuras/ComportamentoEO.png>
-Package pdftex.def Info: Figuras/ComportamentoEO.png  used on input line 8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
-) [77 <./Figuras/simulacao_fuzzy.png (PNG copy)>]
-(Figuras/ResultadoMesclado.tex
-<Figuras/ComportamentoIPO_E_EO.png, id=376, 7726.8675pt x 4354.2675pt>
-File: Figuras/ComportamentoIPO_E_EO.png Graphic file (type png)
-<use Figuras/ComportamentoIPO_E_EO.png>
-Package pdftex.def Info: Figuras/ComportamentoIPO_E_EO.png  used on input line 
-8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
- [78 <./Figuras/ComportamentoIPO.png (PNG copy)> <./Figuras/ComportamentoEO.png
- (PNG copy)>]) (Figuras/ResultadoSP.tex
-<Figuras/ComportamentoSP.png, id=384, 7726.8675pt x 4354.2675pt>
-File: Figuras/ComportamentoSP.png Graphic file (type png)
-<use Figuras/ComportamentoSP.png>
-Package pdftex.def Info: Figuras/ComportamentoSP.png  used on input line 8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
+[79 <./Figuras/ComportamentoIPO_E_EOCompactado.png (PNG copy)>] [80 <./Figuras/
+ComportamentoSPCompactado.png (PNG copy)>] (Figuras/ResultadoFuzzy.tex
+<Figuras/fuzzyCompactado.png, id=396, 1544.77126pt x 870.25125pt>
+File: Figuras/fuzzyCompactado.png Graphic file (type png)
+<use Figuras/fuzzyCompactado.png>
+Package pdftex.def Info: Figuras/fuzzyCompactado.png  used on input line 10.
+(pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
 )
-(Figuras/ResultadoHibrido.tex
-<Figuras/hibrido.png, id=386, 7726.8675pt x 4354.2675pt>
-File: Figuras/hibrido.png Graphic file (type png)
-<use Figuras/hibrido.png>
-Package pdftex.def Info: Figuras/hibrido.png  used on input line 8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
-) [79 <./Figuras/ComportamentoIPO_E_EO.png (PNG copy)>] [80 <./Figuras/Comporta
-mentoSP.png (PNG copy)>]
-(Figuras/ResultadoFuzzy.tex
-<Figuras/fuzzy.png, id=396, 7726.8675pt x 4354.2675pt>
-File: Figuras/fuzzy.png Graphic file (type png)
-<use Figuras/fuzzy.png>
-Package pdftex.def Info: Figuras/fuzzy.png  used on input line 8.
-(pdftex.def)             Requested size: 448.14685pt x 252.54105pt.
-) [81 <./Figuras/hibrido.png (PNG copy)>]
-(ElementosTextuais/ConclusoesTrabalhosFuturos.tex [82 <./Figuras/fuzzy.png (PNG
- copy)>]
+[81 <./Figuras/hibridoCompactado.png (PNG copy)>]
+(ElementosTextuais/ConclusoesTrabalhosFuturos.tex [82 <./Figuras/fuzzyCompactad
+o.png (PNG copy)>]
 Cap\'{\i }tulo 5.
 [83
 
-])) [84] (document.bbl [85
+])) [84] (document.bbl
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
+3.
+ ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [85
 
 
-] [86] [87]
-Overfull \hbox (42.07814pt too wide) in paragraph at lines 309--315
-\OT1/ptm/m/n/12 Dis-pon[]vel em: $\OML/ztmcm/m/it/12 <$\OT1/ptm/m/n/12 https:/
-/repository.upenn.edu/cgi/viewcontent.cgi?article=1524&context=cis[]reports$\OM
-L/ztmcm/m/it/12 >$\OT1/ptm/m/n/12 .
- []
-
-) 
+] [86] [87]) 
 AED: lastpage setting LastPage
 [88]
 +-------------------------------------------------------------------+
@@ -5058,27 +5069,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 37404 strings out of 480224
- 922130 string characters out of 2889982
- 1758416 words of memory out of 3000000
- 53001 multiletter control sequences out of 15000+200000
- 594315 words of font info for 153 fonts, out of 3000000 for 9000
+ 37532 strings out of 480224
+ 924504 string characters out of 2889982
+ 1759903 words of memory out of 3000000
+ 53116 multiletter control sequences out of 15000+200000
+ 595262 words of font info for 157 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,21n,112p,707b,3076s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 77i,21n,112p,707b,3079s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1
 /public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
 onts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb>
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Pro
-gram Files/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/font
-s/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb
-8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on document.pdf (89 pages, 261913229 bytes).
+gram Files/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX/f
+onts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/symbol/
+usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on document.pdf (89 pages, 40637315 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
+ 471 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  282 words of extra memory for PDF output out of 10000 (max. 10000000)
 

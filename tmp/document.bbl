@@ -20,7 +20,7 @@ ISSN 1474-6670.
 3rd IFAC Symposium on Nonlinear Control Systems Design 1995, Tahoe City, CA,
   USA, 25-28 June 1995.
 Dispon{\'\i}vel em:
-  $<$http://www.sciencedirect.com/science/article/pii/S1474667017469047$>$.
+  $<$\url{http://www.sciencedirect.com/science/article/pii/S1474667017469047}$>$.
   Acesso em: 1 maio 2019.}
 
 \bibitem[Banavar e Sankaranarayanan 2006]{inbook:Ravi_Mumbai}
@@ -40,12 +40,12 @@ Dispon{\'\i}vel em:
 \bibitem[Carbonera 2021]{repositorioImplementacao}
 \abntrefinfo{Carbonera}{CARBONERA}{2021a}
 {CARBONERA, M.~G. \textbf{JubileuBotFirmware}. [S.l.]: GitHub, 2021.
-Https://github.com/mcarbonera/JubileuBotFirmware.}
+\url{https://github.com/mcarbonera/JubileuBotFirmware}.}
 
 \bibitem[Carbonera 2021]{repositorioSimulacaoFork}
 \abntrefinfo{Carbonera}{CARBONERA}{2021b}
 {CARBONERA, M.~G. \textbf{Simiam}. [S.l.]: GitHub, 2021.
-Https://github.com/mcarbonera/simiam.}
+\url{https://github.com/mcarbonera/simiam}.}
 
 \bibitem[Carona et al. 2008]{art:Manuel}
 \abntrefinfo{Carona et al.}{CARONA et al.}{2008}
@@ -63,13 +63,13 @@ ISBN 978-0-387-33332-8.}
 \bibitem[Croix 2013]{im:Simiam}
 \abntrefinfo{Croix}{CROIX}{2013}
 {CROIX, J.~P. de~la. \textbf{Quickbot project}. 2013.
-Dispon{\'\i}vel em: $<$http://jpdelacroix.com/software/simiam.html$>$. Acesso
-  em: 21 maio 2019.}
+Dispon{\'\i}vel em: $<$\url{http://jpdelacroix.com/software/simiam.html}$>$.
+  Acesso em: 21 maio 2019.}
 
 \bibitem[Croix 2014]{repositorioSimulacaoOriginal}
 \abntrefinfo{Croix}{CROIX}{2014}
 {CROIX, J.~P. de~la. \textbf{Simiam}. [S.l.]: GitHub, 2014.
-Https://github.com/jdelacroix/simiam.}
+\url{https://github.com/jdelacroix/simiam}.}
 
 \bibitem[Cury 2001]{man:Cury}
 \abntrefinfo{Cury}{CURY}{2001}
@@ -83,21 +83,21 @@ Https://github.com/jdelacroix/simiam.}
 \textbf{{Commande non lin{\'e}aire et asservissement visuel de robots
   autonomes}}.
 Tese (Theses) --- {Sup{\'e}lec}, out. 2011.
-Dispon{\'\i}vel em: $<$https://tel.archives-ouvertes.fr/tel-00657022$>$. Acesso
-  em: 25 abr. 2019.}
+Dispon{\'\i}vel em: $<$\url{https://tel.archives-ouvertes.fr/tel-00657022}$>$.
+  Acesso em: 25 abr. 2019.}
 
 \bibitem[Dukor et al. 2017]{QuickBot}
 \abntrefinfo{Dukor et al.}{DUKOR et al.}{2017}
 {DUKOR, K.~F.; IGWEGBE, G.; KADIRI, D. \textbf{Quickbot project}. 2017.
 Dispon{\'\i}vel em:
-  $<$https://www.hackster.io/quickbot-team/quickbot-1f93e3$>$. Acesso em: 8
-  abr. 2019.}
+  $<$\url{https://www.hackster.io/quickbot-team/quickbot-1f93e3}$>$. Acesso em:
+  8 abr. 2019.}
 
 \bibitem[Dynapar 2020]{odometria2}
 \abntrefinfo{Dynapar}{DYNAPAR}{2020}
 {DYNAPAR. \textbf{Quadrature Encoder Overview}. 2020.
 Dispon{\'\i}vel em:
-  $<$https://www.dynapar.com/technology/encoder\_basics/quadrature\_encoder/$>$.
+  $<$\url{https://www.dynapar.com/technology/encoder_basics/quadrature_encoder/}$>$.
   Acesso em: 2 nov. 2020.}
 
 \bibitem[Egerstedt 2000]{art:Magnus_Behavior}
@@ -110,15 +110,16 @@ Dispon{\'\i}vel em:
 \abntrefinfo{Fuchs et al.}{FUCHS et al.}{2013}
 {FUCHS, T. et al. \textbf{Using PySimiam in Coursera ‘Control of mobile
   robots’ course}. 2013.
-Dispon{\'\i}vel em: $<$http://pysimiam.sourceforge.net/coursera.html$>$. Acesso
-  em: 21 maio 2019.}
+Dispon{\'\i}vel em: $<$\url{http://pysimiam.sourceforge.net/coursera.html}$>$.
+  Acesso em: 21 maio 2019.}
 
 \bibitem[Georgia Robotics and Intelligent Systems Laboratory 2013]{Simiam}
 \abntrefinfo{Georgia Robotics and Intelligent Systems Laboratory}{GEORGIA
   ROBOTICS AND INTELLIGENT SYSTEMS LABORATORY}{2013}
 {GEORGIA ROBOTICS AND INTELLIGENT SYSTEMS LABORATORY. \textbf{Sim.I.am}. 2013.
-Dispon{\'\i}vel em: $<$http://gritslab.gatech.edu/home/2013/10/sim-i-am/$>$.
-  Acesso em: 8 abr. 2019.}
+Dispon{\'\i}vel em:
+  $<$\url{http://gritslab.gatech.edu/home/2013/10/sim-i-am/}$>$. Acesso em: 8
+  abr. 2019.}
 
 \bibitem[Glotfelter e Egerstedt 2018]{art:Magnus_PMPC}
 \abntrefinfo{Glotfelter e Egerstedt}{GLOTFELTER; EGERSTEDT}{2018}
@@ -175,7 +176,7 @@ ISBN 9781118097816.}
 \abntrefinfo{Maheshwari e Smid}{MAHESHWARI; SMID}{2019}
 {MAHESHWARI, A.; SMID, M. \textbf{Introduction to Theory of Computation}.
   School of Computer Science Carleton University, 2019. Dispon{\'\i}vel em:
-  $<$https://cglab.ca/~michiel/TheoryOfComputation/TheoryOfComputation.pdf$>$.
+  $<$\url{https://cglab.ca/~michiel/TheoryOfComputation/TheoryOfComputation.pdf}$>$.
   Acesso em: 7 maio 2019.}
 
 \bibitem[Marchi 2001]{mest_marchi}
@@ -231,8 +232,9 @@ MIT, p. 1--15, jun. 2009.}
   \textbf{Encyclopedia of Systems and Control}. London: Springer London, 2013.
   p.~1--9.
 ISBN 978-1-4471-5102-9.
-Dispon{\'\i}vel em: $<$https://doi.org/10.1007/978-1-4471-5102-9\_178-1$>$.
-  Acesso em: 1 maio 2019.}
+Dispon{\'\i}vel em:
+  $<$\url{https://doi.org/10.1007/978-1-4471-5102-9_178-1}$>$. Acesso em: 1
+  maio 2019.}
 
 \bibitem[Ottoni 2000]{Tcc_Ottoni}
 \abntrefinfo{Ottoni}{OTTONI}{2000}
@@ -283,7 +285,7 @@ ISBN 026219502X.}
 {WANG, J. \textbf{A Khepera III robot at the Georgia Institute of Technology}.
   2008.
 Dispon{\'\i}vel em:
-  $<$https://en.wikipedia.org/wiki/Khepera\_mobile\_robot\#/media/File:Khepera\_III\_robot.jpg$>$.
+  $<$\url{https://en.wikipedia.org/wiki/Khepera_mobile_robot#/media/File:Khepera_III_robot.jpg}$>$.
   Acesso em: 21 maio 2019.}
 
 \bibitem[Yahmedi e Fatmi 2011]{inbook:FuzzyNavigationIntech}
@@ -293,7 +295,7 @@ Dispon{\'\i}vel em:
   InTech, 2011. p. 287--310.
 ISBN 978-953-307-909-7.
 Dispon{\'\i}vel em:
-  $<$http://www.intechopen.com/books/recent-advances-in-mobile-robotics/fuzzy-logic-based-navigation-ofmobile-robots$>$.
+  $<$\url{http://www.intechopen.com/books/recent-advances-in-mobile-robotics/fuzzy-logic-based-navigation-ofmobile-robots}$>$.
   Acesso em: 28 abr. 2019.}
 
 \bibitem[Yun e Tan 1997]{art:wallfollowing}
@@ -310,7 +312,7 @@ ISBN 0-7803-4160-0.}
   1992.
 18~p.
 Dispon{\'\i}vel em:
-  $<$https://repository.upenn.edu/cgi/viewcontent.cgi?article=1524\&context=cis\_reports$>$.
+  $<$\url{https://repository.upenn.edu/cgi/viewcontent.cgi?article=1524&context=cis_reports}$>$.
   Acesso em: 20 maio 2019.}
 
 \end{thebibliography}
