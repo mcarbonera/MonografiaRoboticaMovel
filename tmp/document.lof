@@ -5,7 +5,7 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Transição de Estado\relax }}{22}{}%
 \contentsline {figure}{\numberline {5}{\ignorespaces SED em malha fechada\relax }}{22}{}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Exemplos de diagramas de transição para autômatos temporizados com guarda\relax }}{23}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Controlador Híbrido\relax }}{24}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Controlador Híbrido\relax }}{25}{}%
 \contentsline {figure}{\numberline {8}{\ignorespaces Modo deslizante e diagramas de transição\relax }}{26}{}%
 \contentsline {figure}{\numberline {9}{\ignorespaces Exemplo do modo deslizante em robótica móvel\relax }}{26}{}%
 \contentsline {figure}{\numberline {10}{\ignorespaces Representação gráfica da ação de um controle PID\relax }}{27}{}%
@@ -13,16 +13,16 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Conjuntos \textit {Fuzzy} possíveis para a variável ``altura''\relax }}{29}{}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Operações união e intersecção em conjuntos \textit {Fuzzy}\relax }}{31}{}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Inferência em Lógica \textit {Fuzzy}\relax }}{32}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Defuzzificação COG\relax }}{32}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Defuzzificação COG\relax }}{33}{}%
 \contentsline {figure}{\numberline {16}{\ignorespaces Sinais de saída dos canais dos \textit {encoders} para sentido de rotação\relax }}{34}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Robôs Khepera 3 e QuickBot\relax }}{36}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Robôs Khepera 3 e QuickBot em simulação\relax }}{37}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Materiais e robô após montagem\relax }}{37}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Robô após montagem\relax }}{38}{}%
 \contentsline {figure}{\numberline {19}{\ignorespaces Resposta do sensor infravermelho\relax }}{39}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Materiais e robô após montagem\relax }}{40}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Robô após montagem\relax }}{41}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Curva do motor sem carga\relax }}{41}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Curva do motor com carga\relax }}{42}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Regressão Linear para a curva do motor\relax }}{42}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Curva do motor sem carga\relax }}{39}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Curva do motor com carga\relax }}{40}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Regressão Linear para a curva do motor\relax }}{40}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Robôs Khepera 3 e QuickBot\relax }}{41}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Robôs Khepera 3 e QuickBot em simulação\relax }}{41}{}%
 \contentsline {figure}{\numberline {25}{\ignorespaces Comportamento Ir para Objetivo\relax }}{45}{}%
 \contentsline {figure}{\numberline {26}{\ignorespaces Comportamento Evitar Obstáculo\relax }}{47}{}%
 \contentsline {figure}{\numberline {27}{\ignorespaces Tipos de obstáculos\relax }}{50}{}%

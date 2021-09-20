@@ -1,119 +1,49 @@
-\chapter{Materiais e Método}
+%\chapter{Materiais e Método}
+\chapter{Materiais}
 \vspace{-2.5 cm}
 
+%Este Capítulo descreve os requisitos materiais para o desenvolvimento do
+%trabalho e os métodos que serão adotados para atingir os objetivos.
 Este Capítulo descreve os requisitos materiais para o desenvolvimento do
-trabalho e os métodos que serão adotados para atingir os objetivos. 
+trabalho. 
 
-\section{Materiais}
+%\section{Materiais}
+\section{Componentes Físicos e Eletrônicos}
 
-Os materiais a serem utilizados dividem-se em componentes eletrônicos e
-componentes físicos. Os componentes eletrônicos podem ser vistos na tabela \ref{tab:custo}.
+%Os materiais a serem utilizados dividem-se em componentes eletrônicos e
+%componentes físicos. Os componentes eletrônicos podem ser vistos na Tabela 
+%\ref{tab:custo}.
+Os componentes eletrônicos utilizados neste trabalho podem ser vistos na Tabela 
+\ref{tab:custo}.
 
 \input{Tabelas/TabelaCustos.tex}
 
-Materiais para o corpo do robô, como chapa de MDF para o chassi, parafusos
-de rosca, abraçadeiras não tiveram seus custos contabilizados.
+Os componentes físicos para o corpo do robô, como chapa de MDF para o chassi, papel 
+paraná para suporte estrutural, parafusos de rosca, abraçadeiras não tiveram 
+seus custos contabilizados.
 
-Entre as ferramentas, será utilizado \textit{software} Matlab, com o
-simulador Simiam \cite{Simiam}, que é implementado como um aplicativo Matlab.
+\section{Montagem Física}
 
-\subsection{O simulador Simiam e alterações necessárias}
-
-O Simulador Simiam foi implementado pela Universidade Georgia Tech, 
-inicialmente oferecendo apenas suporte ao robô Khepera 3. Posteriormente, 
-para atender necessidades do curso \textit{Control of Mobile Robots}, hospedado 
-na plataforma ``Coursera.org'', o robô de baixo custo QuickBot foi adicionado. 
-Os robôs Khepera e QuickBot reais podem ser vistos na Figura \ref{fig:RobosK3QB}. 
-Suas contrapartes simuladas estão retratadas na Figura \ref{fig:RobosEmSimulador}.
-
-O curso mencionado foi removido da plataforma no dia 17 de Agosto de 2020 e apenas
-os alunos concluíntes possuem acesso. De qualquer forma, o simulador ainda pode ser
-obtido gratuitamente.
-
-\input{Figuras/FigRobos}
-
-\input{Figuras/FigRobosEmSim}
-
-O Simiam é implementado como um aplicativo Matlab. Possui uma interface
-gráfica intuitiva e uma arquitetura interna simples, facilmente customizável. As
-subseções a seguir apresentam os pacotes mais importantes, bem como as
-principais classes que os compõem e chama atenção para as alterações necessárias
-a fim de tornar a simulação coerente com o presente trabalho.
-
-	\subsubsection{Pacote ``ui''}
+	Nesta seção pretende-se mostrar as questões práticas necessárias para a construção do 
+	robô.
 	
-	O pacote ``ui'' é responsável pela interface gráfica do simulador. A classe
-	``AppWindow'' possui um método construtor que inicializa atributos e o
-	método ``load\_ui'' que invoca o método ``create\_layout", responsável por
-	criar o leiaute da interface.
+	Os componentes físicos do robô podem ser vistos na Figura \ref{fig:RoboReal}. Alguns
+	números foram acrescentados às imagens ao lado dos periféricos utilizados, a fim de 
+	rotulá-los.
 	
-	O botão start, criado pelo método anterior é tratado por ``ui\_button\_start".
-	Esta é a função principal reponsável por criar o ambiente de simulação
-	(definido no arquivo ``settings.xml''), inserir um ou mais robôs e iniciar a
-	simulação.
+	\input{Figuras/RoboJubileu}
 	
-	Alterações mínimas foram efetuadas nesta etapa. Foram adicionados comandos para
-	maximizar a janela do simulador e para ajustar o ``zoom'' de modo a permitir uma
-	visão panorâmica de todo o ambiente de simulação. O arquivo de configuração
-	``settings.xml'' foi alterado a fim de ajustar o ``tamanho do mundo'' ao
-	tamanho da	tela.
+	O número 1 na Figura \ref{fig:RoboReal}.a indica o sensor infravermelho. Os números 2 e 3
+	na Figura \ref{fig:RoboReal}.b indicam o driver e o microcontrolador, respectivamente.
+	Os números 4 e 5 na Figura \ref{fig:RoboReal}.c indicam, respectivamente, o exibidor
+	de nível energia para bateria de lítio (que não é necessário para o funcionamento) 
+	e o regulador de tensão regulável. 
 	
-	\subsubsection{Pacote ``simulator''}
+	A Figura \ref{fig:RoboReal2}.a mostra o posicionamento dos periféricos e parafusos 
+	roscados. A Figura \ref{fig:RoboReal2}.b retrata a montagem concluída.
 	
-	O pacote ``simulator'' realiza de fato a simulação. A classe ``World'' é
-	responsável por extrair informações do arquivo ``.xml'', como quantidade e
-	localização inicial de robôs e obstáculos, armazenado em estruturas de dados.
-	A classe ``Simulator'' atualiza a simulação na janela, enquanto a
-	classe ``Physics'' é responsável por detectar colisões de robôs com obstáculos
-	e entre si. 
+	\input{Figuras/RoboJubileuMontado}
 	
-	As alterações neste pacote foram todas na classe ``Simulator'', no intuito
-	de possibilitar a captura da simulação em video ``.mp4" ou ``.gif". Apesar de
-	não ser uma alteração fundamental para a etapa de execução do trabalho, é
-	necessária para a apresentação. Não foi criado um botão na interface para
-	especificar ao simulador a captura em video. Assim, é necessário, no
-	construtor da classe Simulator, atribuir valor verdadeiro aos atributos
-	``gravarvideo'' e/ou ``gravargif". 
-	
-	\subsubsection{Pacote ``robot''}
-	
-	O pacote ``robot'' define um ou mais robôs passíveis de serem instanciados. A
-	classe ``QuickBot'' estabelece parâmetros físicos, tais como informações
-	geométricas, posicionamento dos sensores no corpo do robô e estabelece
-	limitações, como velocidades de saturação e zona morta dos motores. Além de
-	instanciar objetos das classes ``DifferentialDrive'', ``ProximitySensor'' e
-	``WheelEncoder'', ``QuickBot'' extende a classe ``Robot''. 
-	
-	A classe ``DifferentialDrive" implementa a ``dinâmica'' dos modelos de
-	acionamento diferencial e uniciclo. Com os métodos ``uni\_to\_diff'' e ``diff\_to\_uni'', a
-	equivalência com o modelo apresentado na Equação \ref{eq:vw_to_diff} é
-	estabelecida no espaço de simulação. 
-
-	A classe ``ProximitySensor'' estabelece características do sensor infravermelho
-	usado no QuickBot, tais como distâncias mínimas e máximas, espalhamento, localização e
-	direção em relação ao corpo do robô e adiciona um ruído gaussiano.
-	``WheelEncoder'', similarmente, estabelece características do \textit{encoder}.
-	
-	As alterações nesta etapa foram no intuito de incluir o robô deste trabalho
-	no Simiam. O arquivo ``settings.xml'' deve determinar que um objeto (robô) da
-	nova classe criada seja instanciado, ao invés do objeto da classe QuickBot.
-	
-	\subsubsection{Pacote ``controller''}
-	
-	O pacote ``controller'' é responsável pela implementação de todos os
-	controladores e supervisores dos robôs implementados. A classe ``Supervisor'' é
-	extendida para obter o controlador supervisório de cada robô a ser simulado.
-	Para o QuickBot e Khepera 3, os respectivos supervisores são definidos pelas
-	classes ``QBSupervisor'' e ``K3Supervisor''. Essas classes definem máquinas de
-	estado, onde cada estado é associado a um controlador de variável contínua.
-	Esses controladores, por sua vez, extendem a classe ``Controller'' e
-	implementam os ``comportamentos'', ou modos, dos robôs.
-	% Calculo de odometria está em QBSupervisor.
-	
-	As alterações neste pacote foram responsáveis pela inclusão de suporte a
-	controladores \textit{Fuzzy}, além de adicionar o supervisório específico para
-	o robô desenvolvido.
-
 \subsection{Especificações}
 
 As variáveis L e R na Equação \ref{eq:diff}, para o robô deste trabalho, valem
@@ -138,31 +68,7 @@ na Equação \ref{eq:PolinomioVx}.
 	\end{split}
 \end{equation}
 
-\subsection{Montagem Física}
-
-	Nesta seção pretende-se mostrar as questões práticas necessárias para a construção do 
-	robô.
-	
-\subsubsection{Processo de montagem}
-
-	Os componentes físicos do robô podem ser vistos na Figura \ref{fig:RoboReal}. Alguns
-	números foram acrescentados às imagens ao lado dos periféricos utilizados, a fim de 
-	rotulá-los.
-	
-	\input{Figuras/RoboJubileu}
-	
-	O número 1 na Figura \ref{fig:RoboReal}.a indica o sensor infravermelho. Os números 2 e 3
-	na Figura \ref{fig:RoboReal}.b indicam o driver e o microcontrolador, respectivamente.
-	Os números 4 e 5 na Figura \ref{fig:RoboReal}.c indicam, respectivamente, o exibidor
-	de nível energia para bateria de lítio (que não é necessário para o funcionamento) 
-	e o regulador de tensão regulável. 
-	
-	A Figura \ref{fig:RoboReal2}.a mostra o posicionamento dos periféricos e parafusos 
-	roscados. A Figura \ref{fig:RoboReal2}.b retrata a montagem concluída.
-	
-	\input{Figuras/RoboJubileuMontado}
-	
-\subsubsection{Curvas dos motores}
+\subsection{Curvas dos motores}
 
 	A partir de um requisito de velocidade angular, é necessário definir a quantidade de 
 	acionamento que será utilizada no motor (porcentagem de PWM).
@@ -188,27 +94,127 @@ na Equação \ref{eq:PolinomioVx}.
 	dessa regressão, bem como as constantes obtidas.
 	
 	\input{Figuras/AcionamentoMotor3}
+
+\section{O simulador Simiam}
+
+Entre as ferramentas, será utilizado \textit{software} Matlab, com o
+simulador Simiam \cite{Simiam}, que é implementado como um aplicativo Matlab.
+
+O Simulador Simiam foi implementado pela Universidade Georgia Tech, 
+inicialmente oferecendo apenas suporte ao robô Khepera 3. Posteriormente, 
+para atender necessidades do curso \textit{Control of Mobile Robots}, hospedado 
+na plataforma ``Coursera.org'', o robô de baixo custo QuickBot foi adicionado. 
+Os robôs Khepera e QuickBot reais podem ser vistos na Figura \ref{fig:RobosK3QB}. 
+Suas contrapartes simuladas estão retratadas na Figura \ref{fig:RobosEmSimulador}.
+
+O curso mencionado foi removido da plataforma no dia 17 de Agosto de 2020 e apenas
+os alunos concluíntes possuem acesso. De qualquer forma, o simulador ainda pode ser
+obtido gratuitamente.
+
+\input{Figuras/FigRobos}
+
+\input{Figuras/FigRobosEmSim}
+
+O simulador mencionado possui uma interface gráfica intuitiva e uma arquitetura 
+interna simples, facilmente customizável. As subseções a seguir apresentam os 
+pacotes mais importantes, bem como as principais classes que os compõem e chama 
+atenção para as alterações realizadas a fim de oferecer suporte ao robô implementado
+neste trabalho, tornando a simulação coerente com este novo robô.
+
+	\subsection{Pacote ``ui''}
 	
-\section{Metodologia}
+	O pacote ``ui'' é responsável pela interface gráfica do simulador. A classe
+	``AppWindow'' possui um método construtor que inicializa atributos e o
+	método ``load\_ui'' que invoca o método ``create\_layout", responsável por
+	criar o leiaute da interface.
+	
+	O botão start, criado pelo método anterior é tratado por ``ui\_button\_start".
+	Esta é a função principal reponsável por criar o ambiente de simulação
+	(definido no arquivo ``settings.xml''), inserir um ou mais robôs e iniciar a
+	simulação.
+	
+	Alterações mínimas foram efetuadas nesta etapa. Foram adicionados comandos para
+	maximizar a janela do simulador e para ajustar o ``zoom'' de modo a permitir uma
+	visão panorâmica de todo o ambiente de simulação. O arquivo de configuração
+	``settings.xml'' foi alterado a fim de ajustar o ``tamanho do mundo'' ao
+	tamanho da	tela.
+	
+	\subsection{Pacote ``simulator''}
+	
+	O pacote ``simulator'' realiza de fato a simulação. A classe ``World'' é
+	responsável por extrair informações do arquivo ``.xml'', como quantidade e
+	localização inicial de robôs e obstáculos, armazenado em estruturas de dados.
+	A classe ``Simulator'' atualiza a simulação na janela, enquanto a
+	classe ``Physics'' é responsável por detectar colisões de robôs com obstáculos
+	e entre si (em caso simulações multirobôs). 
+	
+	As alterações neste pacote foram todas na classe ``Simulator'', no intuito
+	de possibilitar a captura da simulação em video ``.mp4" ou ``.gif". Apesar de
+	não ser uma alteração fundamental para a etapa de execução do trabalho, é
+	necessária para a apresentação. Não foi criado um botão na interface para
+	especificar ao simulador a captura em video. Assim, é necessário, no
+	construtor da classe Simulator, atribuir valor verdadeiro aos atributos
+	``gravarvideo'' e/ou ``gravargif". 
+	
+	\subsection{Pacote ``robot''}
+	
+	O pacote ``robot'' define um ou mais robôs passíveis de serem instanciados. A
+	classe ``QuickBot'' estabelece parâmetros físicos, tais como informações
+	geométricas, posicionamento dos sensores no corpo do robô e estabelece
+	limitações, como velocidades de saturação e zona morta dos motores. Além de
+	instanciar objetos das classes ``DifferentialDrive'', ``ProximitySensor'' e
+	``WheelEncoder'', ``QuickBot'' extende a classe ``Robot''. 
+	
+	A classe ``DifferentialDrive" implementa a ``dinâmica'' dos modelos de
+	acionamento diferencial e uniciclo. Com os métodos ``uni\_to\_diff'' e ``diff\_to\_uni'', a
+	equivalência com o modelo apresentado na Equação \ref{eq:vw_to_diff} é
+	estabelecida no espaço de simulação. 
 
-Neste trabalho o protótipo será desenvolvido tendo como base o robô móvel de
-acionamento diferencial Quickbot \cite{QuickBot}. Porém, esse robô se encontra
-com alguns componentes de hardware obsoletos. Componentes mais atuais serão
-utilizados.
-
-O simulador Simiam será estudado de modo a permitir a inserção de novas
-funcionalidades, como o módulo \textit{fuzzy}, pois este simulador foi
-implementado visando a utilização de uma arquitetura de controle híbrida (SED em conjunto
-com SDVC). 
-
-Em seguida, deve-se projetar os comportamentos do robô que solucionem o problema
-proposto de duas maneiras separadas: utilizando o sistema híbrido, a fim de estudar a
-estratégia de arbitragem de comportamentos, e por sistema \textit{fuzzy}, a fim de compreender 
-a estratégia de fusão de comportamentos. 
-
-Utilizar o simulador Simiam, desenvolvido pela Universidade Georgia
-Tech, para validar o algoritmo de controle.
-
-Deve-se executar a montagem física, implementar o sistema embarcado e elaborar os testes em
-protótipo, utilizando obstáculos em posições distintas a fim de verificar a robustez dos 
-algoritmos implementados. 
+	A classe ``ProximitySensor'' estabelece características do sensor infravermelho
+	usado no QuickBot, tais como distâncias mínimas e máximas, espalhamento, localização e
+	direção em relação ao corpo do robô e adiciona um ruído gaussiano.
+	``WheelEncoder'', similarmente, estabelece características do \textit{encoder}.
+	
+	As alterações nesta etapa foram no intuito de incluir o robô deste trabalho
+	no Simiam. O arquivo ``settings.xml'' deve determinar que um objeto (robô) da
+	nova classe criada seja instanciado, ao invés do objeto da classe QuickBot.
+	
+	\subsection{Pacote ``controller''}
+	
+	O pacote ``controller'' é responsável pela implementação de todos os
+	controladores e supervisores dos robôs implementados. A classe ``Supervisor'' é
+	extendida para obter o controlador supervisório de cada robô a ser simulado.
+	Para o QuickBot e Khepera 3, os respectivos supervisores são definidos pelas
+	classes ``QBSupervisor'' e ``K3Supervisor''. Essas classes definem máquinas de
+	estado, onde cada estado é associado a um controlador de variável contínua.
+	Esses controladores, por sua vez, extendem a classe ``Controller'' e
+	implementam os ``comportamentos'', ou modos, dos robôs.
+	% Calculo de odometria está em QBSupervisor.
+	
+	As alterações neste pacote foram responsáveis pela inclusão de suporte a
+	controladores \textit{Fuzzy}, além de adicionar o supervisório específico para
+	o robô desenvolvido.
+	
+% \section{Metodologia}
+% 
+% Neste trabalho o protótipo será desenvolvido tendo como base o robô móvel de
+% acionamento diferencial Quickbot \cite{QuickBot}. Porém, esse robô se encontra
+% com alguns componentes de hardware obsoletos. Componentes mais atuais serão
+% utilizados.
+% 
+% O simulador Simiam será estudado de modo a permitir a inserção de novas
+% funcionalidades, como o módulo \textit{fuzzy}, pois este simulador foi
+% implementado visando a utilização de uma arquitetura de controle híbrida (SED em conjunto
+% com SDVC). 
+% 
+% Em seguida, deve-se projetar os comportamentos do robô que solucionem o problema
+% proposto de duas maneiras separadas: utilizando o sistema híbrido, a fim de estudar a
+% estratégia de arbitragem de comportamentos, e por sistema \textit{fuzzy}, a fim de compreender 
+% a estratégia de fusão de comportamentos. 
+% 
+% Utilizar o simulador Simiam, desenvolvido pela Universidade Georgia
+% Tech, para validar o algoritmo de controle.
+% 
+% Deve-se executar a montagem física, implementar o sistema embarcado e elaborar os testes em
+% protótipo, utilizando obstáculos em posições distintas a fim de verificar a robustez dos 
+% algoritmos implementados. 

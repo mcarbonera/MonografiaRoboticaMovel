@@ -204,11 +204,11 @@ Em \citeonline{art:Magnus_PMPC}, uma técnica é explorada a fim de tratar o
 modelo diferencial pelo modelo de integrador-único (ponto controlado por
 velocidade, ou, $\mathbf{\dot{x}} = \mathbf{u}$). Os autores utilizam como
 referência um ponto deslocado em relação ao ponto no centro entre as duas rodas.
-A Figura \ref{fig:modelo}.b indica a posição deste ponto ($P_r$). O valor $l$ também
-pode ser visto na Figura e é justamente a distância entre a origem e $P_r$. A Equação 
-\ref{eq:Pr} mostra os valores de $x$ e $y$ para a nova referência. Derivando e
-substituindo $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ da Equação \ref{eq:uniciclo},
-obtem-se a Equação \ref{eq:PrDeriv}. 
+A Figura \ref{fig:modelo}.b indica a posição deste ponto ($P_r$). O valor $l$ 
+(minúsculo) também pode ser visto na Figura e é justamente a distância entre a 
+origem e $P_r$. A Equação \ref{eq:Pr} mostra os valores de $x$ e $y$ para a nova 
+referência. Derivando e substituindo $\dot{x}$, $\dot{y}$ e $\dot{\phi}$ da Equação 
+\ref{eq:uniciclo}, obtem-se a Equação \ref{eq:PrDeriv}. 
 \begin{equation}
 	\label{eq:Pr}
 	\left \{ \begin{matrix} x' = x_o + l\cos{\phi}
@@ -303,11 +303,14 @@ uniciclo (Equação \ref{eq:si_inv_uni}), ou modelo diferencial (Equação
 \end{equation}
 
 Pelo que pode ser verificado em \citeonline{art:Magnus_PMPC}, os modelos
-uniciclo e de integrador-único não são equivalentes, já que $l$ não pode tender
-a zero. Um controle de modelo preditivo é estabelecido para ajustar $l$ a fim de
-obter uma resposta que sacrifique o mínimo possível em precisão e
-manobrabilidade, comparando com uma escolha estática de parâmetro ($l =
-\sqrt{\frac{1-\alpha}{\alpha}\frac{Lv_{max}}{R}}$, com $\alpha = 0,99$). 
+uniciclo e de integrador-único não são equivalentes, já que $l$ (distância 
+entre a origem e o ponto $P_r$ da Figura \ref{fig:modelo}.b) não pode tender
+a zero, o que levaria a Equação \ref{eq:si_inv_diff} a ter um uma de suas matrizes 
+um valor que tende a infinito. Um controle de modelo preditivo é estabelecido para 
+ajustar $l$ a fim de obter uma resposta que sacrifique o mínimo possível em 
+precisão e manobrabilidade, comparando com uma escolha estática de parâmetro 
+($l = \sqrt{\frac{1-\alpha}{\alpha}\frac{Lv_{max}}{R}}$, 
+com $\alpha = 0,99$). 
 
 Esta técnica, também chamada ``\textit{look-ahead}'', é utilizada, com
 modificações, em alguns trabalhos como passo intermediário antes de realizar uma
@@ -330,10 +333,11 @@ força, de modo que a aceleração é obtida considerando massa
 o campo vetorial definido indica velocidades. Os vetores velocidade calculados
 podem ser usados como entrada do modelo de integrador único.
 
-Apesar do modelo não ser controlável por técnicas lineares, é possível utilizar controle PID 
-para seguir ângulo, com a limitação de não ter controle sobre velocidade linear. Para 
-aplicações onde a convergência não tem restrições temporais significativas, controlar o ângulo
-é suficiente e será utilizado no caso deste trabalho.
+Apesar do modelo não ser controlável por técnicas lineares, é possível utilizar 
+controle PID para seguir ângulo, com a limitação de não ter controle sobre 
+velocidade linear. Para aplicações onde a convergência não tem restrições 
+temporais significativas, controlar o ângulo é suficiente e será utilizado no caso 
+deste trabalho.
 
 % Campo potencial X Campo vetorial de velocidades.
 

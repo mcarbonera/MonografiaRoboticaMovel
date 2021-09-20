@@ -237,7 +237,7 @@ visando alcançar os objetivos propostos.
 			\label{eq:eo_comb_linear3}
 			\mathbf{u_{eo}} = 
 			\begin{cases}
-				\mathbf{u_{eo1}} & \text{para} \ | \mathbf{v_3} | < D_{insegura} \\
+				\mathbf{u_{eo1}} & \text{para} \ | \mathbf{v_3} | \geq D_{insegura} \\
 				
 				\mleft[
 				\begin{matrix}
@@ -246,7 +246,7 @@ visando alcançar os objetivos propostos.
 				\end{matrix}
 				\mright] \mathbf{u_{eo2}} & 				
 				\begin{matrix*}[l]
-		  			\text{para} \ | \mathbf{v_3} | \geq D_{insegura} \ \land \\
+		  			\text{para} \ | \mathbf{v_3} | < D_{insegura} \ \land \\
 		  			k_1 \ (|\mathbf{v_5}| - |\mathbf{v_1}|) + k_2 \ (|\mathbf{v_4}| - |\mathbf{v_2}|)
 					> 0 \\
 				\end{matrix*} \\
@@ -258,7 +258,7 @@ visando alcançar os objetivos propostos.
 				\end{matrix}
 				\mright] \mathbf{u_{eo2}} & 
 				\begin{matrix*}[l]
-		  			\text{para} \ | \mathbf{v_3} | \geq D_{insegura} \ \land \\
+		  			\text{para} \ | \mathbf{v_3} | < D_{insegura} \ \land \\
 		  			k_1 \ (|\mathbf{v_5}| - |\mathbf{v_1}|) + k_2 \ (|\mathbf{v_4}| - |\mathbf{v_2}|)
 					\leq 0 \\
 				\end{matrix*} \\
@@ -797,11 +797,11 @@ visando alcançar os objetivos propostos.
 			\IF{$ativacaoSP > 0$}
 				\STATE $ativacaoSP \leftarrow ativacaoSP - 1$
 			\ENDIF
-			\IF{$ativacaoSP < ATIVACAO_MARGEM$}
+			\IF{$ativacaoSP < ATIVACAO\_MARGEM$}
 				\STATE $SPDir \leftarrow 0$
 			\ENDIF
 		\ELSE
-			\IF{$ativacaoSP < ATIVACAO_PASSOS$}
+			\IF{$ativacaoSP < ATIVACAO\_PASSOS$}
 				\STATE $ativacaoSP \leftarrow ativacaoSP + 1$
 			\ENDIF
 		\ENDIF
@@ -1228,7 +1228,7 @@ visando alcançar os objetivos propostos.
 	Nesta subseção, pretende-se mostrar todos os comportamentos separadamente para 
 	depois apresentar o resultado com a lógica de arbitragem de comportamentos.
 	
-	\subsubsection{Compotamento Ir Para Objetivo}
+	\subsubsection{Comportamento Ir Para Objetivo}
 	
 	O resultado para o comportamento ``Ir para Objetivo'' pode ser visto na Figura
 	\ref{fig:resultadoImplementadoIPO}. O ângulo de referência do robô converge rapidamente
@@ -1236,7 +1236,7 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoIPO}
 	
-	\subsubsection{Compotamento Evitar Obstáculo}
+	\subsubsection{Comportamento Evitar Obstáculo}
 	
 	O resultado para o comportamento ``Evitar Obstáculo'' pode ser visto na Figura	
 	\ref{fig:resultadoImplementadoEO}. O robô sempre busca adotar o caminho contrário
@@ -1244,7 +1244,7 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoEO}
 	
-	\subsubsection{Compotamento Mesclado}
+	\subsubsection{Comportamento Mesclado}
 	
 	O resultado para o comportamento mesclado ``Ir para Objetivo e Evitar Obstáculo'' pode 
 	ser visto na Figura \ref{fig:resultadoImplementadoMesclado}. Com este comportamento
@@ -1252,7 +1252,7 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoMesclado}
 	
-	\subsubsection{Compotamento Seguir Parede}
+	\subsubsection{Comportamento Seguir Parede}
 	
 	O resultado para o comportamento ``Seguir Parede'' pode ser visto na Figura
 	\ref{fig:resultadoImplementadoSP}. O sentido horário de contorno foi adotado
