@@ -14,3 +14,12 @@
 </div>
 
 [![Watch the video](https://img.youtube.com/vi/PS3rdL_LvIc/hqdefault.jpg)](https://www.youtube.com/watch?v=PS3rdL_LvIc)
+
+<div>
+	<p>
+		É meu amigo.. Respeita o pai! Como diria Kelly Key:
+	</p>
+	<p>
+		- Isso é pra você aprender a nunca mais me esnobar.
+	</p> 
+</div>
