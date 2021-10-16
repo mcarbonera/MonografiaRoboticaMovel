@@ -305,7 +305,7 @@ uniciclo (Equação \ref{eq:si_inv_uni}), ou modelo diferencial (Equação
 Pelo que pode ser verificado em \citeonline{art:Magnus_PMPC}, os modelos
 uniciclo e de integrador-único não são equivalentes, já que $l$ (distância 
 entre a origem e o ponto $P_r$ da Figura \ref{fig:modelo}.b) não pode tender
-a zero, o que levaria a Equação \ref{eq:si_inv_diff} a ter um uma de suas matrizes 
+a zero, o que levaria a Equação \ref{eq:si_inv_diff} a ter em uma de suas matrizes 
 um valor que tende a infinito. Um controle de modelo preditivo é estabelecido para 
 ajustar $l$ a fim de obter uma resposta que sacrifique o mínimo possível em 
 precisão e manobrabilidade, comparando com uma escolha estática de parâmetro 
@@ -406,11 +406,11 @@ provoca transição para o estado 2, mas sim, ocorre a transição reflexiva
 zerado e a transição para o estado 2 volta a ser possível.
 
 Em casos nos quais a condição de guarda deixa de ser válida e nenhuma outra transição 
-puder acontecer, como, por exemplo, o estado 2 da Figura \ref{fig:ATG}.a, $c_1$ se torna 
-maior ou igual a 1, ocorre \textit{deadlock} por tempo (\textit{timelock}). Quando é 
-necessário forçar a ocorrência de um evento para evitar \textit{timelock}, modela-se como 
-na Figura \ref{fig:ATG}.b. A condição associada a um estado é chamada Invariante
-\cite{book:SED}.
+puder acontecer, como, por exemplo, no estado 2 da Figura \ref{fig:ATG}.a, se o evento $b$
+não ocorrer enquanto $c_1 < 1$, a transição para o estado 3 deixa de ser possível e ocorre 
+\textit{deadlock} por tempo (\textit{timelock}). Quando é necessário forçar a ocorrência de 
+um evento para evitar \textit{timelock}, modela-se como na Figura \ref{fig:ATG}.b. A 
+condição associada a um estado é chamada Invariante \cite{book:SED}.
 
 %Dois exemplo de diagramas de transição são mostrados na Figura
 %\ref{fig:ATG}. \textit{Deadlocks} por tempo podem acontecer em casos onde a
@@ -760,7 +760,7 @@ deve-se  calcular a quantidade de pulsos gerados em um período de tempo,
 utilizando a especificação de pulsos por revolução (PPR), bem como a
 medida de circunferência do pneu \cite{odometria2}. A Equação 
 \ref{eq:odometria1} mostra o cálculo de velocidade, onde $N_{ticks}$
-é o período de amostragem, $N_{PPR}$ é o número de partes por revolução,
+é o período de amostragem, $N_{PPR}$ é o número de pulsos por revolução,
 $R$ é o raio do pneu e $T$ é o período de amostragem.
 
 \input{Figuras/motorOdometria}

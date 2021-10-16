@@ -1,13 +1,20 @@
 \chapter{Conclusões e Trabalhos Futuros}
 \vspace{-2.5 cm}
 
-Este trabalho teve por intuito defender que a definição de uma boa arquitetura para solução de um problema é
-mais importante que a tecnologia empregada. Com a definição de uma arquitetura robusta, o funcionamento do sistema 
-independe de tecnologia. Neste trabalho, por exemplo, utilizou-se controladores PID e controladores \textit{Fuzzy}
-para implementar as estratégias de arbitragem e fusão, mas elas poderiam ter sido utilizadas em conjunto sob uma mesma
-estratégia. Se um novo comportamento precisar ser implementado, qualquer tecnologia poderia ser usada para 
-implementá-lo (desde soluções reativas simples até algoritmos de aprendizado de máquina), o que torna a solução
-deste trabalho escalável.
+O presente trabalho foi capaz de cumprir os objetivos propostos. Foi possível realizar a
+construção de um robô móvel de acionamento diferencial para navegação usando arquitetura 
+baseada em comportamentos e explorar as duas estratégias existentes na literatura: arbitragem
+e fusão de comportamentos. 
+ 
+Os resultados atingidos foram satisfatórios e foi possível mostrar que a definição de uma 
+boa arquitetura para solução de um problema é mais importante que a tecnologia empregada. 
+Com a definição de uma arquitetura robusta, o funcionamento do sistema independe de 
+tecnologia. Neste trabalho, por exemplo, utilizou-se controladores PID e controladores 
+\textit{Fuzzy} para implementar as estratégias de arbitragem e fusão, mas estes controladores
+poderiam ter sido utilizados em conjunto sob uma mesma estratégia. Se um novo comportamento 
+precisar ser implementado, qualquer tecnologia poderia ser usada para implementá-lo 
+(desde soluções reativas simples até algoritmos de aprendizado de máquina), o que torna a 
+solução deste trabalho escalável.
 
 Nesse sentido, é necessário comparar arquiteturas de arbitragem e fusão de comportamento. A primeira é mais escalável
 que a segunda, já que cada comportamento pode ser testado de modo isolado. Na fusão de comportamentos, cada novo

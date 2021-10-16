@@ -21,6 +21,22 @@ Warning--entry type for "mest_neto" isn't style-file defined
 --line 161 of file ./ElementosPosTextuais/Referencias_TCC.bib
 Warning--entry type for "art:feedlin_lookahead" isn't style-file defined
 --line 439 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:simHibrido" isn't style-file defined
+--line 534 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:simFuzzy" isn't style-file defined
+--line 542 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:IPO" isn't style-file defined
+--line 550 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:EO" isn't style-file defined
+--line 558 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:IPO_EO" isn't style-file defined
+--line 566 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:SP" isn't style-file defined
+--line 574 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:finalHibrido" isn't style-file defined
+--line 582 of file ./ElementosPosTextuais/Referencias_TCC.bib
+Warning--entry type for "youtube:finalFuzzy" isn't style-file defined
+--line 590 of file ./ElementosPosTextuais/Referencias_TCC.bib
 Warning--I didn't find a database entry for "abnt-etal-list=99"
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
@@ -33,45 +49,45 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 47 entries,
+You've used 55 entries,
             6523 wiz_defined-function locations,
-            1463 strings with 16588 characters,
-and the built_in function-call counts, 32215 in all, are:
-= -- 2591
-> -- 941
+            1497 strings with 17749 characters,
+and the built_in function-call counts, 36959 in all, are:
+= -- 2975
+> -- 1061
 < -- 26
-+ -- 384
-- -- 295
-* -- 2154
-:= -- 4380
-add.period$ -- 204
-call.type$ -- 49
-change.case$ -- 371
++ -- 432
+- -- 335
+* -- 2442
+:= -- 5052
+add.period$ -- 236
+call.type$ -- 57
+change.case$ -- 419
 chr.to.int$ -- 79
-cite$ -- 44
-duplicate$ -- 1584
-empty$ -- 2847
-format.name$ -- 1395
-if$ -- 7871
-int.to.chr$ -- 3
+cite$ -- 52
+duplicate$ -- 1784
+empty$ -- 3303
+format.name$ -- 1579
+if$ -- 9031
+int.to.chr$ -- 11
 int.to.str$ -- 2
-missing$ -- 803
-newline$ -- 241
-num.names$ -- 207
-pop$ -- 927
+missing$ -- 923
+newline$ -- 281
+num.names$ -- 247
+pop$ -- 1095
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 185
 quote$ -- 0
-skip$ -- 1884
+skip$ -- 2180
 stack$ -- 1
-substring$ -- 1009
-swap$ -- 741
+substring$ -- 1185
+swap$ -- 805
 text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 28
 warning$ -- 0
-while$ -- 264
+while$ -- 312
 width$ -- 0
-write$ -- 713
-(There were 4 warnings)
+write$ -- 825
+(There were 12 warnings)

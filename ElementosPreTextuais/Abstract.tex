@@ -1,9 +1,23 @@
 \begin{abstract}
 
-The present work aimed to explore the use of behavior-based architecture in the 
-field of mobile robotics. In this sense, the two existing strategies found in the literature
-were used: behavior arbitration and fusion. The first was implemented using
-hybrid control (discrete event systems with continuous variables controllers),
-while the second used \textit{Fuzzy} controllers for its execution.
+Mobile robotics is an area that involves aspects of automated reasoning, perception and
+control. Navigation is a crucial area of study in autonomous robots. The present work
+explores the use of behavior-based architecture using two existing strategies
+in the literature: arbitration and fusion. The first was implemented using
+hybrid control (discrete event systems with continuous variable dynamic systems),
+while the second uses \textit{Fuzzy} controllers for its execution. The prototype uses
+the differential drive model and a conversion to the unicycle model was carried out in order
+to make the solution scalable, since if other robots could have their models converted
+to the unicycle model, the control system of this work can control them. The achieved 
+results were satisfactory, however, under the arbitration strategy, it was verified
+that the decision process (automaton) is sensitive to the presence of noise. Under the 
+strategy of fusion, the robot showed more aggressive oscillations caused by the 
+subsumption architecture.
+
+%The present work aimed to explore the use of behavior-based architecture in the 
+%field of mobile robotics. In this sense, the two existing strategies found in the literature
+%were used: behavior arbitration and fusion. The first was implemented using
+%hybrid control (discrete event systems with continuous variables controllers),
+%while the second used \textit{Fuzzy} controllers for its execution.
 
 \end{abstract}

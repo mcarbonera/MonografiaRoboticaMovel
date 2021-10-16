@@ -37,13 +37,59 @@ Dispon{\'\i}vel em:
 50~f. Monografia (Trabalho de Conclusão de Curso (Graduação)) ---
   Universidade Tecnológica Federal do Paraná, Pato Branco, 2016.}
 
-\bibitem[Carbonera 2021]{repositorioImplementacao}
+\bibitem[Carbonera 2021]{youtube:finalHibrido}
 \abntrefinfo{Carbonera}{CARBONERA}{2021a}
+{CARBONERA, M. \textbf{Implementação - Autômato híbrido - Arbitragem de
+  comportamentos}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=PS3rdL_LvIc}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:EO}
+\abntrefinfo{Carbonera}{CARBONERA}{2021b}
+{CARBONERA, M. \textbf{Implementação - Autômato híbrido - Comportamento
+  Evitar Obstáculo (EO)}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=0AiDYcGsRX0}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:IPO}
+\abntrefinfo{Carbonera}{CARBONERA}{2021c}
+{CARBONERA, M. \textbf{Implementação - Autômato híbrido - Comportamento Ir
+  Para Objetivo (IPO)}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=Iva_0oh03mk}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:IPO_EO}
+\abntrefinfo{Carbonera}{CARBONERA}{2021d}
+{CARBONERA, M. \textbf{Implementação - Autômato híbrido - Comportamento
+  Mesclado (IPO + EO)}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=eeZYw0_azXY}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:SP}
+\abntrefinfo{Carbonera}{CARBONERA}{2021e}
+{CARBONERA, M. \textbf{Implementação - Autômato híbrido - Comportamento
+  Seguir Parede (SP)}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=enGH6EPYTjc}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:finalFuzzy}
+\abntrefinfo{Carbonera}{CARBONERA}{2021f}
+{CARBONERA, M. \textbf{Implementação - Sistemas Fuzzy - Fusão de
+  Comportamentos}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=MO1DbNZmr0Q}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:simHibrido}
+\abntrefinfo{Carbonera}{CARBONERA}{2021g}
+{CARBONERA, M. \textbf{Simulação - Navegação com autômato híbrido}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=UMyTNZqLsiI}$>$.}
+
+\bibitem[Carbonera 2021]{youtube:simFuzzy}
+\abntrefinfo{Carbonera}{CARBONERA}{2021h}
+{CARBONERA, M. \textbf{Simulação - Navegação com sistemas fuzzy}. 2021.
+Dispon{\'\i}vel em: $<$\url{https://www.youtube.com/watch?v=PLdXuzOz5vQ}$>$.}
+
+\bibitem[Carbonera 2021]{repositorioImplementacao}
+\abntrefinfo{Carbonera}{CARBONERA}{2021i}
 {CARBONERA, M.~G. \textbf{JubileuBotFirmware}. [S.l.]: GitHub, 2021.
 \url{https://github.com/mcarbonera/JubileuBotFirmware}.}
 
 \bibitem[Carbonera 2021]{repositorioSimulacaoFork}
-\abntrefinfo{Carbonera}{CARBONERA}{2021b}
+\abntrefinfo{Carbonera}{CARBONERA}{2021j}
 {CARBONERA, M.~G. \textbf{Simiam}. [S.l.]: GitHub, 2021.
 \url{https://github.com/mcarbonera/simiam}.}
 

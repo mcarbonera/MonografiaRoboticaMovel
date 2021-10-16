@@ -1,71 +1,71 @@
 \babel@toc {brazil}{}
-\contentsline {chapter}{\numberline {1}\MakeUppercase {Introdução}}{12}{}%
-\contentsline {section}{\numberline {1.1}\MakeUppercase {Considerações Iniciais}}{12}{}%
-\contentsline {subsection}{\numberline {1.1.1}Aspectos qualitativos em robótica móvel }{13}{}%
-\contentsline {section}{\numberline {1.2}\MakeUppercase {Objetivos}}{14}{}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{14}{}%
-\contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{14}{}%
-\contentsline {section}{\numberline {1.3}\MakeUppercase {Motivação e justificativa}}{15}{}%
-\contentsline {section}{\numberline {1.4}\MakeUppercase {Estrutura}}{15}{}%
-\contentsline {chapter}{\numberline {2}\MakeUppercase {Referencial Teórico }}{16}{}%
-\contentsline {section}{\numberline {2.1}\MakeUppercase {Arquitetura baseada em comportamento}}{16}{}%
-\contentsline {subsection}{\numberline {2.1.1}Comportamentos como campos potenciais}{16}{}%
-\contentsline {section}{\numberline {2.2}\MakeUppercase {Modelagem}}{18}{}%
-\contentsline {subsection}{\numberline {2.2.1}Modelo cinemático do uniciclo}{18}{}%
-\contentsline {subsection}{\numberline {2.2.2}Modelo cinemático do robô móvel de acionamento diferencial}{19}{}%
-\contentsline {section}{\numberline {2.3}\MakeUppercase {Considerações para o controle de robôs móveis}}{19}{}%
-\contentsline {section}{\numberline {2.4}\MakeUppercase {Sistemas a eventos discretos}}{21}{}%
-\contentsline {subsection}{\numberline {2.4.1}Autômatos temporizados com guardas}{23}{}%
-\contentsline {section}{\numberline {2.5}\MakeUppercase {Sistemas híbridos }}{24}{}%
-\contentsline {section}{\numberline {2.6}\MakeUppercase {Controlador PID}}{26}{}%
-\contentsline {section}{\numberline {2.7}\MakeUppercase {Lógica \textit {Fuzzy} em Controle}}{28}{}%
-\contentsline {subsection}{\numberline {2.7.1}Conjuntos Fuzzy}{29}{}%
-\contentsline {subsection}{\numberline {2.7.2}Componentes de um Sistema \textit {Fuzzy}}{30}{}%
-\contentsline {subsubsection}{\numberline {2.7.2.1}Fuzzificação}{31}{}%
-\contentsline {subsubsection}{\numberline {2.7.2.2}Mecanismo de Inferência}{31}{}%
-\contentsline {subsubsection}{\numberline {2.7.2.3}Defuzzificação}{32}{}%
-\contentsline {section}{\numberline {2.8}\MakeUppercase {Odometria }}{33}{}%
-\contentsline {chapter}{\numberline {3}\MakeUppercase {Materiais}}{36}{}%
-\contentsline {section}{\numberline {3.1}\MakeUppercase {Componentes Físicos e Eletrônicos}}{36}{}%
-\contentsline {section}{\numberline {3.2}\MakeUppercase {Montagem Física}}{36}{}%
-\contentsline {subsection}{\numberline {3.2.1}Especificações}{37}{}%
-\contentsline {subsection}{\numberline {3.2.2}Curvas dos motores}{38}{}%
-\contentsline {section}{\numberline {3.3}\MakeUppercase {O simulador Simiam}}{40}{}%
-\contentsline {subsection}{\numberline {3.3.1}Pacote ``ui''}{42}{}%
-\contentsline {subsection}{\numberline {3.3.2}Pacote ``simulator''}{42}{}%
-\contentsline {subsection}{\numberline {3.3.3}Pacote ``robot''}{42}{}%
-\contentsline {subsection}{\numberline {3.3.4}Pacote ``controller''}{43}{}%
-\contentsline {chapter}{\numberline {4}\MakeUppercase {Desenvolvimento }}{44}{}%
-\contentsline {section}{\numberline {4.1}\MakeUppercase {Desenvolvimento dos controladores}}{44}{}%
-\contentsline {subsection}{\numberline {4.1.1}Controle de sistema híbrido}{44}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}Comportamento ''Ir Para Objetivo'' }{45}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.2}Comportamento ''Evitar Obstáculo''}{47}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.3}Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}{49}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.4}Mínimos locais}{50}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.5}Comportamento ''Seguir parede''}{51}{}%
-\contentsline {subsubsection}{\numberline {4.1.1.6}O autômato para arbitragem de comportamentos}{53}{}%
-\contentsline {subsection}{\numberline {4.1.2}Controle \textit {Fuzzy}}{57}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}Comportamento ''Ir Para Objetivo''}{58}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.2}Comportamento ''Evitar Obstáculo''}{58}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.3}Comportamento ''Seguir parede''}{60}{}%
+\contentsline {chapter}{\numberline {1}\MakeUppercase {Introdução}}{13}{}%
+\contentsline {section}{\numberline {1.1}\MakeUppercase {Considerações Iniciais}}{13}{}%
+\contentsline {subsection}{\numberline {1.1.1}Aspectos qualitativos em robótica móvel }{14}{}%
+\contentsline {section}{\numberline {1.2}\MakeUppercase {Objetivos}}{15}{}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo Geral}{15}{}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos Específicos}{15}{}%
+\contentsline {section}{\numberline {1.3}\MakeUppercase {Motivação e justificativa}}{16}{}%
+\contentsline {section}{\numberline {1.4}\MakeUppercase {Estrutura}}{16}{}%
+\contentsline {chapter}{\numberline {2}\MakeUppercase {Referencial Teórico }}{17}{}%
+\contentsline {section}{\numberline {2.1}\MakeUppercase {Arquitetura baseada em comportamento}}{17}{}%
+\contentsline {subsection}{\numberline {2.1.1}Comportamentos como campos potenciais}{17}{}%
+\contentsline {section}{\numberline {2.2}\MakeUppercase {Modelagem}}{19}{}%
+\contentsline {subsection}{\numberline {2.2.1}Modelo cinemático do uniciclo}{19}{}%
+\contentsline {subsection}{\numberline {2.2.2}Modelo cinemático do robô móvel de acionamento diferencial}{20}{}%
+\contentsline {section}{\numberline {2.3}\MakeUppercase {Considerações para o controle de robôs móveis}}{20}{}%
+\contentsline {section}{\numberline {2.4}\MakeUppercase {Sistemas a eventos discretos}}{22}{}%
+\contentsline {subsection}{\numberline {2.4.1}Autômatos temporizados com guardas}{24}{}%
+\contentsline {section}{\numberline {2.5}\MakeUppercase {Sistemas híbridos }}{25}{}%
+\contentsline {section}{\numberline {2.6}\MakeUppercase {Controlador PID}}{27}{}%
+\contentsline {section}{\numberline {2.7}\MakeUppercase {Lógica \textit {Fuzzy} em Controle}}{29}{}%
+\contentsline {subsection}{\numberline {2.7.1}Conjuntos Fuzzy}{30}{}%
+\contentsline {subsection}{\numberline {2.7.2}Componentes de um Sistema \textit {Fuzzy}}{31}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.1}Fuzzificação}{32}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.2}Mecanismo de Inferência}{32}{}%
+\contentsline {subsubsection}{\numberline {2.7.2.3}Defuzzificação}{33}{}%
+\contentsline {section}{\numberline {2.8}\MakeUppercase {Odometria }}{34}{}%
+\contentsline {chapter}{\numberline {3}\MakeUppercase {Materiais e Ambiente de Simulação}}{37}{}%
+\contentsline {section}{\numberline {3.1}\MakeUppercase {Componentes Mecânicos}}{37}{}%
+\contentsline {section}{\numberline {3.2}\MakeUppercase {Montagem Física}}{37}{}%
+\contentsline {subsection}{\numberline {3.2.1}Especificações}{38}{}%
+\contentsline {subsection}{\numberline {3.2.2}Curvas dos motores}{39}{}%
+\contentsline {section}{\numberline {3.3}\MakeUppercase {O simulador Simiam}}{41}{}%
+\contentsline {subsection}{\numberline {3.3.1}Pacote ``ui''}{43}{}%
+\contentsline {subsection}{\numberline {3.3.2}Pacote ``simulator''}{43}{}%
+\contentsline {subsection}{\numberline {3.3.3}Pacote ``robot''}{43}{}%
+\contentsline {subsection}{\numberline {3.3.4}Pacote ``controller''}{44}{}%
+\contentsline {chapter}{\numberline {4}\MakeUppercase {Desenvolvimento }}{45}{}%
+\contentsline {section}{\numberline {4.1}\MakeUppercase {Desenvolvimento dos controladores}}{45}{}%
+\contentsline {subsection}{\numberline {4.1.1}Controle de sistema híbrido}{45}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Comportamento ``Ir Para Objetivo'' }{46}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Comportamento ``Evitar Obstáculo''}{48}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}Comportamento mesclado ``Ir Para Objetivo e Evitar Obstáculo''}{50}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}Mínimos locais}{51}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}Comportamento ``Seguir parede''}{52}{}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}O autômato para arbitragem de comportamentos}{54}{}%
+\contentsline {subsection}{\numberline {4.1.2}Controle \textit {Fuzzy}}{58}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Comportamento ``Ir Para Objetivo''}{59}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Comportamento ``Evitar Obstáculo''}{59}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}Comportamento ``Seguir parede''}{61}{}%
 \contentsline {subsubsection}{\numberline {4.1.2.4}A estratégia para fusão de comportamentos}{66}{}%
-\contentsline {subsubsection}{\numberline {4.1.2.5}Controlador \textit {Fuzzy} para ''Seguir Recomendação''}{66}{}%
-\contentsline {section}{\numberline {4.2}\MakeUppercase {Implementação do circuito e sistema embarcado}}{70}{}%
-\contentsline {subsection}{\numberline {4.2.1}Considerações práticas, limitações do modelo e da simulação}{70}{}%
-\contentsline {subsection}{\numberline {4.2.2}Circuito Elétrico}{71}{}%
-\contentsline {subsection}{\numberline {4.2.3}Configuração de portas no microcontrolador}{72}{}%
-\contentsline {subsection}{\numberline {4.2.4}Projeto da placa}{73}{}%
-\contentsline {subsection}{\numberline {4.2.5}Esquema lógico do sistema embarcado}{73}{}%
-\contentsline {section}{\numberline {4.3}\MakeUppercase {Simulação}}{75}{}%
-\contentsline {subsection}{\numberline {4.3.1}Utilizando controlador Híbrido}{75}{}%
-\contentsline {subsection}{\numberline {4.3.2}Utilizando controlador \textit {Fuzzy}}{76}{}%
-\contentsline {section}{\numberline {4.4}\MakeUppercase {Resultado e Discussão}}{76}{}%
-\contentsline {subsection}{\numberline {4.4.1}Resultado para controlador híbrido}{77}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Comportamento Ir Para Objetivo}{77}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Comportamento Evitar Obstáculo}{77}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Comportamento Mesclado}{78}{}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}Controlador \textit {Fuzzy} para ``Seguir Recomendação''}{67}{}%
+\contentsline {section}{\numberline {4.2}\MakeUppercase {Implementação do circuito e sistema embarcado}}{71}{}%
+\contentsline {subsection}{\numberline {4.2.1}Considerações práticas, limitações do modelo e da simulação}{71}{}%
+\contentsline {subsection}{\numberline {4.2.2}Circuito Elétrico}{72}{}%
+\contentsline {subsection}{\numberline {4.2.3}Configuração de portas no microcontrolador}{73}{}%
+\contentsline {subsection}{\numberline {4.2.4}Projeto da placa}{74}{}%
+\contentsline {subsection}{\numberline {4.2.5}Esquema lógico do sistema embarcado}{74}{}%
+\contentsline {section}{\numberline {4.3}\MakeUppercase {Simulação}}{76}{}%
+\contentsline {subsection}{\numberline {4.3.1}Utilizando controlador Híbrido}{76}{}%
+\contentsline {subsection}{\numberline {4.3.2}Utilizando controlador \textit {Fuzzy}}{77}{}%
+\contentsline {section}{\numberline {4.4}\MakeUppercase {Resultado e Discussão}}{77}{}%
+\contentsline {subsection}{\numberline {4.4.1}Resultado para controlador híbrido}{78}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Comportamento Ir Para Objetivo}{78}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Comportamento Evitar Obstáculo}{79}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Comportamento Mesclado}{79}{}%
 \contentsline {subsubsection}{\numberline {4.4.1.4}Comportamento Seguir Parede}{79}{}%
-\contentsline {subsubsection}{\numberline {4.4.1.5}Controlador Final com arbitragem}{79}{}%
-\contentsline {subsection}{\numberline {4.4.2}Resultado para controlador \textit {fuzzy}}{81}{}%
-\contentsline {chapter}{\numberline {5}\MakeUppercase {Conclusões e Trabalhos Futuros}}{83}{}%
-\contentsline {chapter}{REFER\^ENCIAS}{85}{}%
+\contentsline {subsubsection}{\numberline {4.4.1.5}Controlador Final com arbitragem}{81}{}%
+\contentsline {subsection}{\numberline {4.4.2}Resultado para controlador \textit {fuzzy}}{82}{}%
+\contentsline {chapter}{\numberline {5}\MakeUppercase {Conclusões e Trabalhos Futuros}}{84}{}%
+\contentsline {chapter}{REFER\^ENCIAS}{86}{}%

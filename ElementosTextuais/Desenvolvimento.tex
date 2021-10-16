@@ -111,7 +111,7 @@ visando alcançar os objetivos propostos.
 	As funções ``uniToDiff()'' e ``diffToUni()'' efetuam as conversões de modelos matemáticos
 	das Equações \ref{eq:vw_to_diff} e \ref{eq:diff_to_vw}, respectivamente.
 	
-		\subsubsection{Comportamento ''Ir Para Objetivo'' \label{SEC:IPO}}
+		\subsubsection{Comportamento ``Ir Para Objetivo'' \label{SEC:IPO}}
 		
 		O comportamento ``Ir Para Objetivo'', exemplificado na Figura \ref{fig:CompIPO}, calcula 
 		um vetor objetivo a partir do centro de massa do robô. A Equação 
@@ -135,7 +135,7 @@ visando alcançar os objetivos propostos.
 			e_\theta = atan2(u_{ipo,y}, u_{ipo,x}) - \phi
 		\end{equation}
 		
-		\subsubsection{Comportamento ''Evitar Obstáculo''}
+		\subsubsection{Comportamento ``Evitar Obstáculo''}
 		
 		O comportamento ``Evitar Obstáculo'' calcula um vetor cujo objetivo é afastar o robô de 
 		barreiras encontradas. A Figura \ref{fig:CompEO}.a mostra a disposição dos 
@@ -268,7 +268,7 @@ visando alcançar os objetivos propostos.
 		O controlador PID para comportamento ``Evitar Obstáculo'' é calculado do mesmo modo
 		que no comportamento ``Ir Para Objetivo''.
 		
-		\subsubsection{Comportamento mesclado ''Ir Para Objetivo e Evitar Obstáculo''}
+		\subsubsection{Comportamento mesclado ``Ir Para Objetivo e Evitar Obstáculo''}
 		
 		Situações de transição entre comportamentos podem trazer problemas que foram discutidos 
 		na Seção \ref{SEC:SISTEMASHIBRIDOS}. Uma forma de mitigar possíveis oscilações é por meio da definição de um novo 
@@ -312,7 +312,8 @@ visando alcançar os objetivos propostos.
 		Se encontrar o Obstáculo 1 (convexo), o robô adota o comportamento EO e ocorre uma deflexão
 		em seu movimento. Quando não puder mais detectar obstáculos, o comportamento IPO volta ao 
 		controle. O robô é capaz de contornar obstáculos desde que a deflexão não leve o 
-		robô para uma posição em que ele já esteve. 
+		robô para uma posição em que ele já esteve (neste caso, o robô oscila entre os mesmos 
+		comportamentos e visita as mesmas regiões indefinidamente). 
 		
 		O Obstáculo 2, por ser côncavo, ilustra melhor a situação de mínimo local. A deflexão 
 		provocada pelo comportamento EO evita o obstáculo, mas visita uma região já conhecida. 
@@ -329,7 +330,7 @@ visando alcançar os objetivos propostos.
 		detectado e este comportamento deve interagir com os anteriores de modo a não criar 
 		novos mínimos locais. Neste caso, foi criado o comportamento ``Seguir Parede''.
 		
-		\subsubsection{Comportamento ''Seguir parede''}
+		\subsubsection{Comportamento ``Seguir parede''}
 		
 		O comportamento ``Seguir Parede'' tem por intuito contornar obstáculos até retirar o robô 
 		de uma região de mínimo local. A detecção de que o robô entrou em um mínimo local ou saiu 
@@ -424,7 +425,7 @@ visando alcançar os objetivos propostos.
 	
 		As funções de transição são formadas por condições, que foram resumidas na Tabela 
 		\ref{tab:automatoEventos}. A tabela traz equações ou algoritmos para cálculo de cada 
-		condição.
+		condição (saídas são ``verdadeiro'' ou ``falso'').
 		
 		\input{Tabelas/AutomatoTransicoes}
 		
@@ -442,7 +443,7 @@ visando alcançar os objetivos propostos.
 		direção ao objetivo. Essa condição detecta entrada e saída de mínimos locais, já que, 
 		parar de fazer progresso significa que o robô está retornando a região já visitada. Quando
 		voltar a fazer progresso, significa que saiu de mínimo local. O Algoritmo 
-		\ref{alg:fezProgresso} mostra esse cálculo. a variável $d_{prog}$ é a última distância 
+		\ref{alg:fezProgresso} mostra o cálculo dessa função booleana. a variável $d_{prog}$ é a última distância 
 		verificada e é atualizada no mesmo algoritmo. No início da navegação ou quando o objetivo
 		for alterado, $d_{prog}$ deve ser inicializado para um valor infinito (no robô, foi usado 
 		valor de 1000 metros, já que nunca será requisitado ao robô percorrer tal distância). A 
@@ -470,7 +471,7 @@ visando alcançar os objetivos propostos.
 	
 		A condição ``tem obstáculo'' detecta se pelo menos algum sensor percebe existência de 
 		obstáculo. A Equação \ref{eq:eventoTemObstaculo} mostra a função booleana, onde ``any''
-		é o quantificador lógico ``algum'' que verifica se algum item no vetor $\mathbf{d_f}$ 
+		é o quantificador lógico ``algum'' que verifica se algum item no vetor $\mathbf{d_s}$ 
 		(que especifica distância detectada pelos cinco sensores) cumpre a condição especificada, 
 		de ser menor que a constante $D_{\text{EM\_OBSTÁCULO}}$, definida como 75 centímetros.
 		\begin{equation}
@@ -480,7 +481,7 @@ visando alcançar os objetivos propostos.
 		
 		A condição ``está inseguro'' detecta se algum sensor percebe a existência de obstáculo 
 		em proximidade preocupante. A Equação \ref{eq:eventoEstaInseguro} mostra a função booleana.
-		Neste caso, é verificado se algum item do vetor $\mathbf{d_f}$ é menor que uma constante 
+		Neste caso, é verificado se algum item do vetor $\mathbf{d_s}$ é menor que uma constante 
 		$D_{INSEGURO}$, definida como 25 centímetros.
 		\begin{equation}
 			\label{eq:eventoEstaInseguro}
@@ -490,7 +491,7 @@ visando alcançar os objetivos propostos.
 		A condição ``livre de obstáculo'' verifica se todos os sensores estão saturados, ou seja,
 		sem obstáculos detectados. A Equação \ref{eq:eventoLivreObstaculo} mostra a função booleana,
 		onde ``all'' é o quantificador lógico ``todos" que verifica se todos os itens do vetor 
-		$\mathbf{d_f}$ cumprem a condição especificada no argumento (maior que 
+		$\mathbf{d_s}$ cumprem a condição especificada no argumento (maior que 
 		$D_{\text{EM\_OBSTÁCULO}}$). É importante salientar que ``livre de obstáculos'' não é 
 		a negação de ``tem obstáculo'', apesar dos nomes. 
 		\begin{equation}
@@ -569,23 +570,23 @@ visando alcançar os objetivos propostos.
 		\input{Figuras/automatoHibrido}
 		
 		De todos os estados é possível chegar ao estado inicial ``Parar'' (0) por meio da 
-		condição ``No Objetivo'' (a), mas para sair dele, uma redefinição de objetivo provoca
+		condição ``No Objetivo'' ($a$), mas para sair dele, uma redefinição de objetivo provoca
 		a negação da condição de parada ($\neg a$) e o estado mesclado ``Ir para Objetivo e 
 		Evitar Obstáculo'' (3) assume controle.
 		
 		A partir desse último, as transições para ``Seguir Parede'' (4 e 5) dependem da condição 
 		``Não Fez Progresso'' ($\neg b$), mas a escolha do sentido de contorno depende das
-		condições ``contornando pela esquerda'' e ``contornando pela direita'' (f e g). A partir
+		condições ``contornando pela esquerda'' e ``contornando pela direita'' ($f$ e $g$). A partir
 		dos estados 4 ou 5, o retorno para o estado 3 depende de não ter encontrado objetivo 
-		($\neg a$), voltar a fazer progresso (b) e deixar a situação de seguir fronteira 
+		($\neg a$), voltar a fazer progresso ($b$) e deixar a situação de seguir fronteira 
 		($\neg f$ ou $\neg g$).
 		
-		O estado 3 pode alcançar ``Ir Para Objetivo'' (1) quando está ``livre de obstáculo'' (e)
-		e retorna quando volta a ``ter obstáculo" (c). O estado 1 alcança ``Seguir Parede'' com
+		O estado 3 pode alcançar ``Ir Para Objetivo'' (1) quando está ``livre de obstáculo'' ($e$)
+		e retorna quando volta a ``ter obstáculo" ($c$). O estado 1 alcança ``Seguir Parede'' com
 		as mesmas condições utilizadas a partir do estado 3.
 		
 		Os estados 1 e 3 podem alcançar ``Evitar Obstáculo'' (2) por meio da condição ``está
-		inseguro'' (d), mas uma vez neste estado, só pode retornar ao estado 3, com condição de
+		inseguro'' ($d$), mas uma vez neste estado, só pode retornar ao estado 3, com condição de
 		``não estar inseguro'' ($\neg d$).
 		
 	\subsection{Controle \textit{Fuzzy}}
@@ -607,7 +608,7 @@ visando alcançar os objetivos propostos.
 	os comportamentos discutidos têm seus cálculos realizados no sistema de coordenadas do robô.
 	O sistema global só é necessário para cálculo de odometria.
 	
-	\subsubsection{Comportamento ''Ir Para Objetivo''}
+	\subsubsection{Comportamento ``Ir Para Objetivo''}
 	
 	O comportamento ``Ir Para Objetivo'' tem o mesmo intuito da contraparte híbrida, porém, 
 	como as saídas vetoriais são todas normalizadas, o cálculo de ``IPO'' é normalizado.
@@ -636,7 +637,7 @@ visando alcançar os objetivos propostos.
 			\end{cases}
 	\end{equation}
 	
-	\subsubsection{Comportamento ''Evitar Obstáculo''}
+	\subsubsection{Comportamento ``Evitar Obstáculo''}
 	
 	O comportamento ``Evitar Obstáculo'' é semelhante à contraparte híbrida. O diagrama do
 	controlador \textit{fuzzy}, relacionando entradas e saídas, pode ser visto na Figura 
@@ -699,13 +700,13 @@ visando alcançar os objetivos propostos.
 	Cada sensor pode ter no máximo dois ``valores ativos'' (pertinência maior que zero). Assim,
 	para cinco entradas, pela tabela, teremos no máximo 10 regras ativas. 
 	 
-	\subsubsection{Comportamento ''Seguir parede''}
+	\subsubsection{Comportamento ``Seguir parede''}
 
 	O comportamento ``Seguir Parede'' também é necessário no controlador \textit{fuzzy} pela 
 	questão dos mínimos locais, discutida anteriormente. Este deve assumir controle do robô 
 	apenas quando necessário, suprimindo a tendência de retornar ao mínimo local. A necessidade 
 	de uma hierarquia entre comportamentos motiva o uso da arquitetura de subsunção, discutida 
-	brevemente na seção \ref{SEC:SUBSUNCAO}.
+	brevemente na Seção \ref{SEC:SUBSUNCAO}.
 	
 	A Figura \ref{fig:fuzzyAtivacaoSubsuncao} mostra uma maneira simples de inibir 
 	comportamentos. A função mostrada é responsável por definir o quão ativo o comportamento 
@@ -715,11 +716,11 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/FuzzySeguirParedeCurvaAtivacao}
 	
-	A figura \ref{fig:fuzzyDiagramaSP} mostra o diagrama do controlador, que associa entradas 
+	A Figura \ref{fig:fuzzyDiagramaSP} mostra o diagrama do controlador, que associa entradas 
 	e saídas. As entradas são as mesmas para o controlador ``Evitar Obstáculo''. As saídas
 	``SPRecX'', ``SPRecY'', ``RegDistYSL'' e ``RegDistYSD'' são recomendações vetoriais. 
-	``SPRecX'' é uma recomendação no eixo x e ``SPRecY'' é recomendação ao longo de y. 
-	``RegDistYSL'' e ``RegDistYSD'' tem por objetivo recomendar uma deflexão no eixo y, para
+	``SPRecX'' é uma recomendação no eixo $x$ e ``SPRecY'' é recomendação ao longo de $y$. 
+	``RegDistYSL'' e ``RegDistYSD'' tem por objetivo recomendar uma deflexão no eixo $y$, para
 	que o robô siga a parede a uma distância segura. O sufixo ``SL'' designa que ``Sensores 
 	Laterais'' são responsáveis pela recomendação, enquanto ``SD'' responsabiliza os 
 	``Sensores Diagonais''. A distinção foi necessária para considerar pesos diferentes para
@@ -729,7 +730,7 @@ visando alcançar os objetivos propostos.
 	
 	A Equação \ref{eq:vetor_sp_fuzzy1} mostra o cálculo de um vetor temporário, definido a 
 	partir das saídas do sistema \textit{fuzzy}. A constante ``C'' é o coeficiente de ativação
-	e $\mathbf{u_{eo,\mathit{fuzzy}}}$ é a recomendação para ``Evitar Obstáculos'', que é somada
+	e $\mathbf{u_{eo,fuzzy}}$ é a recomendação para ``Evitar Obstáculos'', que é somada
 	de modo que mesmo que o comportamento ``SP'' esteja totalmente ativo, o robô ainda é capaz
 	de evitar obstáculos. 
 	\begin{equation}
@@ -742,7 +743,7 @@ visando alcançar os objetivos propostos.
 		  		3 \cdot SPRecX \\
 		  		RegDistYSL + 2,5 \cdot RegDistYSD + 2 \cdot SPRecY \\
 			\end{matrix}
-			\mright] + \mathbf{u_{eo,\mathit{fuzzy}}} & \text{, para} \ C > 0 \\
+			\mright] + \mathbf{u_{eo,fuzzy}} & \text{, para} \ C > 0 \\
 			
 			\mleft[
 			\begin{matrix}
@@ -754,14 +755,13 @@ visando alcançar os objetivos propostos.
 			\end{cases}
 	\end{equation}
 
-	A recomendação \textit{fuzzy} para ``Seguir Parede'' (vetor $\mathbf{u_{sp,\mathit{fuzzy}}}$)
+	A recomendação \textit{fuzzy} para ``Seguir Parede'' (vetor $\mathbf{u_{sp,fuzzy}}$)
 	é calculado pelo Algoritmo \ref{alg:RecSPFuzzy}. Cada função será discutida com detalhe. 
 	\begin{algorithm}
 		\caption{Cálculo Final da Recomendação ``Seguir Parede''}
 		\label{alg:RecSPFuzzy}%
 		\begin{algorithmic}[1]
 	
-		\REQUIRE $t$
 		\ENSURE $\mathbf{u_{sp,\mathit{fuzzy}, x}}, \mathbf{u_{sp,\mathit{fuzzy}, y}}$
 		
 		\STATE $C \leftarrow verificaAtivacaoSP()$
@@ -782,7 +782,7 @@ visando alcançar os objetivos propostos.
 	A função ``verificaAtivacaoSP()'' é responsável por calcular a constante de ativação e pode
 	ser vista no Algoritmo \ref{alg:verificaAtivacao}. A função ``fezProgresso()'' é a mesma
 	verificação utilizada no Algoritmo \ref{alg:fezProgresso}. A variável ``ativacaoSP'' é o
-	contador, variável x no gráfico da Figura \ref{fig:fuzzyAtivacaoSubsuncao}, que	
+	contador, variável $x$ no gráfico da Figura \ref{fig:fuzzyAtivacaoSubsuncao}, que	
 	implicitamente mostra as constantes ``ATIVACAO\_MARGEM'', definida como 5 e 
 	``ATIVACAO\_PASSOS'', estipulada como 40.
 	\begin{algorithm}
@@ -869,7 +869,7 @@ visando alcançar os objetivos propostos.
 	direita). O valor de $\epsilon$ foi definido como 0,0001. 
 	
  	A função ``normalizarEntradasVetor()'' tem por objetivo manter os valores das componentes
- 	x e y do vetor $\mathbf{u_{sp,\mathit{fuzzy}}}$ no intervalo [-1, 1]. O nome ``normalizar''
+ 	$x$ e $y$ do vetor $\mathbf{u_{sp,\mathit{fuzzy}}}$ no intervalo [-1, 1]. O nome ``normalizar''
  	na função, portanto, não é no sentido de normalizar o vetor em si, mas sim, normalizar
  	as componentes. Isso foi feito dessa forma pois as entradas do sistema fuzzy para ``Seguir
  	Recomendação'' devem ser normalizadas. Essa ``normalização'' é calculada pelo Algoritmo
@@ -897,7 +897,7 @@ visando alcançar os objetivos propostos.
 		\end{algorithmic}
 	\end{algorithm}
 	
-	Os conjuntos fuzzy para as saídas vetoriais, bem como suas funções de pertinência podem ser
+	Os conjuntos \textit{fuzzy} para as saídas vetoriais, bem como suas funções de pertinência podem ser
 	vistas na Figura \ref{fig:fuzzySPOutputVet}.
 
 	\input{Figuras/FuzzySeguirParedeSaidas}
@@ -914,18 +914,18 @@ visando alcançar os objetivos propostos.
 	
 	A fusão dos comportamentos ``Ir Para Objetivo'', ``Evitar Obstáculo'' e ``Seguir Parede''
 	é dada pela Equação \ref{eq:recFinalFuzzy}, onde $C$ é a constante de ativação e $\alpha$ 
-	é uma constante definida como 1,6. O vetor da recomendação final deve ter valores x e y no 
+	é uma constante definida como 1,6. O vetor da recomendação final deve ter valores $x$ e $y$ no 
 	intervalo [-1, 1] e por isso, é utilizado novamente o Algoritmo \ref{alg:normalizacao} 
 	para deixá-lo em conformidade com a entrada do sistema \textit{fuzzy} responsável por 
 	seguir recomendação.
 	\begin{equation}
 		\label{eq:recFinalFuzzy}
 			\mathbf{u_{final}} = 
-			(1 - C) \cdot (\mathbf{u_{ipo}} + \alpha \cdot \mathbf{u_{ao, \mathit{fuzzy}}})
-			+ C \cdot \mathbf{u_{sp, \mathit{fuzzy}}}
+			(1 - C) \cdot (\mathbf{u_{ipo}} + \alpha \cdot \mathbf{u_{ao, fuzzy}})
+			+ C \cdot \mathbf{u_{sp, fuzzy}}
 	\end{equation}
 	
-	\subsubsection{Controlador \textit{Fuzzy} para ''Seguir Recomendação''}
+	\subsubsection{Controlador \textit{Fuzzy} para ``Seguir Recomendação''}
 	
 	A Figura \ref{fig:fuzzyDiagramaSV} mostra o diagrama do sistema \textit{fuzzy} responsável 
 	por seguir um vetor de recomendação. As entradas ``ErroVetorX'' e ``ErroVetorY'' são as 
@@ -936,18 +936,18 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/FuzzySeguirVetorDiagrama}
 	
-	Os conjuntos fuzzy para as entradas vetoriais, bem como suas funções de pertinência podem 
+	Os conjuntos \textit{fuzzy} para as entradas vetoriais, bem como suas funções de pertinência podem 
 	ser vistas na Figura \ref{fig:fuzzySVInputVet}. A função de pertinência para ``Z'' foi
-	definida de modo a se sobrepor a outros valores, a fim de evitar oscilações.
+	definida de modo a se sobrepor a outros valores a fim de evitar oscilações.
 	
 	\input{Figuras/FuzzySeguirVetorEntradasXY}
 	
-	Os conjuntos fuzzy para a entrada da velocidade, bem como suas funções de pertinência podem 
+	Os conjuntos \textit{fuzzy} para a entrada da velocidade, bem como suas funções de pertinência podem 
 	ser vistas na Figura \ref{fig:fuzzySVInputV}. 
 	
 	\input{Figuras/FuzzySeguirVetorEntradaV}
 	
-	Os conjuntos fuzzy para as saídas em velocidade angular, bem como suas funções de 
+	Os conjuntos \textit{fuzzy} para as saídas em velocidade angular, bem como suas funções de 
 	pertinência podem ser vistas na Figura \ref{fig:fuzzySVOutputW}.
 	
 	\input{Figuras/FuzzySeguirVetorSaidasW}
@@ -974,7 +974,7 @@ visando alcançar os objetivos propostos.
 	\ref{tab:recomendacoesVelocidades}.c tem por intuito sugerir velocidades maiores quando 
 	o objetivo está distante, e reduzi-las para objetivo próximo, porém respeitando a 
 	recomendação de velocidade (``VP'', ``VM'' ou ``VG''). A célula da tabela que corresponder
-	aos valores x e y de entrada, tem seu valor atribuído à variável ``RecV''. 
+	aos valores $x$ e $y$ de entrada, tem seu valor atribuído à variável ``RecV''. 
 	
 	A Tabela \ref{tab:recomendacoesVelocidades}.d é usada para calcular ``RecW''. Aqui, um valor
 	positivo indica sentido anti-horário de rotação e valores negativos, sentido horário. Quando
@@ -1011,14 +1011,14 @@ visando alcançar os objetivos propostos.
 	em meio à execução.
 	
 	Como exemplo, dado que a entrada para Velocidade é ``VG'' (3), ErroVetorX é ``NM'' (-2) 
-	e ErroVetorY é ``PM'' (2), pela tabela, ``RecV'' vale 2 e ``RecW'' vale 2. O cálculo da
-	equação resulta em ``RecWl'' com valor 0 e ``RecWr'' com valor 4. A regra fuzzy completa
+	e ErroVetorY é ``PM'' (2), pela Tabela, ``RecV'' vale 2 e ``RecW'' vale 2. O cálculo da
+	equação resulta em ``RecWl'' com valor 0 e ``RecWr'' com valor 4. A regra \textit{fuzzy} completa
 	pode ser entendida como ``Se `ErroVetorX' é `NM', `ErroVetorY' é `PM' e `Velocidade' é 
 	`VG', então `Wl' é `Z' e `Wr' é `PGSat'''. 
 	
 \section{Implementação do circuito e sistema embarcado}
 
-	Nesta seção, os aspectos de projeto do circuito e implementação do sistema embarcado 
+	Nesta Seção, os aspectos de projeto do circuito e implementação do sistema embarcado 
 	são desvelados.
 
 	\subsection{Considerações práticas, limitações do modelo e da simulação}
@@ -1069,12 +1069,13 @@ visando alcançar os objetivos propostos.
 	ora medindo com erro. 
 	
 	Uma boa solução para este problema é utilizar outro regulador de tensão para obter 
-	5 \textit{volts} a partir da tensão da bateria. Apesar disso, uma solução fácil, porém 
-	muito questionável foi adotada: em vez de utilizar 6 \textit{volts} nos motores, foi 
-	utilizado valor de 7 \textit{volts}, o que compensa as quedas de tensão do regulador 
-	interno ao \textit{driver}. Dessa forma, os motores funcionam além da especificação, 
-	reduzindo sua vida útil, mas foi possível continuar o desenvolvimento e validação dos 
-	algoritmos deste trabalho.
+	5 \textit{volts} a partir da tensão da bateria. Contudo, outra solução foi adotada:
+	em vez de utilizar 6 \textit{volts} nos motores, foi utilizado valor de 7 
+	\textit{volts}, o que compensa as quedas de tensão do regulador interno ao 
+	\textit{driver}. No cálculo de PWM, portanto, deve-se garantir que a tensão média nos 
+	motores não ultrapasse os 6 \textit{volts}, para que não funcionem além da 
+	especificação. Com essa modificação, foi possível continuar o desenvolvimento e 
+	validação dos algoritmos deste trabalho.
 	
 	\subsection{Configuração de portas no microcontrolador}
 	
@@ -1179,34 +1180,43 @@ visando alcançar os objetivos propostos.
 	
 	\subsection{Utilizando controlador Híbrido}
 	
-	A simulação para o controlador híbrido pode ser vista na Figura \ref{fig:resultadoSimulacaoHibrido}. 
-	A sequência das 16 imagens pode ser entendida analisando no sentido de leitura: da esquerda para direita, de 
-	cima para baixo. O robô adota comportamento ``Ir para Objetivo'' na primeira imagem e, quando encontra um
-	obstáculo em formato côncavo (\textit{frames} 2 a 5), adota o comportamento mesclado ``Ir para objetivo e 
-	Evitar Obstáculos''. No \textit{frame} 6, o robô adota o comportamento ``Evitar Obstáculo'', o que leva o robô
-	a se afastar do objetivo o suficiente para o comportamento ``Seguir Parede'' ser adotado (\textit{frames} 7
-	a 9). No restante do trajeto, há uma troca constante entre comportamentos. Nos \textit{frames} 10, 14, 15 e 16
-	o comportamento ``Ir para Objetivo'' está ativo, enquanto nos \textit{frames} 11 a 13, o comportamento 
-	mesclado está no controle.
+	A simulação para o controlador híbrido pode ser vista na Figura 
+	\ref{fig:resultadoSimulacaoHibrido}. A sequência das 4 imagens pode ser entendida 
+	analisando no sentido de leitura: da esquerda para direita, de cima para baixo. O 
+	robô adota comportamento ``Ir para Objetivo'' na primeira imagem e, quando encontra 
+	o obstáculo em formato côncavo (\textit{frame} 2), adota o comportamento mesclado 
+	``Ir para objetivo e Evitar Obstáculos''. Após o \textit{frame} 2, o robô adota o 
+	comportamento ``Seguir Parede''. No restante do trajeto, (\textit{frames} 3 e 4) há 
+	uma troca constante entre os comportamentos ``Ir para Objetivo'' e ``Mesclado''.
 	
 	\input{Figuras/SimulacaoHibrido}
 	
-	O comportamento ``Evitar Obstáculos'' ocorre apenas em situações muito específicas, normalmente quando algum 
-	obstáculo pequeno está em um ponto cego do robô, ou quando o sentido de movimento forma ângulo de 90 graus com
-	o obstáculo. Em simulação a inércia não é considerada (simulação considera apenas cinemática). Na prática, a 
-	inércia é outro motivo para a adoção deste comportamento. No momento em que este comportamento é adotado
-	a reação do robô é tão rápida que é difícil mostrar em imagens. 
+	A fim de facilitar o entendimento da Figura, o video desta simulação está hospedado
+	no Youtube, disponível em \citeonline{youtube:simHibrido}.
+	
+	O comportamento ``Evitar Obstáculos'' ocorre apenas em situações muito específicas
+	(emergenciais), normalmente quando algum obstáculo pequeno está em um ponto cego do 
+	robô, ou quando o sentido de movimento forma ângulo de 90 graus com o obstáculo. Em 
+	simulação a inércia não é considerada (simulação considera apenas cinemática). Na 
+	prática, a inércia é outro motivo para a adoção deste comportamento. O resultado 
+	deste comportamento será mostrado no robô real.
 	
 	\subsection{Utilizando controlador \textit{Fuzzy}}
 	
-	A simulação para o sistema \textit{Fuzzy} pode ser vista na Figura \ref{fig:resultadoSimulacaoFuzzy}. 
-	Aqui, por conta da arquitetura de fusão de comportamentos (com arquitetura de subsunção), existem muitas 
-	oscilações, que ocorrem quando o robô precisa decidir entre ``Seguir Parede'' ou ``Ir Para Objetivo''. Como a 
-	arquitetura de subsunção é implementada com um contador que determina um peso para combinar linearmente dois
-	comportamentos, oscilações no valor desse contador provocam oscilações na saída. Entre os \textit{frames} 5 e 6, 
-	o robô chega a ficar parado por um tempo até o contador ter um valor suficiente para mudar a recomendação. 
+	A simulação para o sistema \textit{Fuzzy} pode ser vista na Figura 
+	\ref{fig:resultadoSimulacaoFuzzy}. Aqui, por conta da arquitetura de fusão de 
+	comportamentos (com arquitetura de subsunção), existem muitas oscilações, que 
+	ocorrem quando o robô precisa decidir entre ``Seguir Parede'' ou ``Ir Para Objetivo''. 
+	Como a arquitetura de subsunção é implementada com um contador que determina um peso 
+	para combinar linearmente dois comportamentos, oscilações no valor desse contador 
+	provocam oscilações na saída. Um pouco antes do segundo \textit{frame}, o robô chega 
+	a ficar parado por um tempo até o contador ter um valor suficiente para mudar a 
+	recomendação. 
 	
 	\input{Figuras/SimulacaoFuzzy}
+	
+	O video desta simulação está hospedado no Youtube, disponível em 
+	\citeonline{youtube:simFuzzy}.
 	
 \section{Resultado e Discussão}
 
@@ -1236,6 +1246,9 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoIPO}
 	
+	A fim de facilitar o entendimento da Figura, o video deste comportamento está 
+	hospedado no Youtube, disponível em \citeonline{youtube:IPO}.
+	
 	\subsubsection{Comportamento Evitar Obstáculo}
 	
 	O resultado para o comportamento ``Evitar Obstáculo'' pode ser visto na Figura	
@@ -1244,6 +1257,9 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoEO}
 	
+	A fim de facilitar o entendimento da Figura, o video deste comportamento está 
+	hospedado no Youtube, disponível em \citeonline{youtube:EO}.
+	
 	\subsubsection{Comportamento Mesclado}
 	
 	O resultado para o comportamento mesclado ``Ir para Objetivo e Evitar Obstáculo'' pode 
@@ -1251,6 +1267,9 @@ visando alcançar os objetivos propostos.
 	o robô é capaz de navegar em ambientes sem mínimos locais.   
 	
 	\input{Figuras/ResultadoMesclado}
+	
+	A fim de facilitar o entendimento da Figura, o video deste comportamento está 
+	hospedado no Youtube, disponível em \citeonline{youtube:IPO_EO}.
 	
 	\subsubsection{Comportamento Seguir Parede}
 	
@@ -1261,6 +1280,9 @@ visando alcançar os objetivos propostos.
 	
 	\input{Figuras/ResultadoSP}
 	
+	A fim de facilitar o entendimento da Figura, o video deste comportamento está 
+	hospedado no Youtube, disponível em \citeonline{youtube:SP}.
+	
 	\subsubsection{Controlador Final com arbitragem}
 
 	A Figura \ref{fig:resultadoImplementadoHibrido} mostra o resultado para o controlador híbrido no robô real.
@@ -1268,6 +1290,10 @@ visando alcançar os objetivos propostos.
 	nos sensores, ocorrem mudanças mais intensas entre comportamentos do que em simulação.
 	
 	\input{Figuras/ResultadoHibrido}
+	
+	A fim de facilitar o entendimento da Figura, o video do resultado final para a 
+	estratégia de arbitragem de comportamentos está hospedado no Youtube, disponível 
+	em \citeonline{youtube:finalHibrido}.
 	
 	Durante a execução deste trabalho, verificou-se que a arquitetura de arbitragem de comportamentos pode ter 
 	um problema muito grave quando há presença de ruído. Nessa situação, o autômato pode fazer uma transição de 
@@ -1306,7 +1332,11 @@ visando alcançar os objetivos propostos.
 	valor do contador diminui novamente. Por isso o robô para e anda de pouco a pouco até chegar no objetivo.
 	
 	\input{Figuras/ResultadoFuzzy}
-	
+
+	A fim de facilitar o entendimento da Figura, o video do resultado final para a 
+	estratégia de fusão de comportamentos está hospedado no Youtube, disponível em 
+	\citeonline{youtube:finalFuzzy}.
+		
 	As oscilações excessivas para o controlador \textit{Fuzzy} são provocadas pela arquitetura de fusão de 
 	comportamentos e não pelo sistema \textit{fuzzy} em si.
 	

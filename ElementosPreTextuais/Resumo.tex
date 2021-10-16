@@ -1,9 +1,16 @@
 \begin{resumo}
 
-O presente trabalho teve por objetivo explorar o uso da arquitetura baseada em comportamento no
-campo da robótica móvel. Nesse sentido, foram utilizadas as duas estratégias existentes 
-na literatura: arbitragem e fusão de comportamentos. A primeira foi implementada utilizando
-controle híbrido (sistemas a eventos discretos com controladores de variáveis contínuas), 
-enquanto a segunda utilizou controladores \textit{Fuzzy} para sua execução. 
+A robótica móvel é uma área que envolve aspectos de raciocínio automatizado, percepção e 
+controle. A navegação é uma área de estudo crucial em robôs autônomos. O presente trabalho 
+explora o uso da arquitetura baseada em comportamento utilizando duas estratégias existentes 
+na literatura: arbitragem e fusão de comportamentos. A primeira foi implementada utilizando 
+controle híbrido (sistemas a eventos discretos com sistemas dinâmicos de variável contínua), 
+enquanto a segunda utilizou controladores \textit{Fuzzy} para sua execução. O protótipo usa 
+o modelo de acionamento diferencial e uma conversão para o modelo uniciclo foi efetuada a fim
+de tornar a solução escalável, já que, se outros robôs puderem ter seus modelos convertidos 
+para o modelo uniciclo, o sistema de controle deste trabalho poderá controlá-los. Os 
+resultados obtidos foram satisfatórios, contudo, sob estratégia de arbitragem, verificou-se
+que o processo de decisão (autômato) é sensível à presença de ruído. Sob estratégia de 
+fusão, o robô apresentou oscilações mais agressivas causadas pela arquitetura de subsunção.
 
 \end{resumo}

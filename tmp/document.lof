@@ -1,52 +1,52 @@
 \babel@toc {brazil}{}
-\contentsline {figure}{\numberline {1}{\ignorespaces Arbitragem e fusão de comportamentos\relax }}{16}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Comportamentos definidos por campos potenciais\relax }}{17}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Modelos uniciclo e diferencial\relax }}{18}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Transição de Estado\relax }}{22}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces SED em malha fechada\relax }}{22}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Exemplos de diagramas de transição para autômatos temporizados com guarda\relax }}{23}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Controlador Híbrido\relax }}{25}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Modo deslizante e diagramas de transição\relax }}{26}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo do modo deslizante em robótica móvel\relax }}{26}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Representação gráfica da ação de um controle PID\relax }}{27}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de blocos para um sistema com controlador \textit {Fuzzy}\relax }}{28}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Conjuntos \textit {Fuzzy} possíveis para a variável ``altura''\relax }}{29}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Operações união e intersecção em conjuntos \textit {Fuzzy}\relax }}{31}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Inferência em Lógica \textit {Fuzzy}\relax }}{32}{}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Defuzzificação COG\relax }}{33}{}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Sinais de saída dos canais dos \textit {encoders} para sentido de rotação\relax }}{34}{}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Materiais e robô após montagem\relax }}{37}{}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Robô após montagem\relax }}{38}{}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Resposta do sensor infravermelho\relax }}{39}{}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Curva do motor sem carga\relax }}{39}{}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Curva do motor com carga\relax }}{40}{}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Regressão Linear para a curva do motor\relax }}{40}{}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Robôs Khepera 3 e QuickBot\relax }}{41}{}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Robôs Khepera 3 e QuickBot em simulação\relax }}{41}{}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Comportamento Ir para Objetivo\relax }}{45}{}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Comportamento Evitar Obstáculo\relax }}{47}{}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Tipos de obstáculos\relax }}{50}{}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Comportamento Seguir Parede\relax }}{51}{}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Recomendação vetorial\relax }}{52}{}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Autômato Híbrido que soluciona o problema de navegação\relax }}{57}{}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama do sistema \textit {Fuzzy} ``Evitar Obstáculo''\relax }}{59}{}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Conjuntos \textit {Fuzzy} para as entradas dos sensores\relax }}{60}{}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Conjuntos \textit {Fuzzy} para as saídas vetoriais\relax }}{60}{}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Conjuntos \textit {Fuzzy} para a saída de velocidade\relax }}{61}{}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Curva de Ativação para comportamento Seguir Parede\relax }}{62}{}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Diagrama do sistema \textit {Fuzzy} ``Seguir Parede''\relax }}{62}{}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Conjuntos \textit {Fuzzy} para as saídas vetoriais\relax }}{65}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Arbitragem e fusão de comportamentos\relax }}{17}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Comportamentos definidos por campos potenciais\relax }}{18}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Modelos uniciclo e diferencial\relax }}{19}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Diagrama de Transição de Estado\relax }}{23}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces SED em malha fechada\relax }}{23}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Exemplos de diagramas de transição para autômatos temporizados com guarda\relax }}{24}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Controlador Híbrido\relax }}{26}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Modo deslizante e diagramas de transição\relax }}{27}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Exemplo do modo deslizante em robótica móvel\relax }}{27}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Representação gráfica da ação de um controle PID\relax }}{28}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de blocos para um sistema com controlador \textit {Fuzzy}\relax }}{29}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Conjuntos \textit {Fuzzy} possíveis para a variável ``altura''\relax }}{30}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Operações união e intersecção em conjuntos \textit {Fuzzy}\relax }}{32}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Inferência em Lógica \textit {Fuzzy}\relax }}{33}{}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Defuzzificação COG\relax }}{34}{}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Sinais de saída dos canais dos \textit {encoders} para sentido de rotação\relax }}{35}{}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Materiais e robô após montagem\relax }}{38}{}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Robô após montagem\relax }}{39}{}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Resposta do sensor infravermelho\relax }}{40}{}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Curva do motor sem carga\relax }}{40}{}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Curva do motor com carga\relax }}{41}{}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Regressão Linear para a curva do motor\relax }}{41}{}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Robôs Khepera 3 e QuickBot\relax }}{42}{}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Robôs Khepera 3 e QuickBot em simulação\relax }}{42}{}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Comportamento Ir para Objetivo\relax }}{46}{}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Comportamento Evitar Obstáculo\relax }}{48}{}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Tipos de obstáculos\relax }}{51}{}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Comportamento Seguir Parede\relax }}{52}{}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Recomendação vetorial\relax }}{53}{}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Autômato Híbrido que soluciona o problema de navegação\relax }}{58}{}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Diagrama do sistema \textit {Fuzzy} ``Evitar Obstáculo''\relax }}{60}{}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Conjuntos \textit {Fuzzy} para as entradas dos sensores\relax }}{61}{}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Conjuntos \textit {Fuzzy} para as saídas vetoriais\relax }}{61}{}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Conjuntos \textit {Fuzzy} para a saída de velocidade\relax }}{62}{}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Curva de Ativação para comportamento Seguir Parede\relax }}{63}{}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Diagrama do sistema \textit {Fuzzy} ``Seguir Parede''\relax }}{63}{}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Conjuntos \textit {Fuzzy} para as saídas vetoriais\relax }}{67}{}%
 \contentsline {figure}{\numberline {38}{\ignorespaces Diagrama do sistema \textit {Fuzzy} ``Seguir Recomendação''\relax }}{67}{}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Conjuntos \textit {Fuzzy} para as entradas vetoriais\relax }}{67}{}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Conjuntos \textit {Fuzzy} para a entrada de velocidade\relax }}{68}{}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Conjuntos \textit {Fuzzy} para as velocidades angulares de saída\relax }}{68}{}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Esquema lógico do circuito\relax }}{71}{}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Placa projetada\relax }}{74}{}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Resultado em simulação para o controlador híbrido\relax }}{76}{}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Resultado em simulação para o controlador \textit {fuzzy}\relax }}{77}{}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Resultado do comportamento ``Ir Para Objetivo''\relax }}{78}{}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Resultado do comportamento ``Evitar Obstáculo''\relax }}{78}{}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Resultado do comportamento ``Mesclado''\relax }}{79}{}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Resultado do comportamento ``Seguir Parede''\relax }}{80}{}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Resultado implementado para o controlador híbrido\relax }}{81}{}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Resultado implementado para o controlador \textit {fuzzy}\relax }}{82}{}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Conjuntos \textit {Fuzzy} para as entradas vetoriais\relax }}{68}{}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Conjuntos \textit {Fuzzy} para a entrada de velocidade\relax }}{69}{}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Conjuntos \textit {Fuzzy} para as velocidades angulares de saída\relax }}{69}{}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Esquema lógico do circuito\relax }}{72}{}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Placa projetada\relax }}{75}{}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Resultado em simulação para o controlador híbrido\relax }}{77}{}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Resultado em simulação para o controlador \textit {fuzzy}\relax }}{78}{}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Resultado do comportamento ``Ir Para Objetivo''\relax }}{79}{}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Resultado do comportamento ``Evitar Obstáculo''\relax }}{80}{}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Resultado do comportamento ``Mesclado''\relax }}{80}{}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Resultado do comportamento ``Seguir Parede''\relax }}{81}{}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Resultado implementado para o controlador híbrido\relax }}{82}{}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Resultado implementado para o controlador \textit {fuzzy}\relax }}{83}{}%
