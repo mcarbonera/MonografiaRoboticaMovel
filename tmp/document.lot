@@ -1,8 +1,8 @@
 \babel@toc {brazil}{}
-\contentsline {table}{\numberline {1}{\ignorespaces Tabela de custos\relax }}{37}{}%
-\contentsline {table}{\numberline {2}{\ignorespaces Estados do autômato\relax }}{55}{}%
-\contentsline {table}{\numberline {3}{\ignorespaces Condições utilizadas nas transições do autômato\relax }}{55}{}%
-\contentsline {table}{\numberline {4}{\ignorespaces Regras \textit {Fuzzy} para sistema ``Evitar Obstáculo''\relax }}{62}{}%
-\contentsline {table}{\numberline {5}{\ignorespaces Regras \textit {Fuzzy} para sistema ``Seguir Parede''\relax }}{68}{}%
-\contentsline {table}{\numberline {6}{\ignorespaces Recomendações para velocidades\relax }}{70}{}%
-\contentsline {table}{\numberline {7}{\ignorespaces Comandos disponíveis na interface por linha de comando via \textit {bluetooth}\relax }}{76}{}%
+\contentsline {table}{\numberline {1}{\ignorespaces Tabela de custos\relax }}{37}{table.caption.25}%
+\contentsline {table}{\numberline {2}{\ignorespaces Estados do autômato\relax }}{55}{table.caption.39}%
+\contentsline {table}{\numberline {3}{\ignorespaces Condições utilizadas nas transições do autômato\relax }}{55}{table.caption.40}%
+\contentsline {table}{\numberline {4}{\ignorespaces Regras \textit {Fuzzy} para sistema ``Evitar Obstáculo''\relax }}{62}{table.caption.46}%
+\contentsline {table}{\numberline {5}{\ignorespaces Regras \textit {Fuzzy} para sistema ``Seguir Parede''\relax }}{67}{table.caption.50}%
+\contentsline {table}{\numberline {6}{\ignorespaces Recomendações para velocidades\relax }}{70}{table.caption.55}%
+\contentsline {table}{\numberline {7}{\ignorespaces Comandos disponíveis na interface por linha de comando via \textit {bluetooth}\relax }}{76}{table.caption.58}%

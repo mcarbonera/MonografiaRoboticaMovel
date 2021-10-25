@@ -49,39 +49,39 @@ Reallocating 'global_strs' (item size: 1) to 4000000 items.
 | Em caso de duvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 55 entries,
+You've used 56 entries,
             6523 wiz_defined-function locations,
-            1497 strings with 17749 characters,
-and the built_in function-call counts, 36959 in all, are:
-= -- 2975
+            1498 strings with 17777 characters,
+and the built_in function-call counts, 36582 in all, are:
+= -- 2763
 > -- 1061
 < -- 26
-+ -- 432
++ -- 433
 - -- 335
-* -- 2442
-:= -- 5052
-add.period$ -- 236
-call.type$ -- 57
-change.case$ -- 419
+* -- 2400
+:= -- 4998
+add.period$ -- 232
+call.type$ -- 58
+change.case$ -- 437
 chr.to.int$ -- 79
 cite$ -- 52
-duplicate$ -- 1784
-empty$ -- 3303
+duplicate$ -- 1813
+empty$ -- 3339
 format.name$ -- 1579
-if$ -- 9031
-int.to.chr$ -- 11
+if$ -- 8867
+int.to.chr$ -- 12
 int.to.str$ -- 2
-missing$ -- 923
-newline$ -- 281
+missing$ -- 948
+newline$ -- 286
 num.names$ -- 247
 pop$ -- 1095
 preamble$ -- 1
-purify$ -- 185
+purify$ -- 188
 quote$ -- 0
-skip$ -- 2180
+skip$ -- 2194
 stack$ -- 1
-substring$ -- 1185
-swap$ -- 805
+substring$ -- 1125
+swap$ -- 835
 text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
@@ -89,5 +89,5 @@ type$ -- 28
 warning$ -- 0
 while$ -- 312
 width$ -- 0
-write$ -- 825
+write$ -- 821
 (There were 12 warnings)

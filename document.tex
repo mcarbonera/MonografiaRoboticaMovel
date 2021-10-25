@@ -12,8 +12,36 @@
 %%             pode escrever acentos sem precisar de códigos para tal.
 %%
 
+%pdf/a compliance
+%\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+%	\Title{navegacaorobosmoveiscomportamentais}
+%	\Author{Marcelo Carbonera}
+%	\Language{pt-BR}
+%	\Subject{Navegacao Robos Moveis}
+%	\Keywords{navegacao\sep robos\sep moveis\sep comportamentais}
+%\end{filecontents*}
+
 \documentclass[openright]{normas-utf-tex} %openright = o capitulo comeca sempre
 % em paginas impares \documentclass[oneside]{normas-utf-tex} %oneside = para dissertacoes com numero de paginas menor que 100 (apenas frente da folha) 
+
+%pdf/a compliance
+\usepackage[a-2u]{pdfx}
+
+%pdf/a compliance
+%\usepackage{colorprofiles}
+%\usepackage[a-2b,mathxmp]{pdfx}[2021/10/18]
+%\hypersetup{pdfstartview=}
+
+%pdf/a compliance 2
+%\usepackage{hyperxmp}
+%\usepackage{hyperref}
+%\hypersetup{%
+%pdftitle={navegacaorobosmoveiscomportamentais},
+%pdfauthor={Marcelo Carbonera},
+%pdflang={pt-BR},
+%pdfsubject={Navegacao Robos Moveis},
+%pdfkeywords={navegacao, robos, moveis, comportamentais},
+%pdfstartview=}
 
 % force A4 paper format
 \special{papersize=210mm,297mm}
@@ -25,10 +53,7 @@
 \usepackage{amsmath,amsfonts,amssymb} % pacote matematico
 \usepackage{graphicx} % pacote grafico
 \usepackage{times} % fonte times
-\usepackage[final]{pdfpages} % adicao da ata
-
-%Podem utilizar GEOMETRY{...} para realizar pequenos ajustes das margens. Onde, left=esquerda, right=direita, top=superior, bottom=inferior. P.ex.:
-%\geometry{left=3.0cm,right=1.5cm,top=4cm,bottom=1cm} 
+\usepackage[final]{pdfpages} % adicao da ata 
 
 %% Bora pro TikZ feraaaa
 \usepackage{tikz}

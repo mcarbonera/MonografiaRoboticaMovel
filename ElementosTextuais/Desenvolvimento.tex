@@ -443,7 +443,7 @@ visando alcançar os objetivos propostos.
 		direção ao objetivo. Essa condição detecta entrada e saída de mínimos locais, já que, 
 		parar de fazer progresso significa que o robô está retornando a região já visitada. Quando
 		voltar a fazer progresso, significa que saiu de mínimo local. O Algoritmo 
-		\ref{alg:fezProgresso} mostra o cálculo dessa função booleana. a variável $d_{prog}$ é a última distância 
+		\ref{alg:fezProgresso} mostra o cálculo dessa função booleana. A variável $d_{prog}$ é a última distância 
 		verificada e é atualizada no mesmo algoritmo. No início da navegação ou quando o objetivo
 		for alterado, $d_{prog}$ deve ser inicializado para um valor infinito (no robô, foi usado 
 		valor de 1000 metros, já que nunca será requisitado ao robô percorrer tal distância). A 
@@ -841,7 +841,6 @@ visando alcançar os objetivos propostos.
 	
 		\end{algorithmic}
 	\end{algorithm}
-	
 	\begin{algorithm}
 		\caption{Verificar Perda de Referência}
 		\label{alg:verificarPerdaReferencia}%
@@ -874,7 +873,7 @@ visando alcançar os objetivos propostos.
  	as componentes. Isso foi feito dessa forma pois as entradas do sistema fuzzy para ``Seguir
  	Recomendação'' devem ser normalizadas. Essa ``normalização'' é calculada pelo Algoritmo
  	\ref{alg:normalizacao}.
-	\begin{algorithm}
+	\begin{algorithm}[!ht]
 		\caption{Normalização de Componentes do vetor}
 		\label{alg:normalizacao}%
 		\begin{algorithmic}[1]
