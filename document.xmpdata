@@ -1,5 +1,9 @@
- \Title{navegacaorobosmoveiscomportamentais}
- \Author{Marcelo Carbonera}
- \Language{pt-br}
- \Subject{Navegacao Robos Moveis}
- \Keywords{navegacao\sep robos\sep moveis\sep comportamentais}
+%\Title{navegacaorobosmoveiscomportamentais}
+\Title{Navegação em Robôs Móveis por Arbitragem e Fusão em Arquiteturas Comportamentais}
+\Author{Marcelo Gervazoni Carbonera}
+\Subject{Navegação Robôs Móveis}
+%\Keywords{navegacao\sep robos\sep moveis\sep comportamentais}
+\Keywords{Robótica móvel\sep Robô de acionamento diferencial\sep Modelo Uniciclo\sep Robótica Baseada em Comportamento}
+\Producer{Latex}
+\Publisher{UTFPR}
+\Language{pt-BR}

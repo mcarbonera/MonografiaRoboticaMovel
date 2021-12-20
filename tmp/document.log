@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  18 OCT 2021 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.1)  19 DEC 2021 20:10
 entering extended mode
 **./document.tex
 (document.tex
@@ -1138,7 +1138,7 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 \verbatim@out=\write5
-runsystem(echo 'write18-test-202110181033'>"document.w18")...disabled (restrict
+runsystem(echo 'write18-test-202112191210'>"document.w18")...disabled (restrict
 ed).
 
 
@@ -1258,7 +1258,7 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-65.
+40.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -1320,27 +1320,27 @@ LaTeX Warning: Label `fig:CompSP@cref' multiply defined.
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
-LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 165.
+(lastpage)             ! on input line 140.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1365,7 +1365,7 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package hyperref Info: Link coloring OFF on input line 165.
+Package hyperref Info: Link coloring OFF on input line 140.
 
 ("C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1378,9 +1378,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count351
 )
-LaTeX Info: Redefining \ref on input line 165.
-LaTeX Info: Redefining \pageref on input line 165.
-LaTeX Info: Redefining \nameref on input line 165.
+LaTeX Info: Redefining \ref on input line 140.
+LaTeX Info: Redefining \pageref on input line 140.
+LaTeX Info: Redefining \nameref on input line 140.
 
 (document.out) (document.out)
 \@outlinefile=\write6
@@ -1399,93 +1399,111 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 165.
+ on input line 140.
 
 <Figuras/capa_PB.png, id=288, 597.432pt x 845.0772pt>
 File: Figuras/capa_PB.png Graphic file (type png)
 <use Figuras/capa_PB.png>
-Package pdftex.def Info: Figuras/capa_PB.png  used on input line 170.
+Package pdftex.def Info: Figuras/capa_PB.png  used on input line 145.
 (pdftex.def)             Requested size: 597.55817pt x 845.04933pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 170.
+ 145.
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 170.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 170.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 170.
+ 145.
 
 ("C:\Program Files\MiKTeX\tex/latex/psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 170.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 170.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 170.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 145.
  [1
 
 
 Non-PDF special ignored!
 <special> papersize=210mm,297mm
  <./Figuras/capa_PB.png (PNG copy)>]
-Overfull \hbox (2.28001pt too wide) in paragraph at lines 171--171
+Overfull \hbox (2.28001pt too wide) in paragraph at lines 146--146
   $[]$ 
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 146.
+<Figuras/Cc-by-nc-sa_icon.svg.png, id=297, 120.45pt x 42.1575pt>
+File: Figuras/Cc-by-nc-sa_icon.svg.png Graphic file (type png)
+<use Figuras/Cc-by-nc-sa_icon.svg.png>
+Package pdftex.def Info: Figuras/Cc-by-nc-sa_icon.svg.png  used on input line 1
+46.
+(pdftex.def)             Requested size: 136.57462pt x 47.80592pt.
+
+Overfull \hbox (18.00002pt too wide) in paragraph at lines 146--146
+[][][]$[]$ $[]$| 
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171 \folhaderosto
-                    % geracao automatica da folha de rosto [1]
-<TermoDeAprovacao.pdf, id=299, 597.23125pt x 845.1575pt>
+l.146 \folhaderosto
+                    % geracao automatica da folha de rosto [1 <./Figuras/Cc-by-
+nc-sa_icon.svg.png>]
+<TermoDeAprovacao.pdf, id=305, 597.23125pt x 845.1575pt>
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf>
-Package pdftex.def Info: TermoDeAprovacao.pdf  used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf  used on input line 160.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf>
-Package pdftex.def Info: TermoDeAprovacao.pdf  used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf  used on input line 160.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-<TermoDeAprovacao.pdf, id=302, page=1, 597.23125pt x 845.1575pt>
+<TermoDeAprovacao.pdf, id=308, page=1, 597.23125pt x 845.1575pt>
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf, page 1>
-Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf, page 1>
-Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf, page 1>
-Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf, page 1>
-Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.185 \includepdf{TermoDeAprovacao.pdf}
+l.160 \includepdf{TermoDeAprovacao.pdf}
                                        
 File: TermoDeAprovacao.pdf Graphic file (type pdf)
 <use TermoDeAprovacao.pdf, page 1>
-Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 185.
+Package pdftex.def Info: TermoDeAprovacao.pdf , page1 used on input line 160.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [1 <./TermoDeAprovacao.pdf>]
 (ElementosPreTextuais/Dedicatoria.tex [2
@@ -1539,7 +1557,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.204 \listadetabelas
+l.179 \listadetabelas
                         % geracao automatica da lista de tabelas [8]
 (document.lot)
 \tf@lot=\write8
@@ -1549,7 +1567,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \sumario
+l.185 \sumario
                % geracao automatica do sumario [9
 
 ] (document.tocpdfTeX warning (ext4): destination with the same identifier (nam
@@ -1568,7 +1586,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \sumario
+l.185 \sumario
                % geracao automatica do sumario [11]
 (ElementosTextuais/Introducao.tex
 Cap\'{\i }tulo 1.
@@ -1665,8 +1683,6 @@ and I'll forget about whatever was undefined.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 12.
 
 Overfull \hbox (4.56006pt too wide) in paragraph at lines 16--95
@@ -5020,7 +5036,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/encoderMotor-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/encoderMotor-eps-converted-to.pdf, id=1055, 483.8075pt x 123.46124pt>
+<Figuras/encoderMotor-eps-converted-to.pdf, id=1060, 483.8075pt x 123.46124pt>
 File: Figuras/encoderMotor-eps-converted-to.pdf Graphic file (type pdf)
 <use Figuras/encoderMotor-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/encoderMotor-eps-converted-to.pdf  used on inp
@@ -5064,7 +5080,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 (Figuras/RoboJubileu.tex
-<Figuras/RoboMontagem1.jpg, id=1083, 4175.6pt x 3131.7pt>
+<Figuras/RoboMontagem1.jpg, id=1088, 4175.6pt x 3131.7pt>
 File: Figuras/RoboMontagem1.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem1.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem1.jpg  used on input line 9.
@@ -5074,7 +5090,7 @@ Overfull \hbox (6.55473pt too wide) in paragraph at lines 8--10
  [][] 
  []
 
-<Figuras/RoboMontagem2.jpg, id=1085, 4175.6pt x 3131.7pt>
+<Figuras/RoboMontagem2.jpg, id=1090, 4175.6pt x 3131.7pt>
 File: Figuras/RoboMontagem2.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem2.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem2.jpg  used on input line 18.
@@ -5084,7 +5100,7 @@ Overfull \hbox (6.55473pt too wide) in paragraph at lines 17--19
  [][] 
  []
 
-<Figuras/RoboMontagem3.jpg, id=1087, 4175.6pt x 3131.7pt>
+<Figuras/RoboMontagem3.jpg, id=1092, 4175.6pt x 3131.7pt>
 File: Figuras/RoboMontagem3.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem3.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem3.jpg  used on input line 27.
@@ -5094,18 +5110,18 @@ Overfull \hbox (6.55473pt too wide) in paragraph at lines 26--28
  [][] 
  []
 
-<Figuras/RoboMontagem4.jpg, id=1089, 3131.7pt x 4175.6pt>
+<Figuras/RoboMontagem4.jpg, id=1094, 3131.7pt x 4175.6pt>
 File: Figuras/RoboMontagem4.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem4.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem4.jpg  used on input line 36.
 (pdftex.def)             Requested size: 172.22014pt x 229.62685pt.
 ) (Figuras/RoboJubileuMontado.tex
-<Figuras/RoboMontagem5.jpg, id=1096, 3131.7pt x 4175.6pt>
+<Figuras/RoboMontagem5.jpg, id=1101, 3131.7pt x 4175.6pt>
 File: Figuras/RoboMontagem5.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem5.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem5.jpg  used on input line 9.
 (pdftex.def)             Requested size: 172.22014pt x 174.86273pt.
-<Figuras/RoboMontagem6.jpg, id=1098, 3131.7pt x 4175.6pt>
+<Figuras/RoboMontagem6.jpg, id=1103, 3131.7pt x 4175.6pt>
 File: Figuras/RoboMontagem6.jpg Graphic file (type jpg)
 <use Figuras/RoboMontagem6.jpg>
 Package pdftex.def Info: Figuras/RoboMontagem6.jpg  used on input line 18.
@@ -5116,7 +5132,7 @@ Package pdftex.def Info: Figuras/RoboMontagem6.jpg  used on input line 18.
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/IR_Datasheet_Figure.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/IR_Datasheet_Figure.pdf, id=1106, 597.50786pt x 845.04686pt>
+<Figuras/IR_Datasheet_Figure.pdf, id=1111, 597.50786pt x 845.04686pt>
 File: Figuras/IR_Datasheet_Figure.pdf Graphic file (type pdf)
 <use Figuras/IR_Datasheet_Figure.pdf>
 Package pdftex.def Info: Figuras/IR_Datasheet_Figure.pdf  used on input line 8.
@@ -5124,14 +5140,14 @@ Package pdftex.def Info: Figuras/IR_Datasheet_Figure.pdf  used on input line 8.
 (pdftex.def)             Requested size: 327.2059pt x 258.91931pt.
 ) [38 <./Figuras/RoboMontagem1.jpg> <./Figuras/RoboMontagem2.jpg> <./Figuras/Ro
 boMontagem3.jpg> <./Figuras/RoboMontagem4.jpg>] (Figuras/AcionamentoMotor1.tex
-<Figuras/Acionamento_Sem_Carga_rps.png, id=1120, 1387.584pt x 672.111pt>
+<Figuras/Acionamento_Sem_Carga_rps.png, id=1125, 1387.584pt x 672.111pt>
 File: Figuras/Acionamento_Sem_Carga_rps.png Graphic file (type png)
 <use Figuras/Acionamento_Sem_Carga_rps.png>
 Package pdftex.def Info: Figuras/Acionamento_Sem_Carga_rps.png  used on input l
 ine 8.
 (pdftex.def)             Requested size: 431.05927pt x 222.96835pt.
 ) (Figuras/AcionamentoMotor2.tex
-<Figuras/Acionamento_Com_Carga_rps.png, id=1124, 1387.584pt x 672.111pt>
+<Figuras/Acionamento_Com_Carga_rps.png, id=1128, 1387.584pt x 672.111pt>
 File: Figuras/Acionamento_Com_Carga_rps.png Graphic file (type png)
 <use Figuras/Acionamento_Com_Carga_rps.png>
 Package pdftex.def Info: Figuras/Acionamento_Com_Carga_rps.png  used on input l
@@ -5139,7 +5155,7 @@ ine 8.
 (pdftex.def)             Requested size: 431.05927pt x 222.96835pt.
 ) [39 <./Figuras/RoboMontagem5.jpg> <./Figuras/RoboMontagem6.jpg>] (Figuras/Aci
 onamentoMotor3.tex
-<Figuras/Curva_Do_Motor_rps.png, id=1134, 1387.584pt x 672.111pt>
+<Figuras/Curva_Do_Motor_rps.png, id=1138, 1387.584pt x 672.111pt>
 File: Figuras/Curva_Do_Motor_rps.png Graphic file (type png)
 <use Figuras/Curva_Do_Motor_rps.png>
 Package pdftex.def Info: Figuras/Curva_Do_Motor_rps.png  used on input line 8.
@@ -5159,18 +5175,18 @@ and I'll forget about whatever was undefined.
 [40 <./Figuras/IR_Datasheet_Figure.pdf> <./Figuras/Acionamento_Sem_Carga_rps.pn
 g>] [41 <./Figuras/Acionamento_Com_Carga_rps.png> <./Figuras/Curva_Do_Motor_rps
 .png>] (Figuras/FigRobos.tex
-<Figuras/Khepera_III_robot.jpg, id=1161, 1310.496pt x 982.872pt>
+<Figuras/Khepera_III_robot.jpg, id=1165, 1310.496pt x 982.872pt>
 File: Figuras/Khepera_III_robot.jpg Graphic file (type jpg)
 <use Figuras/Khepera_III_robot.jpg>
 Package pdftex.def Info: Figuras/Khepera_III_robot.jpg  used on input line 9.
 (pdftex.def)             Requested size: 151.60132pt x 137.60114pt.
-<Figuras/quickbot-blue.png, id=1163, 2055.68pt x 1541.76pt>
+<Figuras/quickbot-blue.png, id=1167, 2055.68pt x 1541.76pt>
 File: Figuras/quickbot-blue.png Graphic file (type png)
 <use Figuras/quickbot-blue.png>
 Package pdftex.def Info: Figuras/quickbot-blue.png  used on input line 18.
 (pdftex.def)             Requested size: 161.95747pt x 138.75241pt.
 ) (Figuras/FigRobosEmSim.tex
-<Figuras/simiam-screenshot.png, id=1169, 1606.0pt x 903.375pt>
+<Figuras/simiam-screenshot.png, id=1173, 1606.0pt x 903.375pt>
 File: Figuras/simiam-screenshot.png Graphic file (type png)
 <use Figuras/simiam-screenshot.png>
 Package pdftex.def Info: Figuras/simiam-screenshot.png  used on input line 8.
@@ -5215,12 +5231,7 @@ Overfull \hbox (4.56006pt too wide) in paragraph at lines 111--146
  [][]  [] 
  []
 
-) [52] (Figuras/CompSPVetor.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
-) [53] (Tabelas/AutomatoEstados.tex)
+) [52] (Figuras/CompSPVetor.tex) [53] (Tabelas/AutomatoEstados.tex)
 (Tabelas/AutomatoTransicoes.tex) [54] [55] [56] (Figuras/automatoHibrido.tex)
 [57] [58] (Figuras/FuzzyEvitarObstaculoDiagrama.tex [59])
 (Figuras/FuzzyEvitarObstaculoInput.tex
@@ -5549,7 +5560,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/EsquemaCircuito-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/EsquemaCircuito-eps-converted-to.pdf, id=1535, 557.08125pt x 505.89pt>
+<Figuras/EsquemaCircuito-eps-converted-to.pdf, id=1539, 557.08125pt x 505.89pt>
 
 File: Figuras/EsquemaCircuito-eps-converted-to.pdf Graphic file (type pdf)
 <use Figuras/EsquemaCircuito-eps-converted-to.pdf>
@@ -5573,7 +5584,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./Figuras/JubileuBoard-eps-converted-to.pdf)
 : PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figuras/JubileuBoard-eps-converted-to.pdf, id=1597, 171.64125pt x 342.27875pt>
+<Figuras/JubileuBoard-eps-converted-to.pdf, id=1601, 171.64125pt x 342.27875pt>
 
 File: Figuras/JubileuBoard-eps-converted-to.pdf Graphic file (type pdf)
 <use Figuras/JubileuBoard-eps-converted-to.pdf>
@@ -5594,14 +5605,14 @@ and I'll forget about whatever was undefined.
 
 [75 <./Figuras/JubileuBoard-eps-converted-to.pdf>]
 (Figuras/SimulacaoHibrido.tex
-<Figuras/simulacao_hibrido2Compactado.png, id=1618, 1926.19624pt x 947.54pt>
+<Figuras/simulacao_hibrido2Compactado.png, id=1622, 1926.19624pt x 947.54pt>
 File: Figuras/simulacao_hibrido2Compactado.png Graphic file (type png)
 <use Figuras/simulacao_hibrido2Compactado.png>
 Package pdftex.def Info: Figuras/simulacao_hibrido2Compactado.png  used on inpu
 t line 10.
 (pdftex.def)             Requested size: 446.86609pt x 219.82364pt.
 ) [76] (Figuras/SimulacaoFuzzy.tex
-<Figuras/simulacao_fuzzy2Compactado.png, id=1630, 1926.19624pt x 947.54pt>
+<Figuras/simulacao_fuzzy2Compactado.png, id=1634, 1926.19624pt x 947.54pt>
 File: Figuras/simulacao_fuzzy2Compactado.png Graphic file (type png)
 <use Figuras/simulacao_fuzzy2Compactado.png>
 Package pdftex.def Info: Figuras/simulacao_fuzzy2Compactado.png  used on input 
@@ -5621,7 +5632,7 @@ and I'll forget about whatever was undefined.
 
 [77 <./Figuras/simulacao_hibrido2Compactado.png (PNG copy)>]
 (Figuras/ResultadoIPO.tex
-<Figuras/ComportamentoIPOCompactado.png, id=1643, 1544.77126pt x 870.25125pt>
+<Figuras/ComportamentoIPOCompactado.png, id=1647, 1544.77126pt x 870.25125pt>
 File: Figuras/ComportamentoIPOCompactado.png Graphic file (type png)
 <use Figuras/ComportamentoIPOCompactado.png>
 Package pdftex.def Info: Figuras/ComportamentoIPOCompactado.png  used on input 
@@ -5629,14 +5640,14 @@ line 10.
 (pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
 ) [78 <./Figuras/simulacao_fuzzy2Compactado.png (PNG copy)>] (Figuras/Resultado
 EO.tex
-<Figuras/ComportamentoEOCompactado.png, id=1656, 1544.77126pt x 870.25125pt>
+<Figuras/ComportamentoEOCompactado.png, id=1660, 1544.77126pt x 870.25125pt>
 File: Figuras/ComportamentoEOCompactado.png Graphic file (type png)
 <use Figuras/ComportamentoEOCompactado.png>
 Package pdftex.def Info: Figuras/ComportamentoEOCompactado.png  used on input l
 ine 10.
 (pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
 ) (Figuras/ResultadoMesclado.tex
-<Figuras/ComportamentoIPO_E_EOCompactado.png, id=1661, 1544.77126pt x 870.25125
+<Figuras/ComportamentoIPO_E_EOCompactado.png, id=1665, 1544.77126pt x 870.25125
 pt>
 File: Figuras/ComportamentoIPO_E_EOCompactado.png Graphic file (type png)
 <use Figuras/ComportamentoIPO_E_EOCompactado.png>
@@ -5645,7 +5656,7 @@ nput line 10.
 (pdftex.def)             Requested size: 447.9722pt x 252.3664pt.
 )
 (Figuras/ResultadoSP.tex
-<Figuras/ComportamentoSPCompactado.png, id=1666, 1544.77126pt x 870.25125pt>
+<Figuras/ComportamentoSPCompactado.png, id=1670, 1544.77126pt x 870.25125pt>
 File: Figuras/ComportamentoSPCompactado.png Graphic file (type png)
 <use Figuras/ComportamentoSPCompactado.png>
 Package pdftex.def Info: Figuras/ComportamentoSPCompactado.png  used on input l
@@ -5654,7 +5665,7 @@ ine 10.
  [79 <./Figuras/ComportamentoIPOCompactado.png (PNG copy)>]) [80 <./Figuras/Com
 portamentoEOCompactado.png (PNG copy)> <./Figuras/ComportamentoIPO_E_EOCompacta
 do.png (PNG copy)>] (Figuras/ResultadoHibrido.tex
-<Figuras/hibridoCompactado.png, id=1685, 1544.77126pt x 870.25125pt>
+<Figuras/hibridoCompactado.png, id=1689, 1544.77126pt x 870.25125pt>
 File: Figuras/hibridoCompactado.png Graphic file (type png)
 <use Figuras/hibridoCompactado.png>
 Package pdftex.def Info: Figuras/hibridoCompactado.png  used on input line 10.
@@ -5662,7 +5673,7 @@ Package pdftex.def Info: Figuras/hibridoCompactado.png  used on input line 10.
 )
 [81 <./Figuras/ComportamentoSPCompactado.png (PNG copy)>] [82 <./Figuras/hibrid
 oCompactado.png (PNG copy)>] (Figuras/ResultadoFuzzy.tex
-<Figuras/fuzzyCompactado.png, id=1701, 1544.77126pt x 870.25125pt>
+<Figuras/fuzzyCompactado.png, id=1705, 1544.77126pt x 870.25125pt>
 File: Figuras/fuzzyCompactado.png Graphic file (type png)
 <use Figuras/fuzzyCompactado.png>
 Package pdftex.def Info: Figuras/fuzzyCompactado.png  used on input line 10.
@@ -5708,11 +5719,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47962 strings out of 480224
- 1075637 string characters out of 2889982
- 1914544 words of memory out of 3000000
- 62945 multiletter control sequences out of 15000+200000
- 595262 words of font info for 157 fonts, out of 3000000 for 9000
+ 47972 strings out of 480224
+ 1075892 string characters out of 2889982
+ 1917005 words of memory out of 3000000
+ 62953 multiletter control sequences out of 15000+200000
+ 596276 words of font info for 159 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  77i,21n,112p,707b,3098s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX
@@ -5727,9 +5738,9 @@ usyr.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Program
 Files/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on document.pdf (90 pages, 40717160 bytes).
+Output written on document.pdf (90 pages, 40723553 bytes).
 PDF statistics:
- 1916 PDF objects out of 2073 (max. 8388607)
- 433 named destinations out of 1000 (max. 500000)
- 874 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1920 PDF objects out of 2073 (max. 8388607)
+ 434 named destinations out of 1000 (max. 500000)
+ 879 words of extra memory for PDF output out of 10000 (max. 10000000)
 

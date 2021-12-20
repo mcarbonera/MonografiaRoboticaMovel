@@ -220,6 +220,28 @@
 		\begin{center}
 			\textbf{\MakeUppercase{\ABNTlocaldata}}\par
 			\textbf{\ABNTdatadata}
+			
+			\let\thefootnote\relax\footnote{
+				\begin{minipage}{0.3\textwidth}
+					\hspace{-0.7cm}
+					\includegraphics[width=\linewidth]{Figuras/Cc-by-nc-sa_icon.svg.png}
+					
+					\hspace{-0.4cm}\vspace{-0.4cm}
+					\begin{scriptsize}
+						\textit{Creative Commons 4.0 International}
+					\end{scriptsize}
+					\vspace{0.4cm}
+				\end{minipage}%
+				\hfill%
+				\begin{minipage}{0.7\textwidth}
+					\vspace{-0.3cm}
+					Esta licença permite remixe, adaptação e criação a partir do trabalho, 
+					para fins não comerciais, desde que sejam atribuídos créditos ao autor 
+					e que licenciem novas criações sob termos idênticos. Conteúdos elaborados 
+					por terceiros, citados e referenciados nesta obra não são cobertos pela 
+					licença.
+				\end{minipage}%
+			}
 		\end{center}
 	\end{titlepage}
 }
