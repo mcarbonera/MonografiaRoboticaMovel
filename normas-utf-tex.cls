@@ -186,13 +186,17 @@
 			\begin{espacosimples}
 				\large\MakeUppercase{\ABNTautordata}\\
 				\UTFPRifnotempty{\UTFPRautordoisdata}{\large\MakeUppercase{\UTFPRautordoisdata}\\}{\vspace{18pt}}
-				\UTFPRifnotempty{\UTFPRautortresdata}{\large\MakeUppercase{\UTFPRautortresdata}\\}{\vspace{18pt}}
-				\UTFPRifnotempty{\UTFPRautorquatrodata}{\large\MakeUppercase{\UTFPRautorquatrodata}\\}{\vspace{18pt}}
 			\end{espacosimples}
 		\end{center}
-		\vspace{96pt}
-		\begin{center}
+		\vspace{66pt}
+		\begin{center}	
 			\large\ABNTchapterfont \MakeUppercase{\ABNTtitulodata} \par
+		\end{center}
+		\vspace{40pt}
+		\begin{center}
+			\begin{espacosimples}
+				\large\ABNTchapterfont \UTFPRtitledata \par
+			\end{espacosimples}
 		\end{center}
 		\vspace{60pt}
 		\hspace{.45\textwidth}	
@@ -224,11 +228,11 @@
 			\let\thefootnote\relax\footnote{
 				\begin{minipage}{0.3\textwidth}
 					\hspace{-0.7cm}
-					\includegraphics[width=\linewidth]{Figuras/Cc-by-nc-sa_icon.svg.png}
+					\href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{\includegraphics[width=\linewidth]{Figuras/cc-by-nc-sa.eps}}
 					
 					\hspace{-0.4cm}\vspace{-0.4cm}
 					\begin{scriptsize}
-						\textit{Creative Commons 4.0 International}
+						\href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{\textit{Creative Commons 4.0 International}}
 					\end{scriptsize}
 					\vspace{0.4cm}
 				\end{minipage}%
@@ -290,7 +294,7 @@
 		{
 		\begin{center}
 			\vspace{-0.5cm}
-			\assinatura{\ABNTprimeiroassinadata}
+			\ABNTprimeiroassinadata
 		\end{center}
 		}
 		\ABNTifnotempty{\ABNTsegundoassinadata}%
@@ -317,6 +321,83 @@
 		\vfill
 		\begin{center}
 			\ABNTlocaldiadata
+		\end{center}
+	\end{titlepage}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Folha de aprovacao 
+
+\renewcommand{\folhadeaprovacao}
+{
+	\begin{titlepage}
+		\espaco{1.1}
+		\begin{center}
+			\begin{espacosimples}
+				\large\MakeUppercase{\ABNTautordata}\\
+				\UTFPRifnotempty{\UTFPRautordoisdata}{\large\MakeUppercase{\UTFPRautordoisdata}\\}{\vspace{18pt}}
+			\end{espacosimples}
+		\end{center}
+		\vspace{66pt}
+		\begin{center}	
+			\large\ABNTchapterfont \MakeUppercase{\ABNTtitulodata} \par
+		\end{center}
+		\vspace{20pt}
+		\hspace{.45\textwidth}	
+		\begin{minipage}{.55\textwidth}
+			\begin{espacosimples}
+				\ABNTcomentariodata\par
+			\end{espacosimples}		
+		\end{minipage}
+		
+		\begin{center}	
+			\normalsize Data de Aprovação: 07 de Outubro de 2021 \par
+		\end{center}
+		
+		\vspace{10pt}
+		\ABNTifnotempty{\ABNTprimeiroassinadata}%
+		{
+		\noindent\hfil\rule{0.75\textwidth}{.4pt}\hfil
+		\begin{center}
+			\vspace{-3.7cm}
+			\assinatura{\ABNTprimeiroassinadata}
+			\vspace{-0.1cm}
+			Doutora\\
+			\vspace{-0.1cm}
+			Universidade Tecnológica Federal do Paraná
+		\end{center}
+		}
+		\vspace{10pt}
+		\ABNTifnotempty{\ABNTsegundoassinadata}%
+		{
+		\noindent\hfil\rule{0.75\textwidth}{.4pt}\hfil
+		\begin{center}
+			\vspace{-3.7cm}
+			\assinatura{\ABNTsegundoassinadata}
+			\vspace{-0.1cm}
+			Doutor\\
+			\vspace{-0.1cm}
+			Universidade Tecnológica Federal do Paraná
+		\end{center}
+		}
+		\vspace{10pt}
+		\ABNTifnotempty{\ABNTterceiroassinadata}%
+		{
+		\noindent\hfil\rule{0.75\textwidth}{.4pt}\hfil
+		\begin{center}
+			\vspace{-3.7cm}
+			\assinatura{\ABNTterceiroassinadata}
+			\vspace{-0.1cm}
+			Doutor\\
+			\vspace{-0.1cm}
+			Universidade Tecnológica Federal do Paraná
+		\end{center}
+		}
+		
+		\vfill
+		\begin{center}
+			\textbf{\MakeUppercase{\ABNTlocaldata}}\par
+			\textbf{\ABNTdatadata}
 		\end{center}
 	\end{titlepage}
 }
@@ -367,11 +448,11 @@
           \begin{tabular}{lp{12cm}}
             %% personal data
             \UTFPRfichacatpumdata \lenauthor & \UTFPRfichacatautordata \\
-            \lenauthor & \hspace{12px} \ABNTtitulodata / \ABNTautordata. -- \the\year. \\
+            \lenauthor & \hspace{12px} \ABNTtitulodata / \ABNTautordata. -- 2021. \\
             & \lencore \pageref{LastPage} f. : il. ; 30 cm \\
             & \\
             & \lencore Orientador: \ABNTorientadordata. \\
-            & \lencore \UTFPRdocumentodata $\;$(\UTFPRniveldata) -- \ABNTinstituicaodata. \UTFPRprogramadata.  \ABNTlocaldata, \the\year. \\
+            & \lencore \UTFPRdocumentodata $\;$(\UTFPRniveldata) -- \ABNTinstituicaodata. \UTFPRprogramadata.  \ABNTlocaldata, 2021. \\
             & \lencore Bibliografia: f. \UTFPRfichacatpgbibdata. \\
             & \\
             & \lencore \UTFPRfichacatpalchadata \\
@@ -487,7 +568,7 @@
 	\begin{espacosimples}%
 		\setlength\parindent{0pt}
 		\setlength\parskip{12pt}
-		\UTFPRcitadata. \UTFPRtitledata. \pageref{LastPage} f. \UTFPRdocumentodata\ -- \UTFPRprogramadata,
+		\UTFPRcitadata. \MakeUppercase{\UTFPRtitledata}. \pageref{LastPage} f. \UTFPRdocumentodata\ -- \UTFPRprogramadata,
 		\ABNTinstituicaodata. \ABNTlocaldata, \ABNTdatadata. \par
 }%
 {
